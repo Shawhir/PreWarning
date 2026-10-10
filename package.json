@@ -1,0 +1,8 @@
+{
+  "name": "prewarning",
+  "private": true,
+  "description": "Personal early-warning dashboard for large-scale war",
+  "scripts": {
+    "test": "node --test tests/*.test.js"
+  }
+}

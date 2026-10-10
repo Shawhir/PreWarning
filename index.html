@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Early Warning</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main class="wrap">
+    <header class="masthead">
+      <h1>Early Warning</h1>
+      <p class="sub">Valbirse → Crolly / Carrickfinn · <span id="last-review"></span></p>
+    </header>
+
+    <section id="alert" class="alert" hidden aria-live="polite"></section>
+
+    <section class="tiles" aria-label="Current status">
+      <div class="tile" id="tile-overall">
+        <span class="tile-label">Threat</span>
+        <span class="tile-value" id="overall-value"></span>
+        <span class="tile-note" id="overall-note"></span>
+      </div>
+      <div class="tile" id="tile-logistics">
+        <span class="tile-label">Departure window</span>
+        <span class="tile-value" id="logistics-value"></span>
+        <span class="tile-note" id="logistics-note"></span>
+      </div>
+      <div class="tile" id="tile-ladder">
+        <span class="tile-label">Ladder level</span>
+        <span class="tile-value" id="ladder-value"></span>
+        <span class="tile-note" id="ladder-note"></span>
+      </div>
+    </section>
+
+    <p class="guidance" id="guidance"></p>
+
+    <section aria-labelledby="h-indicators">
+      <div class="section-head">
+        <h2 id="h-indicators">Indicators</h2>
+        <span class="hint">Open a category to update it. Red needs two independent sources.</span>
+      </div>
+      <div id="categories"></div>
+    </section>
+
+    <section aria-labelledby="h-ladder">
+      <h2 id="h-ladder">Escalation ladder</h2>
+      <p class="hint">Set this by judgement. The goal is to act at level 3, or level 4 at the latest.</p>
+      <ol class="ladder" id="ladder"></ol>
+    </section>
+
+    <section aria-labelledby="h-triggers" class="print-keep">
+      <h2 id="h-triggers">Personal triggers</h2>
+      <p class="hint">Decided in advance. If one is met, act on it without re-debating it.</p>
+      <ul class="triggers" id="triggers"></ul>
+    </section>
+
+    <section aria-labelledby="h-plan" class="print-keep">
+      <h2 id="h-plan">Plan</h2>
+      <div class="plan-grid">
+        <label>Routes
+          <textarea id="plan-routes" rows="7"></textarea>
+        </label>
+        <label>Contacts
+          <textarea id="plan-contacts" rows="7"></textarea>
+        </label>
+        <label>Documents and money checklist
+          <textarea id="plan-checklist" rows="7"></textarea>
+        </label>
+      </div>
+      <div class="print-plan" id="print-plan"></div>
+    </section>
+
+    <details class="block">
+      <summary><h2>History</h2></summary>
+      <p class="hint">Every change in overall status, departure window and ladder level. Use it to see how often an alert was a crisis that passed.</p>
+      <ol class="log" id="log" reversed></ol>
+    </details>
+
+    <details class="block">
+      <summary><h2>Sources</h2></summary>
+      <table class="sources">
+        <thead><tr><th>Source</th><th>Covers</th><th>Notes</th></tr></thead>
+        <tbody id="sources"></tbody>
+      </table>
+    </details>
+
+    <details class="block">
+      <summary><h2>Data</h2></summary>
+      <p class="hint">Everything is stored in this browser only. Export regularly. Print the page for an offline copy of triggers, routes and contacts.</p>
+      <div class="buttons">
+        <button type="button" id="btn-export">Export JSON</button>
+        <label class="button">Import JSON<input type="file" id="btn-import" accept="application/json" hidden></label>
+        <button type="button" id="btn-print">Print offline copy</button>
+        <button type="button" id="btn-reset" class="danger">Reset to baseline</button>
+      </div>
+      <p class="hint" id="storage-warning" hidden>Browser storage is unavailable, so changes will be lost when you close this page. Export before leaving.</p>
+    </details>
+
+    <footer class="foot">
+      Covers the slow paths to war only. False alarms, accidents and very rapid escalation can skip the ladder entirely.
+      Framework: <a href="FRAMEWORK.md">FRAMEWORK.md</a>
+    </footer>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/scoring.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
