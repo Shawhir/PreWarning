@@ -6,6 +6,7 @@
 // not be opened directly, so key facts should be confirmed by hand.
 window.Assessment = {
   date: '2026-10-10',
+  issuedAt: '2026-10-10T14:30:00Z',
   ladder: 2,
   categories: {
     conventional: {

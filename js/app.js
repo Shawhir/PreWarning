@@ -525,8 +525,11 @@
   // A researched assessment published in js/assessment.js. Applied once per
   // assessment date, and only to readings the user has not updated since.
   function applyAssessment(st) {
-    if (!ASSESSMENT || (st.appliedAssessment && st.appliedAssessment >= ASSESSMENT.date)) return false;
-    const at = new Date(ASSESSMENT.date + 'T12:00:00').toISOString();
+    if (!ASSESSMENT) return false;
+    const at = ASSESSMENT.issuedAt
+      ? new Date(ASSESSMENT.issuedAt).toISOString()
+      : new Date(ASSESSMENT.date + 'T12:00:00').toISOString();
+    if (st.appliedAssessment && st.appliedAssessment >= at) return false;
     const newer = (entry) => !entry.checkedAt || entry.checkedAt < at;
     const apply = (entry, a) => {
       if (!a || !newer(entry)) return;
@@ -541,7 +544,7 @@
       st.ladder = ASSESSMENT.ladder;
       st.ladderSetAt = at;
     }
-    st.appliedAssessment = ASSESSMENT.date;
+    st.appliedAssessment = at;
     return true;
   }
 
