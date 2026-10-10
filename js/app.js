@@ -95,7 +95,42 @@
   function categoryStates(st) {
     const out = {};
     for (const c of CATEGORIES) out[c.id] = st.categories[c.id].status;
+    // The markets feed can raise the markets reading, never lower it.
+    const feed = marketsFeedStatus();
+    if (feed) out.markets = S.worst([out.markets, feed]);
     return out;
+  }
+
+  // ---------- Signals (data/signals.json, refreshed by GitHub Actions) ----------
+
+  const SIGNALS_STALE_HOURS = 12;
+  let signals = null;
+  let signalsError = null;
+
+  function signalsAgeHours() {
+    if (!signals || !signals.generatedAt) return null;
+    return (Date.now() - Date.parse(signals.generatedAt)) / 3600000;
+  }
+
+  // Only a fresh feed counts towards the markets reading.
+  function marketsFeedStatus() {
+    const age = signalsAgeHours();
+    if (age === null || age > 24 || !signals.markets) return null;
+    return signals.markets.status || null;
+  }
+
+  async function loadSignals() {
+    try {
+      const res = await fetch('data/signals.json', { cache: 'no-store' });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      signals = await res.json();
+      signalsError = null;
+    } catch (e) {
+      signals = null;
+      signalsError = location.protocol === 'file:'
+        ? 'Signals load when the dashboard is hosted (GitHub Pages).'
+        : 'Signals unavailable. If the feed has gone dark, that is itself information.';
+    }
   }
 
   function computeOverall(st) {
@@ -233,6 +268,7 @@
     renderTriggers(today, streak);
     renderPlan();
     renderLog();
+    renderSignals();
   }
 
   function setTile(id, status) {
@@ -291,7 +327,8 @@
       `${weightLabel} · checked ${cat.cadence}`,
       dir !== 'steady' ? ` · ${dir} over ${TREND_DAYS} days` : '',
       ' · ',
-      due ? el('span', { class: 'due', text: entry.checkedAt ? 'check due' : 'not checked yet' }) : `checked ${formatDate(entry.checkedAt)}`
+      due ? el('span', { class: 'due', text: entry.checkedAt ? 'check due' : 'not checked yet' }) : `checked ${formatDate(entry.checkedAt)}`,
+      cat.id === 'markets' && marketsFeedStatus() ? ` · feed ${marketsFeedStatus()}, your reading ${entry.status}` : ''
     );
 
     const trend = el('span', { class: 'trend', title: `Last ${TREND_DAYS} days`, 'aria-hidden': 'true' },
@@ -300,7 +337,7 @@
 
     const summary = el('summary', null,
       el('span', { class: 'cat-name', text: cat.name }),
-      el('span', { class: 'cat-pill' }, pill(entry.status)),
+      el('span', { class: 'cat-pill' }, pill(cat.id === 'markets' ? categoryStates(state).markets : entry.status)),
       meta,
       trend
     );
@@ -476,6 +513,130 @@
     );
   }
 
+  function timeAgo(iso) {
+    const h = (Date.now() - Date.parse(iso)) / 3600000;
+    if (!Number.isFinite(h)) return '';
+    if (h < 1) return 'less than an hour ago';
+    if (h < 48) return `${Math.round(h)} hour${Math.round(h) === 1 ? '' : 's'} ago`;
+    return `${Math.round(h / 24)} days ago`;
+  }
+
+  function sparkline(values) {
+    const NS = 'http://www.w3.org/2000/svg';
+    const svg = document.createElementNS(NS, 'svg');
+    svg.setAttribute('viewBox', '0 0 100 24');
+    svg.setAttribute('preserveAspectRatio', 'none');
+    svg.setAttribute('class', 'spark');
+    svg.setAttribute('aria-hidden', 'true');
+    if (values && values.length > 1) {
+      const min = Math.min(...values);
+      const max = Math.max(...values);
+      const span = max - min || 1;
+      const pts = values.map((v, i) => `${(i / (values.length - 1)) * 100},${22 - ((v - min) / span) * 20}`).join(' ');
+      const line = document.createElementNS(NS, 'polyline');
+      line.setAttribute('points', pts);
+      svg.append(line);
+    }
+    return svg;
+  }
+
+  function fmtNum(v) {
+    if (v === null || v === undefined) return '–';
+    return v >= 100 ? v.toLocaleString(undefined, { maximumFractionDigits: 0 }) : v.toLocaleString(undefined, { maximumFractionDigits: v < 10 ? 4 : 2 });
+  }
+
+  function fmtPct(v) {
+    if (v === null || v === undefined) return '';
+    return `${v > 0 ? '+' : ''}${v.toFixed(1)}%`;
+  }
+
+  function signalBlock(title, ...body) {
+    return el('div', { class: 'sig-block' }, el('h3', { text: title }), ...body);
+  }
+
+  function failed(text) {
+    return el('p', { class: 'sig-error', text });
+  }
+
+  function renderSignals() {
+    const wrap = document.getElementById('signals');
+    const updated = document.getElementById('signals-updated');
+    wrap.replaceChildren();
+    if (!signals) {
+      updated.textContent = '';
+      wrap.append(failed(signalsError || 'Loading…'));
+      return;
+    }
+    const age = signalsAgeHours();
+    updated.textContent = `Updated ${timeAgo(signals.generatedAt)}. Refreshed automatically every 3 hours.`;
+    if (age > SIGNALS_STALE_HOURS) {
+      wrap.append(el('p', { class: 'sig-stale', text: `The feed has not updated for ${Math.round(age)} hours. Check the GitHub Actions workflow. If it has gone dark, that is itself information.` }));
+    }
+
+    // Markets
+    const m = signals.markets || { items: [] };
+    wrap.append(signalBlock(`Markets${m.status ? '' : ''}`,
+      el('p', { class: 'hint' },
+        m.status ? el('span', null, 'Feed reading ', pill(m.status), ` from ${m.lookbackDays || 5}-day moves. It can raise your Markets reading, never lower it. Confirmation only.`)
+          : 'No market data this run.'),
+      el('div', { class: 'sig-markets' },
+        (m.items || []).map((i) => i.ok
+          ? el('div', { class: 'sig-tile' },
+              el('span', { class: 'sig-name' }, i.name, ' ', pill(i.status || 'green')),
+              el('span', { class: 'sig-value', text: `${fmtNum(i.value)}${i.unit ? ' ' + i.unit : ''}` }),
+              el('span', { class: 'sig-sub', text: `${fmtPct(i.change)} over ${m.lookbackDays || 5} days · ${i.source}` }),
+              sparkline(i.spark))
+          : el('div', { class: 'sig-tile' }, el('span', { class: 'sig-name', text: i.name }), failed(`Unavailable (${i.error})`)))
+      )
+    ));
+
+    // Forecasts
+    const f = signals.forecasts || { items: [] };
+    wrap.append(signalBlock('Forecasts (Metaculus)',
+      el('p', { class: 'hint', text: 'Watch for sudden jumps, not absolute values. A jump is 5+ points, or a doubling from a low base, within a week.' }),
+      f.items && f.items.length
+        ? el('ul', { class: 'sig-list' }, f.items.map((q) => {
+            const diff = q.weekAgo !== null && q.weekAgo !== undefined ? (q.probability - q.weekAgo) * 100 : null;
+            return el('li', { class: q.jump ? 'flag' : '' },
+              el('span', { class: 'sig-prob', text: `${(q.probability * 100).toFixed(q.probability < 0.1 ? 1 : 0)}%` }),
+              el('span', null,
+                el('a', { href: q.url, target: '_blank', rel: 'noopener noreferrer', text: q.title }),
+                el('span', { class: 'sig-sub', text: diff === null ? ' · no week-ago value yet' : ` · ${diff > 0 ? '+' : ''}${diff.toFixed(1)} pts on the week${q.jump ? ' · JUMP' : ''}` })));
+          }))
+        : failed(`Unavailable (${f.error || 'no data'}).${f.authenticated ? '' : ' Metaculus may need an API token: add METACULUS_TOKEN as a repository secret.'}`)
+    ));
+
+    // Travel advice
+    const advice = signals.advice || [];
+    const recent = (iso) => iso && Date.now() - Date.parse(iso) < 7 * 86400000;
+    wrap.append(signalBlock('Travel advice',
+      el('p', { class: 'hint', text: 'Flags any change to the page in the last 7 days. Read it: "leave" is a stronger signal than "avoid travel".' }),
+      el('ul', { class: 'sig-list' }, advice.map((a) =>
+        el('li', { class: recent(a.changedAt) ? 'flag' : '' },
+          el('span', { class: 'sig-prob', text: a.country }),
+          el('span', null,
+            el('a', { href: a.url, target: '_blank', rel: 'noopener noreferrer', text: a.source }),
+            a.level ? ` · ${a.level}` : '',
+            recent(a.changedAt)
+              ? el('strong', { text: ` · changed ${timeAgo(a.changedAt)}${a.previousLevel && a.previousLevel !== a.level ? ` (was ${a.previousLevel})` : ''}` })
+              : el('span', { class: 'sig-sub', text: a.ok ? (a.changedAt ? ` · last changed ${formatDate(a.changedAt)}` : ' · no change seen') : ` · unavailable (${a.error})` }))
+        )
+      ))
+    ));
+
+    // Feeds
+    for (const feed of signals.feeds || []) {
+      wrap.append(signalBlock(feed.name,
+        feed.ok
+          ? el('ul', { class: 'sig-list plain' }, feed.items.map((it) =>
+              el('li', null,
+                el('a', { href: it.link, target: '_blank', rel: 'noopener noreferrer', text: it.title }),
+                it.date ? el('span', { class: 'sig-sub', text: ` · ${formatDate(it.date)}` }) : '')))
+          : failed(`Unavailable (${feed.error})`)
+      ));
+    }
+  }
+
   // ---------- Wiring ----------
 
   function wire() {
@@ -558,5 +719,6 @@
   save();
   wire();
   renderSources();
+  loadSignals().then(() => commit(null));
   render();
 })();

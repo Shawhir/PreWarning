@@ -25,6 +25,17 @@ One-time setup: in the repository, go to **Settings → Pages** and set **Source
 
 Readings, notes and plan stay in each browser's `localStorage`. Nothing you enter is published, but the page itself (including the default routes) is public if Pages is public.
 
+## Signals panel
+
+Every 3 hours (and on every push) the Pages workflow runs `scripts/fetch-signals.js`, which writes `data/signals.json` next to the page:
+
+- **Markets:** VIX, gold, Brent (Yahoo Finance) and EUR/CHF (ECB), with 5-day moves against thresholds in `scripts/signals-lib.js`. The feed reading can raise the Markets category, never lower it, and only while it is less than 24 hours old.
+- **Forecasts:** open Metaculus questions on nuclear use and NATO–Russia war, flagging jumps of 5+ points (or a doubling from a low base) in a week. If Metaculus requires authentication, add a `METACULUS_TOKEN` repository secret.
+- **Travel advice:** Irish DFA and Swiss FDFA pages for Russia, Belarus, Ukraine, Lithuania and China. Any change to the page text is flagged for 7 days, with the Irish security level where it can be read.
+- **ISW:** latest assessment headlines.
+
+Each source fails independently and shows as unavailable. If the panel says the feed is stale, check the Actions tab. Scheduled runs only happen on the repository's default branch.
+
 ## Scoring
 
 Implemented in `js/scoring.js` and following FRAMEWORK.md §4:

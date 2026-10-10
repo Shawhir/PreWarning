@@ -4,6 +4,9 @@ on:
   push:
     branches: [main, claude/modest-newton-2yn4zc]
   workflow_dispatch:
+  # Refresh automated signals every three hours.
+  schedule:
+    - cron: '17 */3 * * *'
 
 permissions:
   contents: read
@@ -29,12 +32,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - id: pages
+        uses: actions/configure-pages@v5
+      - name: Fetch signals
+        env:
+          PREV_SIGNALS_URL: ${{ steps.pages.outputs.base_url }}/data/signals.json
+          METACULUS_TOKEN: ${{ secrets.METACULUS_TOKEN }}
+        run: node scripts/fetch-signals.js
       - name: Assemble site
         run: |
           mkdir _site
-          cp -r index.html css js _site/
+          cp -r index.html css js data _site/
           touch _site/.nojekyll
-      - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
