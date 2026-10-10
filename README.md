@@ -35,6 +35,10 @@ Implemented in `js/scoring.js` and following FRAMEWORK.md §4:
 
 Strategic context is background only. It is capped at amber and never counts towards the overall status. Markets (low weight) can count as one of the "two others" for red, but never raise the status on their own.
 
+## Researched assessments
+
+`js/assessment.js` holds a dated assessment (status, note and sources per category, plus ladder level). When the page loads a newer assessment, it updates every reading you have not checked by hand since that date, once, and logs it in History. Your own later readings always win.
+
 ## Editing the framework
 
 Indicators, reading guides, triggers, sources and the baseline are in `js/config.js`.
