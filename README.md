@@ -17,6 +17,14 @@ Open `index.html` in a browser. There is no build step and no server, and it wor
 
 The dashboard does not fetch news. Readings are entered by hand from the sources listed in the page, on purpose: no ticker, no feed, a once-a-day check.
 
+## Hosting on GitHub Pages
+
+`.github/workflows/pages.yml` runs the tests and publishes the dashboard to GitHub Pages on every push to `main` (or this branch), or manually from the Actions tab.
+
+One-time setup: in the repository, go to **Settings → Pages** and set **Source** to **GitHub Actions**. The page is then at `https://shawhir.github.io/PreWarning/`.
+
+Readings, notes and plan stay in each browser's `localStorage`. Nothing you enter is published, but the page itself (including the default routes) is public if Pages is public.
+
 ## Scoring
 
 Implemented in `js/scoring.js` and following FRAMEWORK.md §4:
