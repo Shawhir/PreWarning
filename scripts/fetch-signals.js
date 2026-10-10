@@ -31,7 +31,16 @@ const METACULUS_PATTERN = /nuclear|nato/i;
 const METACULUS_MAX = 5;
 
 const RSS_FEEDS = [
-  { id: 'isw', name: 'Institute for the Study of War', urls: ['https://understandingwar.org/feed/', 'https://www.understandingwar.org/rss.xml'] },
+  {
+    id: 'isw',
+    name: 'Institute for the Study of War',
+    urls: [
+      'https://understandingwar.org/feed/',
+      'https://www.understandingwar.org/rss.xml',
+      // ISW blocks automated requests at times; fall back to a news search.
+      'https://news.google.com/rss/search?q=%22Institute+for+the+Study+of+War%22+Russia+when:7d&hl=en-GB&gl=GB&ceid=GB:en',
+    ],
+  },
 ];
 
 async function get(url, opts) {
@@ -165,6 +174,7 @@ async function fetchFeeds() {
   const out = [];
   for (const f of RSS_FEEDS) {
     const entry = { id: f.id, name: f.name, ok: false, items: [] };
+    const errors = [];
     for (const url of f.urls) {
       try {
         const items = L.parseRss(await (await get(url)).text(), 5);
@@ -172,7 +182,8 @@ async function fetchFeeds() {
         Object.assign(entry, { ok: true, url, items, error: null });
         break;
       } catch (e) {
-        entry.error = `${url}: ${errMsg(e)}`;
+        errors.push(`${new URL(url).hostname}: ${errMsg(e)}`);
+        entry.error = errors.join('; ');
       }
     }
     out.push(entry);
