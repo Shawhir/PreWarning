@@ -154,18 +154,45 @@ function hashText(text) {
   return h.toString(16).padStart(8, '0');
 }
 
+// Text used for change detection: digits and long tokens (dates, times,
+// counters, session ids) are dropped so routine page churn does not count.
+function stableText(text) {
+  return String(text)
+    .replace(/\b[\w-]{24,}\b/g, ' ')
+    .replace(/\d+/g, '#')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 // Carry change history across runs. prev is last run's entry (or undefined).
+// A new page hash only counts as a change once two consecutive runs agree,
+// so content that varies on every load is never flagged. A change in the
+// stated security level counts at once.
 function mergeAdvice(prev, current, nowIso) {
   if (!current.ok) {
     return prev ? { ...prev, ok: false, error: current.error, checkedAt: nowIso } : current;
   }
-  const out = { ...current, checkedAt: nowIso, changedAt: prev && prev.changedAt ? prev.changedAt : null, previousLevel: prev ? prev.previousLevel || null : null };
-  if (prev && prev.hash && prev.hash !== current.hash) {
-    out.changedAt = nowIso;
-    out.previousLevel = prev.level !== current.level ? prev.level : out.previousLevel;
+  if (!prev || !prev.hash) {
+    return { ...current, checkedAt: nowIso, firstSeenAt: nowIso, changedAt: null, previousLevel: null, pendingHash: null };
   }
-  if (!prev || !prev.hash) out.firstSeenAt = nowIso;
-  else out.firstSeenAt = prev.firstSeenAt || null;
+  const out = {
+    ...current,
+    hash: prev.hash,
+    checkedAt: nowIso,
+    firstSeenAt: prev.firstSeenAt || null,
+    changedAt: prev.changedAt || null,
+    previousLevel: prev.previousLevel || null,
+    pendingHash: null,
+  };
+  const levelChanged = !!(prev.level && current.level && prev.level !== current.level);
+  if (current.hash === prev.hash) return out;
+  if (current.hash === prev.pendingHash || levelChanged) {
+    out.hash = current.hash;
+    out.changedAt = nowIso;
+    if (levelChanged) out.previousLevel = prev.level;
+    return out;
+  }
+  out.pendingHash = current.hash;
   return out;
 }
 
@@ -257,6 +284,7 @@ module.exports = {
   mainText,
   adviceLevel,
   hashText,
+  stableText,
   mergeAdvice,
   metaculusProbability,
   mergeSeries,

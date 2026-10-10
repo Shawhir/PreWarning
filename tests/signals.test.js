@@ -47,18 +47,38 @@ test('advice level prefers the stated security status', () => {
   assert.equal(L.adviceLevel('nothing here'), null);
 });
 
-test('advice change detection carries history', () => {
-  const first = L.mergeAdvice(undefined, { id: 'a', ok: true, hash: 'h1', level: 'Do not travel' }, '2026-10-10T00:00:00Z');
-  assert.equal(first.changedAt, null);
-  const same = L.mergeAdvice(first, { id: 'a', ok: true, hash: 'h1', level: 'Do not travel' }, '2026-10-11T00:00:00Z');
-  assert.equal(same.changedAt, null);
-  const changed = L.mergeAdvice(same, { id: 'a', ok: true, hash: 'h2', level: 'Avoid non-essential travel' }, '2026-10-12T00:00:00Z');
-  assert.equal(changed.changedAt, '2026-10-12T00:00:00Z');
-  assert.equal(changed.previousLevel, 'Do not travel');
-  const failed = L.mergeAdvice(changed, { id: 'a', ok: false, error: 'HTTP 500' }, '2026-10-13T00:00:00Z');
+test('advice change needs two agreeing runs, level change counts at once', () => {
+  const day = (d) => `2026-10-${d}T00:00:00Z`;
+  const run = (prev, hash, level, d) => L.mergeAdvice(prev, { id: 'a', ok: true, hash, level }, day(d));
+  let a = run(undefined, 'h1', 'Do not travel', 10);
+  assert.equal(a.changedAt, null);
+  // Content that differs on every load is never flagged.
+  a = run(a, 'x1', 'Do not travel', 11);
+  a = run(a, 'x2', 'Do not travel', 12);
+  a = run(a, 'h1', 'Do not travel', 13);
+  assert.equal(a.changedAt, null);
+  assert.equal(a.hash, 'h1');
+  // A real change is confirmed on the second run that sees it.
+  a = run(a, 'h2', 'Do not travel', 14);
+  assert.equal(a.changedAt, null);
+  a = run(a, 'h2', 'Do not travel', 15);
+  assert.equal(a.changedAt, day(15));
+  assert.equal(a.hash, 'h2');
+  // A level change counts immediately.
+  a = run(a, 'h3', 'Avoid non-essential travel', 16);
+  assert.equal(a.changedAt, day(16));
+  assert.equal(a.previousLevel, 'Do not travel');
+  // Failures keep the last good state.
+  const failed = L.mergeAdvice(a, { id: 'a', ok: false, error: 'HTTP 500' }, day(17));
   assert.equal(failed.ok, false);
-  assert.equal(failed.hash, 'h2');
-  assert.equal(failed.changedAt, '2026-10-12T00:00:00Z');
+  assert.equal(failed.hash, 'h3');
+  assert.equal(failed.changedAt, day(16));
+});
+
+test('stable text ignores dates and tokens', () => {
+  const a = L.stableText('Last updated 9 October 2026 10:42 session a1b2c3d4e5f6a7b8c9d0e1f2a3b4 Do not travel');
+  const b = L.stableText('Last updated 10 October 2026 08:01 session ffffffffffffffffffffffffffffff Do not travel');
+  assert.equal(a, b);
 });
 
 test('metaculus probability and jumps', () => {

@@ -15,6 +15,7 @@ const L = require('./signals-lib.js');
 const OUT = path.join(__dirname, '..', 'data', 'signals.json');
 const UA = 'Mozilla/5.0 (compatible; PreWarning dashboard; +https://github.com/Shawhir/PreWarning)';
 const TIMEOUT_MS = 20000;
+const SIGNALS_VERSION = 2;
 
 const ADVICE = [
   { id: 'ie-russia', source: 'Ireland DFA', country: 'Russia', url: 'https://www.ireland.ie/en/dfa/overseas-travel/advice/russian-federation/' },
@@ -109,7 +110,10 @@ async function fetchMarkets(now) {
 
 async function fetchAdvice(prev, nowIso) {
   const prevById = {};
-  for (const p of (prev && prev.advice) || []) prevById[p.id] = p;
+  for (const p of (prev && prev.advice) || []) {
+    // Before v2, every load could look like a change: reset that history.
+    prevById[p.id] = (prev.version || 1) < SIGNALS_VERSION ? { ...p, hash: null, changedAt: null, previousLevel: null } : p;
+  }
   const out = [];
   for (const a of ADVICE) {
     let current;
@@ -117,7 +121,7 @@ async function fetchAdvice(prev, nowIso) {
       const html = await (await get(a.url)).text();
       const text = L.mainText(html);
       if (text.length < 200) throw new Error('page content too short');
-      current = { ...a, ok: true, hash: L.hashText(text), level: a.source === 'Ireland DFA' ? L.adviceLevel(text) : null };
+      current = { ...a, ok: true, hash: L.hashText(L.stableText(text)), level: a.source === 'Ireland DFA' ? L.adviceLevel(text) : null };
     } catch (e) {
       current = { ...a, ok: false, error: errMsg(e) };
     }
@@ -204,7 +208,7 @@ async function main() {
     fetchFeeds().catch(() => []),
   ]);
 
-  const signals = { generatedAt: nowIso, markets, forecasts, advice, feeds };
+  const signals = { version: SIGNALS_VERSION, generatedAt: nowIso, markets, forecasts, advice, feeds };
   fs.mkdirSync(path.dirname(OUT), { recursive: true });
   fs.writeFileSync(OUT, JSON.stringify(signals, null, 2));
 
