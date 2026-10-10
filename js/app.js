@@ -2,6 +2,7 @@
   'use strict';
 
   const { LADDER, CATEGORIES, LOGISTICS, TRIGGERS, SOURCES, BASELINE } = window.Config;
+  const ASSESSMENT = window.Assessment || null;
   const S = window.Scoring;
 
   const STORAGE_KEY = 'prewarning.v1';
@@ -392,6 +393,7 @@
         const input = el('input', { type: 'radio', name: 'ladder', value: r.level, checked: state.ladder === r.level });
         input.addEventListener('change', () => {
           state.ladder = r.level;
+          state.ladderSetAt = new Date().toISOString();
           commit(null);
         });
         return el('li', null,
@@ -520,7 +522,34 @@
     });
   }
 
+  // A researched assessment published in js/assessment.js. Applied once per
+  // assessment date, and only to readings the user has not updated since.
+  function applyAssessment(st) {
+    if (!ASSESSMENT || (st.appliedAssessment && st.appliedAssessment >= ASSESSMENT.date)) return false;
+    const at = new Date(ASSESSMENT.date + 'T12:00:00').toISOString();
+    const newer = (entry) => !entry.checkedAt || entry.checkedAt < at;
+    const apply = (entry, a) => {
+      if (!a || !newer(entry)) return;
+      entry.status = a.status;
+      entry.note = a.note;
+      entry.sources = (a.sources || []).join('\n');
+      entry.checkedAt = at;
+    };
+    for (const c of CATEGORIES) apply(st.categories[c.id], ASSESSMENT.categories[c.id]);
+    apply(st.logistics, ASSESSMENT.logistics);
+    if (Number.isInteger(ASSESSMENT.ladder) && (!st.ladderSetAt || st.ladderSetAt < at)) {
+      st.ladder = ASSESSMENT.ladder;
+      st.ladderSetAt = at;
+    }
+    st.appliedAssessment = ASSESSMENT.date;
+    return true;
+  }
+
   let state = load();
+  latestHeadline();
+  if (applyAssessment(state)) {
+    commit(`Applied researched assessment of ${ASSESSMENT.date}`);
+  }
   // Carry the last reading forward to today so trends and streaks stay current.
   recordSnapshot(state, S.dayKey(new Date()));
   save();
