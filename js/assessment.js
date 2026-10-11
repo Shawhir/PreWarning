@@ -1,95 +1,95 @@
 // Researched assessment applied to the dashboard on load (see app.js
-// applyAssessment). Applied once per date, and only to readings not
+// applyAssessment). Applied once per issuedAt, and only to readings not
 // checked by hand since. Set to null when there is nothing to publish.
 //
-// 2026-10-10: compiled from dated news search results. Source pages could
-// not be opened directly, so key facts should be confirmed by hand.
+// 2026-10-11: daily check, compiled from dated news search results. Source
+// pages could not be opened directly, so key facts should be confirmed by hand.
 window.Assessment = {
-  date: '2026-10-10',
-  issuedAt: '2026-10-10T14:30:00Z',
+  date: '2026-10-11',
+  issuedAt: '2026-10-11T05:05:00Z',
   ladder: 2,
   categories: {
     conventional: {
       status: 'amber',
-      note: 'Russia–Ukraine war intense (major Russian strike 7 Oct; ~290 Ukrainian drones at Moscow region 6 Oct). 6 Oct: drones hit two commercial ships in Bulgaria\'s Black Sea EEZ, attribution unclear; Article 4 floated by a Bulgarian opposition party but not requested. No Article 4/5 invocation found. Asia: China Coast Guard rammed a Philippine vessel 18 Sep; no US–China clashes. India–Pakistan ceasefire holding despite 2 Oct border killings.',
+      note: 'No change. Kaliningrad: no blockade or clash; NATO Military Committee chair Dragone said 10 Oct NATO has no plan to blockade it ("serious but under control"). Lithuania sent ~100 troops to the Kaliningrad border until 16 Oct as a precaution. Bulgaria\'s PM ruled out Articles 4/5 over the 6 Oct Black Sea drone strikes. Poland and Romania scrambled jets 9–10 Oct during Russian strikes on Ukraine. Nothing new in Asia.',
       sources: [
-        'https://www.washingtonpost.com/world/2026/10/06/bulgaria-prime-minister-ships-drones-economic-zone/41e5ef02-c164-11f1-8170-681419af1cc9_story.html',
-        'https://www.aljazeera.com/news/2026/10/7/at-least-two-killed-in-kyiv-as-russia-launches-massive-attack-on-ukraine',
-        'https://news.usni.org/2026/09/18/video-china-coast-guard-rams-philippine-fisheries-vessel-in-south-china-sea',
-        'https://www.aljazeera.com/news/2026/10/3/pakistan-summons-indian-diplomat-over-border-killing-of-two-pakistanis',
+        'https://1news.az/en/news/20261010122508915-NATO-does-not-plan-to-blockade-Kaliningrad',
+        'https://www.bloomberg.com/news/articles/2026-10-08/lithuania-sends-troops-to-border-over-putin-mobilization-concern',
+        'https://newsukraine.rbc.ua/news/bulgaria-rules-out-nato-articles-4-and-5-1791307321.html',
+        'https://abcnews.com/International/russian-strikes-kill-2-kyiv-prompt-nato-scramble/story?id=136881319',
       ],
     },
     posture: {
       status: 'green',
-      note: 'Close to amber. No reports of SSBN surges, bomber dispersal, warhead movement or alert changes. NATO Steadfast Noon starts 13 Oct (routine scale, not postponed). Russia\'s autumn Grom exercise not yet announced; if it runs alongside the Kaliningrad dispute, check daily for Barents Sea NOTAMs and launch announcements.',
+      note: 'Close to amber, no change. NATO nuclear policy head said 8 Oct no big changes in Russian posture observed. Steadfast Noon runs from 13 Oct for ~10 days (Italy, 17 nations). Russia\'s Grom exercise not yet announced (held every October since 2022; 22 Oct last year); watch Barents Sea NOTAMs and an unconfirmed report of Oreshnik launch notices at Kapustin Yar from 22 Oct.',
       sources: [
+        'https://www.wsls.com/news/world/2026/10/08/nato-presses-ahead-with-steadfast-noon-nuclear-drill-after-russias-nuclear-warning/',
+        'https://www.thebarentsobserver.com/security/russia-readies-barents-sea-for-annual-thunder-nuke-exercise/438972',
         'https://www.nato.int/en/news-and-events/articles/news/2026/10/08/nato-holds-annual-nuclear-exercise-steadfast-noon',
-        'https://ny1.com/nyc/all-boroughs/ap-top-news/2026/10/08/nato-presses-ahead-with-steadfast-noon-nuclear-drill-after-russias-nuclear-warning',
-        'https://tass.com/defense/2196875',
       ],
     },
     continuity: {
       status: 'green',
-      note: 'No leader relocations, civil defence activation, iodine distribution or martial law found. Switzerland: no Alertswiss alerts; only a civil-protection earthquake exercise. European emergency diesel talks (1 Oct) are economic strain, not war preparation.',
+      note: 'No change. No civil defence activation, leader relocation, martial law or emergency powers in NATO states or Switzerland. Austria\'s 3 Oct siren test was a scheduled drill. Russia has announced no mobilisation.',
       sources: [
-        'https://www.babs.admin.ch/en',
-        'https://www.bloomberg.com/news/articles/2026-10-01/europe-holds-emergency-diesel-talks-as-us-pressure-mounts',
+        'https://www.tirol.gv.at/presse/meldungen/meldung/zivilschutzprobealarm-am-samstag-den-03102026/',
+        'https://www.themoscowtimes.com/2026/09/02/complete-nonsense-putin-dismisses-mobilization-rumors-a93621',
       ],
     },
     diplomacy: {
       status: 'green',
-      note: 'Close to amber. Russia delivered its Kaliningrad nuclear warning as a formal diplomatic note (30 Sep), counted under rhetoric. No new embassy drawdowns, expulsions or hotline reports found. US "leave Russia" advice (re-issued 6 Oct with a plague health alert) and Irish/Swiss advice against travel to Russia and Belarus are the long-standing baseline.',
+      note: 'Close to amber, no change. No new expulsions, closures, suspended talks or new "leave" advisories. Irish DFA pages unchanged per the signals feed (Russia, Belarus, Ukraine: Do not travel). Lavrov said ~7 Oct that Rutte and the US NATO envoy assured Moscow NATO has no plans to attack Russia (Russian claim only).',
       sources: [
-        'https://ru.usembassy.gov/health-alert-u-s-embassy-moscow-russia-october-6-2026/',
         'https://www.ireland.ie/en/dfa/overseas-travel/advice/russian-federation/',
-        'https://www.eda.admin.ch/countries/russia/it/home/consigli-di-viaggio/consigli-di-viaggio.html',
+        'https://govukdiff.njk.onl/update/2026-09-10T14:40:00+01:00/www.gov.uk/foreign-travel-advice/belarus',
+        'https://www.dailysabah.com/world/europe/russia-closely-watching-nato-over-attack-warnings-lavrov/amp',
       ],
     },
     rhetoric: {
       status: 'amber',
-      note: 'Top of amber. 30 Sep: Russian note to NATO threatening the "entire arsenal… including nuclear weapons" if Kaliningrad is blockaded, citing alleged NATO blockade plans. 1 Oct (Valdai): Putin said "all weapons" are on the agenda if Kaliningrad is attacked. Tied to a specific event, but no deadline and no readiness announcement. A blockade, deadline or alert change would make this red.',
+      note: 'Top of amber, no change. The 30 Sep Kaliningrad nuclear note and Putin\'s 1 Oct Valdai remarks stand; no new nuclear statements, deadlines or readiness announcements found since. Slight easing: NATO says no blockade is planned. A blockade, deadline or alert change would make this red.',
       sources: [
         'https://www.aljazeera.com/news/2026/9/30/russia-warns-nato-of-possible-nuclear-response-if-kaliningrad-is-cut-off',
         'https://www.cnn.com/2026/10/01/europe/putin-kaliningrad-warning-ukraine-latam-intl',
-        'https://www.euronews.com/2026/10/02/putin-says-all-weapons-on-agenda-if-russias-kaliningrad-attacked',
+        'https://news.am/en/news/1066113',
       ],
     },
     infrastructure: {
       status: 'green',
-      note: 'Background level. No Baltic/North Sea cable cuts since Jan 2026. NATO allies said on 10 Sep they had foiled a Russian cable-sabotage rehearsal near Svalbard. Baltic GPS jamming at usual levels. No grid or bank outages from cyberattacks found.',
+      note: 'No change. No new cable cuts, cyber-caused outages or unusual GPS/satellite interference reported in October; latest Baltic cable incident Jan 2026.',
       sources: [
+        'https://capacityglobal.com/news/latvia-investigation-finds-no-link-between-liepaja-vessel-and-damaged-baltic-sea-telecom-cable',
         'https://www.defensenews.com/global/europe/2026/09/10/nato-allies-foil-russian-subsea-cable-sabotage-plot/',
-        'https://www.irishtimes.com/world/europe/2026/09/11/nato-allies-say-they-foiled-russian-subsea-cable-sabotage-plot/',
       ],
     },
     markets: {
       status: 'amber',
-      note: 'Energy stress from the Iran war: Brent ~$104 (9 Oct), European diesel at record ~€2.24/L, France proposing an EU/IEA stock release (2 Oct). Gulf airline suspensions extended. Not war-panic elsewhere: VIX 14.8, gold ~$4,190 and down on the month, EUR/CHF ~0.93 after a brief 2 Oct drop.',
+      note: 'No material change. Energy stress persists: Brent ~$104 on 9 Oct after a 4% jump; France releasing 10M barrels of diesel from strategic stocks; Iran reviewing a US reply on reopening Hormuz. Signals feed (5-day moves) green: VIX 14.8, gold ~$4,216, EUR/CHF 0.931.',
       sources: [
-        'https://www.bloomberg.com/news/articles/2026-10-02/france-proposes-fresh-release-of-diesel-and-crude-by-eu-iea',
         'https://tradingeconomics.com/commodity/brent-crude-oil',
-        'https://fortune.com/article/current-price-of-gold-10-09-2026/',
-        'https://finance.yahoo.com/quote/%5EVIX/',
+        'https://www.fxstreet.com/news/oil-prices-supported-by-supply-risks-and-iran-tensions-danske-bank-202610080914',
+        'https://gulfnews.com/world/mena/us-iran-standoff-what-uae-residents-need-to-know-this-evening-october-9-2026-1.500704947',
       ],
     },
     strategic: {
       status: 'amber',
-      note: 'Deteriorating. New START expired 5–6 Feb 2026 with no formal follow-on talks found. No confirmed explosive tests; early US–China talks on reciprocal facility visits (8 Oct) amid US accusations of secret Chinese testing. China ~620 warheads and growing (SIPRI 2026). Oreshnik unit on duty in Belarus.',
+      note: 'Deteriorating, no change. US told the Conference on Disarmament (6–8 Oct) that China has conducted nuclear explosive tests; NNSA ran a 16-ton non-nuclear underground blast in Nevada, seen by Beijing and Moscow as a step toward resumed testing. US–China facility-visit talks remain informal; no New START follow-on.',
       sources: [
-        'https://www.washingtontimes.com/news/2026/oct/8/show-tell-us-china-discuss-visiting-others-nuclear-facilities/',
-        'https://www.sipri.org/media/press-release/2026/increasing-focus-nuclear-weapons-amid-heightened-escalation-risks-new-sipri-yearbook-out-now',
-        'https://meta-defense.fr/en/2026/06/01/oreshnik-belarus-krichev-6/',
+        'https://cnn.com/2026/10/06/politics/us-and-china-discussing-nuclear-inspections',
+        'https://www.twz.com/nuclear/china-secretly-testing-nuclear-weapons-and-covering-its-tracks-u-s-alleges',
+        'https://www.armscontrol.org/act/2026-10/focus/trump-xi-putin-failing-tackle-nuclear-threat',
       ],
     },
   },
   logistics: {
     status: 'amber',
-    note: 'Fuel is the weak point: TotalEnergies refinery strikes reported ~8 Oct blocking shipments in France (single source; check before driving), Swiss diesel CHF 2.31–2.50/L after a Sep stock release (supply now normal). Ferries: Irish Ferries Dublin–Cherbourg on time; Rosslare–Cherbourg is Brittany Ferries only, 3–4 sailings/week, ship swapped to Barfleur from 12 Oct with no backup. No disruption found on Zurich/Basel/Geneva–Dublin/Belfast flights. French border checks continue to Apr 2027 (spot checks).',
+    note: 'No change in status. French refinery strike (8 Oct, Donges, Normandy, La Mède) now confirmed by two sources, not renewed so far; 92% of French stations without difficulty on 10 Oct. French pilots/cabin crew strike notice for 17–21 Oct (Air France, Transavia, Volotea, Corsair), not direct Swiss–Irish flights. Check Brittany Ferries Rosslare–Cherbourg directly: reports conflict on which ship serves it from 12 Oct.',
     sources: [
-      'https://www.thelocal.ch/20261008/could-switzerland-experience-fuel-shortages-this-autumn',
-      'https://www.swissinfo.ch/eng/war-peace/swiss-oil-supplies-once-again-secured-through-regular-channels/92092781',
-      'https://www.irishferries.com/uk-en/sailing-updates/ireland-france/',
-      'https://cyprusshippingnews.com/2026/10/09/brittany-ferries-move-barfleur-to-rosslare-cherbourg-route/',
+      'https://www.boursedirect.fr/fr/actualites/categorie/economie/greve-totalenergies-les-expeditions-de-carburants-bloquees-dans-plusieurs-raffineries-selon-la-cgt-afp-6e75ad838c2fde425f414d0db743749c9badf7f6',
+      'https://infos-media-nantes.fr/donges-raffinerie-totalenergies-greve-8-octobre-2026-cgt-45-postes/',
+      'https://www.prix-carburants.gouv.fr/disponibilites-carburants',
+      'https://www.travelextra.ie/france-pilots-and-cabin-crew-serve-strike-notice-for-october-17-21/',
+      'https://www.aferry.com/ferry-deals/no8287/brittany-ferries-route-changes/',
     ],
   },
 };
