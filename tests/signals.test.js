@@ -120,3 +120,16 @@ test('rss parsing', () => {
   assert.equal(items[0].date, '2026-10-09T22:00:00.000Z');
   assert.equal(items[1].date, null);
 });
+
+test('latest items filters by publisher and sorts newest first', () => {
+  const items = [
+    { title: 'War in Ukraine | Global Conflict Tracker - Council on Foreign Relations', link: 'https://news.google.com/a', date: '2026-10-13T00:00:00.000Z' },
+    { title: 'Russian Offensive Campaign Assessment, October 7, 2026 - Institute for the Study of War', link: 'https://news.google.com/b', date: '2026-10-08T00:00:00.000Z' },
+    { title: 'Russian Offensive Campaign Assessment, October 12, 2026 - Institute for the Study of War', link: 'https://news.google.com/c', date: '2026-10-13T02:00:00.000Z' },
+  ];
+  const out = L.latestItems(items, /institute for the study of war|understandingwar/i, 5);
+  assert.deepEqual(out.map((i) => i.title), [
+    'Russian Offensive Campaign Assessment, October 12, 2026',
+    'Russian Offensive Campaign Assessment, October 7, 2026',
+  ]);
+});
