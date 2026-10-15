@@ -2,92 +2,94 @@
 // applyAssessment). Applied once per issuedAt, and only to readings not
 // checked by hand since. Set to null when there is nothing to publish.
 //
-// 2026-10-14: daily check, compiled from dated news search results. Source
+// 2026-10-15: daily check, compiled from dated news search results. Source
 // pages could not be opened directly, so key facts should be confirmed by hand.
 window.Assessment = {
-  date: '2026-10-14',
-  issuedAt: '2026-10-14T05:10:00Z',
+  date: '2026-10-15',
+  issuedAt: '2026-10-15T05:10:00Z',
   ladder: 2,
   categories: {
     conventional: {
       status: 'amber',
-      note: 'Top of amber. Overnight into 13 Oct drones hit two more merchant ships off Bulgaria (one sank, up to 10 missing), the second sinking in a week; Bulgaria\'s PM says the outcome benefits Russia and summoned the Russian ambassador, but ruled out Articles 4/5 and asked the EU and NATO for help identifying the drones. Rutte says NATO will adjust its Black Sea posture. An Article 4 request would be the next step up. Energy ceasefire still not in force (Peskov 13 Oct: "no new developments").',
+      note: 'Top of amber. 14 Oct: tanker Yara J caught fire at anchor in Romanian territorial waters near Sulina (crew safe); Romania is investigating whether a drone hit it, which would be the first strike inside a NATO member\'s own waters. Bulgaria\'s PM says Russia was "likely" behind drone strikes on four ships in a week (two sunk, 11 missing); Bulgaria, Romania and Türkiye are sharing more intelligence and Bulgaria expects to join NATO\'s anti-drone initiative by 30 Oct. No Article 4 request. China\'s live-fire drills (12–17 Oct) are along its own coast, not around Taiwan.',
       sources: [
-        'https://www.aljazeera.com/news/2026/10/13/drone-attack-sinks-ship-off-bulgarias-black-sea-coast-pm-says',
-        'https://brusselssignal.eu/2026/10/bulgaria-asks-eu-and-nato-to-help-identify-drones-that-sank-ship-in-black-sea/',
-        'https://united24media.com/world/rutte-says-nato-will-adjust-black-sea-defense-posture-after-russian-drone-attacks-on-commercial-ships-23391',
-        'https://tass.com/politics/2201369',
+        'https://wtxnews.com/ship-catches-fire-in-romanias-waters-amid-increased-black-sea-tensions/',
+        'https://www.usnews.com/news/world/articles/2026-10-14/bulgaria-expects-to-join-nato-anti-drone-initiative-this-month-says-minister',
+        'https://www.washingtonpost.com/business/2026/10/14/bulgaria-russia-ukraine-drone-attacks-radev-yotova/ff75351c-c7c4-11f1-aefb-abe4112d087e_story.html',
+        'https://focustaiwan.tw/politics/202610120006',
       ],
     },
     posture: {
       status: 'green',
-      note: 'Close to amber, no change. NATO Steadfast Noon runs 13–23 Oct (17 allies, routine scale). No Russian reaction, Grom announcement, counter-drill, Barents NOTAM or SSBN/bomber/warhead moves found. Russia held its big nuclear exercise in May, so an October Grom is not certain; watch 18–22 Oct.',
+      note: 'Close to amber, no change. Steadfast Noon under way (13–23 Oct). No Kremlin statement on it (only a 9 Oct embassy line that Russia "will closely monitor"), no Grom announcement, Barents NOTAMs, or SSBN/bomber/warhead moves. Watch 18–22 Oct.',
       sources: [
         'https://www.stripes.com/theaters/europe/2026-10-13/steadfast-noon-nato-exercise-23139099.html',
-        'https://ny1.com/nyc/all-boroughs/ap-top-news/2026/10/08/nato-presses-ahead-with-steadfast-noon-nuclear-drill-after-russias-nuclear-warning',
+        'https://tass.com/politics/2201479',
         'https://www.nato.int/en/news-and-events/articles/news/2026/10/08/nato-holds-annual-nuclear-exercise-steadfast-noon',
       ],
     },
     continuity: {
       status: 'green',
-      note: 'No change. No civil defence activation, leader relocation or emergency powers in NATO states or Switzerland; Bulgaria\'s response to the Black Sea sinkings is diplomatic.',
+      note: 'No change. No civil defence activation, leader relocation or emergency powers in NATO states or Switzerland; only long-term planning (e.g. Germany\'s civil defence overhaul).',
       sources: [
-        'https://www.aljazeera.com/news/2026/10/13/drone-attack-sinks-ship-off-bulgarias-black-sea-coast-pm-says',
-        'https://thedefensepost.com/2026/09/04/finland-wartime-civil-defense-drill/',
+        'https://san.com/cc/germany-rushes-civil-defense-overhaul-as-russian-threat-grows/',
+        'https://en.ara.cat/international/evacuation-plans-sirens-and-new-shelters-eastern-europe-prepares-for-the-russian-threat_1_5868887.html',
       ],
     },
     diplomacy: {
       status: 'green',
-      note: 'Close to amber, no change. Bulgaria summoned the Russian ambassador over the Black Sea sinkings (counted under conventional conflict). No expulsions, closures, suspended talks or new "leave" advisories; Irish DFA pages unchanged per the signals feed.',
+      note: 'Close to amber, no change. No expulsions, closures, suspended talks or new "leave" advisories. Bulgaria, Romania and Türkiye are taking a Black Sea shipping-security plan to the EU Council (15–16 Oct). Russia–Montenegro visa tit-for-tat (14 Oct) is minor.',
       sources: [
-        'https://brusselssignal.eu/2026/10/bulgaria-asks-eu-and-nato-to-help-identify-drones-that-sank-ship-in-black-sea/',
+        'https://ria.ru/20261014/bolgarija-2124552178.html',
+        'https://eadaily.com/ru/news/2026/10/14/zaharova-ozvuchila-otvet-moskvy-na-vvedenie-chernogoriey-vizovogo-rezhima-dlya-rossiyan',
         'https://www.ireland.ie/en/dfa/overseas-travel/advice/russian-federation/',
-        'https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/lithuania-travel-advisory.html',
       ],
     },
     rhetoric: {
       status: 'amber',
-      note: 'Top of amber, no change. The 30 Sep Kaliningrad nuclear note and Putin\'s 1 Oct Valdai remarks stand; no Russian reaction yet to Steadfast Noon, no deadlines or readiness announcements. Zakharova\'s weekly briefing (Wed/Thu) is the next likely venue.',
+      note: 'Amber, easing slightly. Zakharova\'s 14 Oct briefing did not mention Steadfast Noon, Kaliningrad or the Bulgarian sinkings; Peskov said nuclear arsenals are "not an appropriate topic" for a possible Putin–Trump–Xi meeting. Calming items: 9 Oct Putin–Trump call (Kremlin says US de-escalation proposals received "with understanding"); NATO says no Kaliningrad blockade planned. The 30 Sep nuclear note still stands; no deadlines or readiness announcements.',
       sources: [
+        'https://ria.ru/20261014/zakharova--2124382694.html',
+        'https://www.tasnimnews.ir/en/news/2026/10/14/3723004/nuclear-arsenals-unlikely-to-be-discussed-by-putin-trump-xi-jinping-kremlin',
+        'https://tass.com/world/2200231',
         'https://www.aljazeera.com/news/2026/9/30/russia-warns-nato-of-possible-nuclear-response-if-kaliningrad-is-cut-off',
-        'https://www.cnn.com/2026/10/01/europe/putin-kaliningrad-warning-ukraine-latam-intl',
-        'https://www.stripes.com/theaters/europe/2026-10-13/steadfast-noon-nato-exercise-23139099.html',
       ],
     },
     infrastructure: {
       status: 'amber',
-      note: 'Raised from green: sudden cluster. 13 Oct: cyberattacks on refrigeration controllers made systems overheat in ~700 of France\'s 10,000 supermarkets (Paris cybercrime unit investigating; government says food supply not at risk). Ahold Delhaize took Albert Heijn, Etos and Gall & Gall systems offline from 11 Oct, likely a cyberattack. Attribution unknown; no grid, bank or telecom outages, cable cuts or new GPS jamming.',
+      note: 'Amber, ongoing. France\'s cyber agency ANSSI says the supermarket refrigeration attack (~700 stores) is "likely still underway" and also hit Copeland/Dixell controllers; no claim of responsibility. Ahold Delhaize\'s Dutch chains still restoring systems on 13 Oct, with fresh-produce shortages in major cities. No grid, bank or telecom outages, cable cuts or new GPS jamming.',
       sources: [
-        'https://abcnews.com/Business/wireStory/cyberattack-targeting-refrigeration-systems-hits-700-supermarkets-french-137230099',
-        'https://www.news4jax.com/business/2026/10/13/cyberattack-targeting-refrigeration-systems-hits-700-supermarkets-french-government-says/',
-        'https://nltimes.nl/2026/10/13/albert-heijn-outage-likely-cyber-attack-experts-say',
+        'https://www.cnn.com/2026/10/14/europe/france-cyberattack-supermarket-fridges-intl',
+        'https://www.technology.org/2026/10/14/french-supermarket-fridge-hack-copeland-dixell-anssi/',
+        'https://retaildetail.eu/news/food/cyber-attack-also-affects-dutch-employees-of-ahold-delhaize',
       ],
     },
     markets: {
       status: 'amber',
-      note: 'Energy stress persists. Brent settled $105.69 on 13 Oct; Hormuz attacks escalated (UKMTO: tanker and container ship hit; IRGC claims more strikes), the worst run since the war began. No US strikes on the Houthis yet. Elsewhere calm: VIX ~15.2, gold ~$4,170, EUR/CHF ~0.93.',
+      note: 'Amber. Houthi missiles hit Aramco HQ in Dhahran overnight 13–14 Oct; Trump "evaluating" joining Saudi strikes, none yet. Brent ~$105–106 (intraday $108.70). VIX up to ~16.9 and S&P −1.2% on hot US inflation data, gold down ~1.9% to ~$4,100: rate-driven, not war panic. EUR/CHF ~0.933.',
       sources: [
-        'https://investinglive.com/commodities/catch-up-time-oil-settles-mixed-brent-near-106-booms-reported-near-aramco-hq-in-dhahran',
-        'https://www.democracynow.org/2026/10/13/headlines/irans_irgc_says_it_struck_another_tanker_in_strait_of_hormuz',
-        'https://www.cbsnews.com/live-updates/iran-war-us-trump-saudi-arabia-houthi/',
+        'https://www.bloomberg.com/news/articles/2026-10-14/aramco-headquarters-hit-as-houthis-widen-attacks-on-saudi-arabia',
+        'https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-14-2026',
+        'https://tradingeconomics.com/commodity/brent-crude-oil',
       ],
     },
     strategic: {
       status: 'amber',
-      note: 'Deteriorating, no change. No new testing or arms-control news after 13 Oct; no high-level talks among nuclear powers. North Korea\'s last confirmed launch was 3 Oct (IRBM drill); a reported 12 Oct launch is unconfirmed.',
+      note: 'Deteriorating, minor change. North Korea tested two types of submarine-launched cruise missiles (15 Oct), framed as checking its nuclear deterrent, after a hypersonic launch (3 Oct) and a tactical ballistic missile (12 Oct). No new US–Russia–China testing or treaty news.',
       sources: [
-        'https://www.armscontrol.org/act/2026-10/focus/trump-xi-putin-failing-tackle-nuclear-threat',
-        'https://ground.news/daily-briefing/88bb3588-181b-4620-bcfe-161bdb8a7702',
+        'https://www.aljazeera.com/news/2026/10/15/north-korea-tests-two-submarine-launched-missiles-state-media-reports',
+        'https://www.bloomberg.com/news/articles/2026-10-03/north-korea-s-kim-oversaw-hypersonic-missile-drill-kcna-says',
       ],
     },
   },
   logistics: {
     status: 'amber',
-    note: 'No change. French airline crew strike still suspended (pension decree not yet published; could be re-filed). Barfleur running Rosslare–Cherbourg since 12 Oct with no spare ship; Irish Ferries Dublin–Cherbourg normal. No disruption to Zurich/Basel/Geneva–Dublin/Belfast flights or new French fuel strikes found. Watch French supermarket cyber incident for any knock-on to fuel or retail.',
+    note: 'Amber. Correction: the French TotalEnergies refinery strike continues (CGT 12 Oct: "the strike continues"); over 1,300 French stations short of at least one fuel, mostly in Grand Est, on the driving route to Cherbourg. Carry fuel or fill up in Switzerland. Barfleur made her first Rosslare–Cherbourg crossing but is confirmed only for October. French airline crew strike still suspended (decree not yet published). Irish Ferries Dublin–Cherbourg and Swiss–Irish flights normal.',
     sources: [
+      'https://prix-carburant.eu/article/greve-raffinerie-totalenergies-normandie',
+      'https://media.roole.fr/quotidien/au-volant/greve-chez-totalenergies-raffineries-bloquees-stations-touchees-faut-il-craindre-une-penurie-de-carburant',
+      'https://afloat.ie/port-news/ferry-news/brittany-ferries/item/73373-former-english-channel-ferry-barfleur-debuts-on-france-ireland-route-albeit-temporarily',
       'https://www.deplacementspros.com/transport/l-intersyndicale-des-pnc-suspendent-leur-preavis-de-greve-nationale',
-      'https://brittanyferriesnewsroom.com/brittany-ferries-move-barfleur-to-rosslare-cherbourg-route/',
-      'https://www.irishferries.com/ie-en/sailing-updates/ireland-france/',
     ],
   },
 };
