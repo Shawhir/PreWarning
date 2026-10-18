@@ -41,8 +41,8 @@ const RSS_FEEDS = [
       'https://understandingwar.org/feed/',
       'https://www.understandingwar.org/rss.xml',
       // ISW blocks automated requests at times; fall back to a news search.
-      'https://news.google.com/rss/search?q=site:understandingwar.org+when:7d&hl=en-GB&gl=GB&ceid=GB:en',
-      'https://news.google.com/rss/search?q=%22Institute+for+the+Study+of+War%22+%22Campaign+Assessment%22+when:7d&hl=en-GB&gl=GB&ceid=GB:en',
+      'https://news.google.com/rss/search?q=site:understandingwar.org+when:14d&hl=en-GB&gl=GB&ceid=GB:en',
+      'https://news.google.com/rss/search?q=%22Institute+for+the+Study+of+War%22+%22Campaign+Assessment%22+when:14d&hl=en-GB&gl=GB&ceid=GB:en',
     ],
   },
 ];
