@@ -272,9 +272,10 @@ function parseRss(xml, limit) {
 
 // Newest-first items whose title or link matches, with a news aggregator's
 // " - Publisher" title suffix removed.
-function latestItems(items, match, limit) {
+function latestItems(items, match, limit, titleMatch) {
   return items
     .filter((i) => !match || match.test(i.title || '') || match.test(i.link || ''))
+    .filter((i) => !titleMatch || titleMatch.test(i.title || ''))
     .map((i) => ({ ...i, title: i.title.replace(/\s+-\s+Institute for the Study of War$/i, '') }))
     .sort((a, b) => (b.date || '').localeCompare(a.date || ''))
     .slice(0, limit || 5);

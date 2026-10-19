@@ -133,3 +133,12 @@ test('latest items filters by publisher and sorts newest first', () => {
     'Russian Offensive Campaign Assessment, October 7, 2026',
   ]);
 });
+
+test('latest items can require report-style titles', () => {
+  const items = [
+    { title: 'John Gillespie', link: 'https://understandingwar.org/people/john', date: '2026-10-18T00:00:00.000Z' },
+    { title: 'Russian Offensive Campaign Assessment, October 15, 2026', link: 'https://understandingwar.org/a', date: '2026-10-16T00:00:00.000Z' },
+  ];
+  const out = L.latestItems(items, /understandingwar/i, 5, /assessment|update/i);
+  assert.deepEqual(out.map((i) => i.title), ['Russian Offensive Campaign Assessment, October 15, 2026']);
+});

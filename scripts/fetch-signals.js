@@ -37,6 +37,8 @@ const RSS_FEEDS = [
     name: 'Institute for the Study of War',
     // News-search results can include other publishers; keep ISW's own.
     match: /institute for the study of war|understandingwar/i,
+    // Reports only, not staff or topic pages.
+    titleMatch: /assessment|update|control of terrain|warning|campaign/i,
     urls: [
       'https://understandingwar.org/feed/',
       'https://www.understandingwar.org/rss.xml',
@@ -184,7 +186,7 @@ async function fetchFeeds() {
     const errors = [];
     for (const url of f.urls) {
       try {
-        const items = L.latestItems(L.parseRss(await (await get(url)).text(), 50), f.match, 5);
+        const items = L.latestItems(L.parseRss(await (await get(url)).text(), 50), f.match, 5, f.titleMatch);
         if (!items.length) throw new Error('no items');
         Object.assign(entry, { ok: true, url, items, error: null });
         break;
