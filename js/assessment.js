@@ -2,91 +2,92 @@
 // applyAssessment). Applied once per issuedAt, and only to readings not
 // checked by hand since. Set to null when there is nothing to publish.
 //
-// 2026-10-20: daily check, compiled from dated news search results. Source
+// 2026-10-21: daily check, compiled from dated news search results. Source
 // pages could not be opened directly, so key facts should be confirmed by hand.
 window.Assessment = {
-  date: '2026-10-20',
-  issuedAt: '2026-10-20T05:10:00Z',
+  date: '2026-10-21',
+  issuedAt: '2026-10-21T05:15:00Z',
   ladder: 2,
   categories: {
     conventional: {
       status: 'amber',
-      note: 'Amber, slightly below top of band. The 18 Oct drone that exploded over Lithuania was Ukrainian, likely diverted by Russian jamming; Ukraine apologised (19 Oct). Lithuania says it entered from Poland, which is reviewing radar data. The 17 Oct Romanian shootdown of two Geran drones is confirmed by several dated sources. No new shootdowns or ship strikes since; North Atlantic Council meets on Black Sea defence today (20 Oct), outcome pending, no Article 4. Bulgaria says allied aircraft will "soon" be based there (single source).',
+      note: 'Amber, slightly below top of band. 20 Oct: the North Atlantic Council agreed to send maritime patrol aircraft, radars, drones, EOD teams and intelligence staff to the Black Sea, focused on surveillance; no country blamed, no Article 4. Russia reportedly rejected a Black Sea escort proposal (single source). No new drone incursions or ship strikes since 17 Oct and 15 Oct respectively. Romania\'s Supreme Defence Council meets 22 Oct.',
       sources: [
-        'https://notesfrompoland.com/2026/10/19/lithuania-says-ukrainian-drone-that-struck-car-entered-its-airspace-from-poland/',
-        'https://easternherald.com/2026/10/19/lithuania-drone-crash-kyiv-apology-car/',
-        'https://www.stripes.com/theaters/europe/2026-10-19/romania-drones-nato-meeting-23196504.html',
-        'https://www.usnews.com/news/world/articles/2026-10-18/romanian-f-16-fighter-jets-shoot-down-two-drones-over-romanian-territorial-waters',
+        'https://www.aljazeera.com/news/2026/10/20/nato-to-send-additional-patrol-planes-to-black-sea-after-drone-attacks',
+        'https://kyivindependent.com/nato-to-bolster-black-sea-presence-with-patrol-aircraft-drones-after-attacks-on-commercial-ships/',
+        'https://www.trtworld.com/article/6056ebaead35',
+        'https://www.romaniajournal.ro/politics/romanias-president-calls-security-council-over-black-sea/',
       ],
     },
     posture: {
       status: 'green',
-      note: 'Close to amber, no change. No Grom announcement, confirmed NOTAMs, or unusual bomber/SSBN activity. The claim that TASS announced exercises in response to Steadfast Noon remains single-sourced. Watch through 23 Oct (Steadfast Noon ends; Grom ran 22 Oct last year).',
+      note: 'Close to amber, no change. No Grom announcement, Kremlin readout, new NOTAMs (latest Kapustin Yar closure 28 Sep–3 Oct) or unusual bomber/SSBN activity. Claims of Russian exercises or Oreshnik launches "from 22 Oct" remain single-source and possibly from 2025. Watch 22–23 Oct (Steadfast Noon ends 23 Oct; Grom was 22 Oct last year).',
       sources: [
+        'https://militarnyi.com/en/news/russia-closes-airspace-over-kapustin-yar-launch-site-for-oreshnik-missiles/',
         'https://www.peacelink.it/en/a/51684.html',
-        'https://www.usnews.com/news/world/articles/2026-10-08/nato-presses-ahead-with-steadfast-noon-nuclear-drill-after-russias-nuclear-warning',
+        'https://tass.com/politics/2202573',
       ],
     },
     continuity: {
       status: 'green',
-      note: 'No change. Lithuania\'s 18 Oct shelter alerts (Šiauliai, Panevėžys) lasted about an hour and were not repeated. No activation, leader relocation or emergency powers in major NATO states or Switzerland.',
+      note: 'No change. No civil defence activation, leader relocation or emergency powers in NATO states or Switzerland; Romania\'s 22 Oct security council meeting is routine.',
       sources: [
-        'https://www.usnews.com/news/world/articles/2026-10-18/lithuania-told-residents-to-go-to-shelters-after-detecting-a-flying-object',
-        'https://kyivindependent.com/nato-jets-scramble-as-drone-explodes-in-lithuanian-airspace/',
+        'https://www.romaniajournal.ro/politics/romanias-president-calls-security-council-over-black-sea/',
+        'https://kyivindependent.com/european-countries-bolster-defenses-as-officials-warn-of-growing-russian-hybrid-threat/',
       ],
     },
     diplomacy: {
       status: 'green',
-      note: 'Close to amber, no change. No new expulsions, drawdowns, talks broken off or "leave" advisories. Zakharova reportedly blamed Kyiv for the Bulgarian ship strikes (single source). No Russian reaction to the Romanian shootdowns.',
+      note: 'Close to amber, no change. No new expulsions, drawdowns, talks broken off or "leave" advisories (UK advice for Romania unchanged since 18 Sep). Older items (US "leave Russia" 6 Oct, Russian expulsion of Hungarian diplomats 1 Oct) are baseline.',
       sources: [
-        'https://www.usnews.com/news/world/articles/2026-10-18/romanian-f-16-fighter-jets-shoot-down-two-drones-over-romanian-territorial-waters',
-        'https://balgarianovinite.com/en/defence-minister-nato-aircraft-are-expected-ar/',
+        'https://www.gov.uk/foreign-travel-advice/romania',
         'https://www.ireland.ie/en/dfa/overseas-travel/advice/russian-federation/',
+        'https://kyivindependent.com/ukraine-to-compensate-damaged-cargo-ships-as-russia-rejects-black-sea-proposal/',
       ],
     },
     rhetoric: {
       status: 'amber',
-      note: 'Amber, no change. No new nuclear statements, ultimatums or readiness announcements since the 30 Sep–1 Oct Kaliningrad warnings; no Russian comment on Steadfast Noon. Zakharova\'s midweek briefing is the next likely venue.',
+      note: 'Amber, no change. No Russian reaction yet to NATO\'s 20 Oct Black Sea decision, Steadfast Noon or the Romanian shootdowns; Moscow still denies the ship attacks. No new nuclear statements, deadlines or readiness announcements since 30 Sep–1 Oct. Three weeks of official quiet after the Kaliningrad threats is worth watching but is not the "sudden silence" red signal.',
       sources: [
-        'https://www.themoscowtimes.com/2026/09/30/moscow-sends-nuclear-warning-to-nato-as-tensions-rise-in-the-baltic-a93828',
+        'https://www.aljazeera.com/news/2026/10/20/nato-to-send-additional-patrol-planes-to-black-sea-after-drone-attacks',
         'https://www.cnn.com/2026/10/01/europe/putin-kaliningrad-warning-ukraine-latam-intl',
       ],
     },
     infrastructure: {
       status: 'amber',
-      note: 'Amber, no change. Retail refrigeration attack still unclaimed; a Sekoia analyst says Spain, Portugal, Poland, Germany and Belgium were also hit (analyst view, not official). No cable cuts, GPS jamming, or grid/bank/telecom outages.',
+      note: 'Amber, no change. Retail refrigeration attack still unclaimed; spread beyond France not officially confirmed. No new cyber incidents, cable cuts, GPS jamming or national outages 20–21 Oct.',
       sources: [
-        'https://www.tomshardware.com/tech-industry/cyber-security/unprecedented-cyberattack-cripples-supermarket-fridges-across-europe-as-hackers-activate-automatic-defrosting-delivery-and-store-prices-also-impacted-by-incident',
-        'https://www.darkreading.com/ics-ot-security/eu-grocers-unpatched-fridge-firmware',
+        'https://www.cnn.com/2026/10/14/europe/france-cyberattack-supermarket-fridges-intl',
         'https://en.wikipedia.org/wiki/2026_French_supermarket_refrigerator_hack',
       ],
     },
     markets: {
       status: 'amber',
-      note: 'Amber, easing slightly. Monday 19 Oct: Brent ~$108–109 (down ~1.5% on a US Russia-sanctions waiver), VIX 18.4 (−7.8%), gold ~$4,160, EUR/CHF ~0.926. Iran says its 7-day Hormuz reopening plan is "still on the table"; no deal or new escalation since the 17–18 Oct mine strikes.',
+      note: 'Amber. Tue 20 Oct: Brent spiked to $111–112 intraday (five-month high) on Houthi strikes on Saudi energy sites, settling ~$108.8 as Pakistan began mediating with Iran; ~$109.6 early Wed. VIX ~17.3, gold ~$4,135, EUR/CHF ~0.924 (franc creeping firmer). IRGC mine claims unsupported per JMIC; Hormuz transits down ~70%.',
       sources: [
-        'https://vantagemarkets.com/market-analysis/crude-oil-prices-slip-russia-sanctions-waiver-brent-wti-october-19-2026',
-        'https://www.turkiyetoday.com/region/hormuz-can-reopen-in-6-days-if-us-meets-irans-terms-araghchi-3230616',
-        'https://cappnotes.substack.com/p/closing-look-monday-october-19-2026',
+        'https://energynow.com/2026/10/oil-prices-surge-as-middle-east-attacks-push-brent-above-111-and-wti-back-above-100/',
+        'https://www.asiaone.com/money/brent-falls-irans-president-discusses-mediation-pakistani-army-chief',
+        'https://gcaptain.com/iran-claims-more-tankers-hit-mines-in-hormuz-but-evidence-remains-elusive/',
       ],
     },
     strategic: {
       status: 'amber',
-      note: 'Deteriorating, no change. Trump\'s 15 Oct denuclearisation-talks claim still unconfirmed by Russia or China; no scheduled round. No testing news.',
+      note: 'Deteriorating, small change. Trump says he is open to a Putin–Xi summit focused on denuclearisation (19–20 Oct), possibly at APEC in Shenzhen (18–19 Nov); Peskov says discussed, nothing agreed. China has called three-way disarmament talks unfair and unrealistic. No new tests.',
       sources: [
-        'https://www.internazionale.it/ultime-notizie-reuters/2026/10/16/trump-says-he-is-talking-to-russia-and-china-about-denuclearization',
-        'https://www.businesstoday.in/world/story/whole-thing-is-a-shame-trump-says-he-is-talking-to-china-russia-about-denuclearisation-561950-2026-10-16',
+        'https://www.bloomberg.com/news/articles/2026-10-19/trump-open-to-putin-xi-summit-but-would-focus-on-nuclear-arms',
+        'https://time.com/article/2026/10/20/trump-summit-putin-xi-russia-china-ukraine-nuclear-weapons/',
+        'https://www.aa.com.tr/en/world/china-says-asking-it-to-join-disarmament-talks-neither-fair-nor-reasonable-after-trump-s-denuclearization-remarks/4091154',
       ],
     },
   },
   logistics: {
     status: 'amber',
-    note: 'Amber. French fuel confirmed by several dated sources: on 18 Oct 595 stations completely dry and 16.3% short of at least one fuel, worst in Grand Est and Île-de-France, ~87% of dry stations TotalEnergies; diesel ~€2.36/L. Stable since early October. A further social mobilisation is called for 5 Nov. Fill up in Switzerland. Ferries and Swiss–Irish flights normal.',
+    note: 'Amber, French fuel worsening. Selectra: 28.7% of stations missing at least one fuel (Sun 18 Oct evening), up from ~16%; Grand Est worst at 23.6%; a jerrycan-filling ban there is reported by one source. Five unions call a general strike for 5 Nov, which could hit depots. Fill up in Switzerland and avoid relying on French fuel. Barfleur covers Rosslare–Cherbourg in October only (November unknown); Irish Ferries and Swiss–Irish flights normal.',
     sources: [
+      'https://selectra.info/energie/actualites/marche/carburant-rupture-dimanche-soir-carte-toussaint',
+      'https://www.planet.fr/penurie-de-carburant-faut-il-faire-le-plein-pres-de-600-stations-sont-deja-a-sec.2999923.817032.html',
       'https://www.journaldeleconomie.fr/carburant-pourquoi-595-stations-vides/',
-      'https://lenergeek.com/2026/10/19/carburant-energie-france-crise-2026/',
-      'https://lautomobiliste.fr/19/10/2026/guide-automobiliste-carburant-penurie/',
-      'https://cyprusshippingnews.com/2026/10/09/brittany-ferries-move-barfleur-to-rosslare-cherbourg-route/',
+      'https://afloat.ie/port-news/ferry-news/brittany-ferries/item/73373-former-english-channel-ferry-barfleur-debuts-on-france-ireland-route-albeit-temporarily',
     ],
   },
 };
