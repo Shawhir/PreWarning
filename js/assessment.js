@@ -2,92 +2,94 @@
 // applyAssessment). Applied once per issuedAt, and only to readings not
 // checked by hand since. Set to null when there is nothing to publish.
 //
-// 2026-10-21: daily check, compiled from dated news search results. Source
+// 2026-10-22: daily check, compiled from dated news search results. Source
 // pages could not be opened directly, so key facts should be confirmed by hand.
 window.Assessment = {
-  date: '2026-10-21',
-  issuedAt: '2026-10-21T05:15:00Z',
+  date: '2026-10-22',
+  issuedAt: '2026-10-22T05:15:00Z',
   ladder: 2,
   categories: {
     conventional: {
       status: 'amber',
-      note: 'Amber, slightly below top of band. 20 Oct: the North Atlantic Council agreed to send maritime patrol aircraft, radars, drones, EOD teams and intelligence staff to the Black Sea, focused on surveillance; no country blamed, no Article 4. Russia reportedly rejected a Black Sea escort proposal (single source). No new drone incursions or ship strikes since 17 Oct and 15 Oct respectively. Romania\'s Supreme Defence Council meets 22 Oct.',
+      note: 'Amber, slightly below top of band. No new drone incursions since 17 Oct or ship strikes since 15 Oct. First NATO-linked arrival: a US Navy P-8A at Varna, Bulgaria (20 Oct). Romania\'s Supreme Defence Council meets 22 Oct 18:00 on Black Sea security. Pakistan\'s nuclear adviser warned India may be moving toward a first-strike posture (20–21 Oct, rhetoric only, no military moves).',
       sources: [
-        'https://www.aljazeera.com/news/2026/10/20/nato-to-send-additional-patrol-planes-to-black-sea-after-drone-attacks',
-        'https://kyivindependent.com/nato-to-bolster-black-sea-presence-with-patrol-aircraft-drones-after-attacks-on-commercial-ships/',
-        'https://www.trtworld.com/article/6056ebaead35',
-        'https://www.romaniajournal.ro/politics/romanias-president-calls-security-council-over-black-sea/',
+        'https://www.stripes.com/theaters/europe/2026-10-20/nato-reinforcements-black-sea-shipping-23210458.html',
+        'https://nineoclock.ro/romanias-supreme-defence-council-to-discuss-black-sea-security-on-22-october/',
+        'https://arabnews.pk/pakistan/pakistan-nuclear-adviser-warns-india-may-be-moving-toward-first-strike-posture-3004674',
+        'https://dawn.com/news/2038662',
       ],
     },
     posture: {
       status: 'green',
-      note: 'Close to amber, no change. No Grom announcement, Kremlin readout, new NOTAMs (latest Kapustin Yar closure 28 Sep–3 Oct) or unusual bomber/SSBN activity. Claims of Russian exercises or Oreshnik launches "from 22 Oct" remain single-source and possibly from 2025. Watch 22–23 Oct (Steadfast Noon ends 23 Oct; Grom was 22 Oct last year).',
+      note: 'Close to amber, no change. No Kremlin readout or strategic launches dated 21–22 Oct 2026 (Grom-with-Putin results are all from 22 Oct 2025); no NOTAMs or bomber/SSBN activity. The single-source claim of a Russian exercise in response to Steadfast Noon remains unconfirmed. Steadfast Noon ends 23 Oct; a Grom-type drill framed as a response to NATO would make this amber.',
       sources: [
-        'https://militarnyi.com/en/news/russia-closes-airspace-over-kapustin-yar-launch-site-for-oreshnik-missiles/',
+        'https://www.cnn.com/2025/10/22/europe/russia-nuclear-drills-putin-intl',
         'https://www.peacelink.it/en/a/51684.html',
-        'https://tass.com/politics/2202573',
+        'https://militarnyi.com/en/news/russian-tu-95ms-bombers-carrying-kh-101-missiles-flew-over-barents-and-norwegian-seas/',
       ],
     },
     continuity: {
       status: 'green',
-      note: 'No change. No civil defence activation, leader relocation or emergency powers in NATO states or Switzerland; Romania\'s 22 Oct security council meeting is routine.',
+      note: 'No change. No civil defence activation, leader relocation or emergency powers in NATO states or Switzerland.',
       sources: [
         'https://www.romaniajournal.ro/politics/romanias-president-calls-security-council-over-black-sea/',
-        'https://kyivindependent.com/european-countries-bolster-defenses-as-officials-warn-of-growing-russian-hybrid-threat/',
+        'https://kyivindependent.com/nato-to-bolster-black-sea-presence-with-patrol-aircraft-drones-after-attacks-on-commercial-ships/',
       ],
     },
     diplomacy: {
       status: 'green',
-      note: 'Close to amber, no change. No new expulsions, drawdowns, talks broken off or "leave" advisories (UK advice for Romania unchanged since 18 Sep). Older items (US "leave Russia" 6 Oct, Russian expulsion of Hungarian diplomats 1 Oct) are baseline.',
+      note: 'Green, easing. 21 Oct: US envoy Witkoff met Putin for ~3 hours in St Petersburg; Russia released detained American Stephen Hubbard; Putin agreed in principle to resume Russia–Ukraine–US talks after 10 Nov, possibly in Abu Dhabi. No expulsions, drawdowns or new "leave" advisories for Russia or Europe.',
       sources: [
-        'https://www.gov.uk/foreign-travel-advice/romania',
-        'https://www.ireland.ie/en/dfa/overseas-travel/advice/russian-federation/',
-        'https://kyivindependent.com/ukraine-to-compensate-damaged-cargo-ships-as-russia-rejects-black-sea-proposal/',
+        'https://www.pbs.org/newshour/world/putin-agrees-to-resume-trilateral-russia-ukraine-u-s-talks-next-month',
+        'https://www.kwqc.com/2026/10/21/trump-envoy-witkoff-meets-putin-st-petersburg-ukraine-war-talks/',
+        'https://www.jpost.com/international/internationalrussia-ukraine-war/article-912448',
       ],
     },
     rhetoric: {
       status: 'amber',
-      note: 'Amber, no change. No Russian reaction yet to NATO\'s 20 Oct Black Sea decision, Steadfast Noon or the Romanian shootdowns; Moscow still denies the ship attacks. No new nuclear statements, deadlines or readiness announcements since 30 Sep–1 Oct. Three weeks of official quiet after the Kaliningrad threats is worth watching but is not the "sudden silence" red signal.',
+      note: 'Amber, no change. No official Russian reaction to NATO\'s Black Sea decision, Steadfast Noon or the Romanian shootdowns; no new nuclear statements, deadlines or readiness announcements. Zakharova reportedly said Russia will use "all available forces and means" against threats to the Russia–Belarus Union State (single source, no nuclear mention).',
       sources: [
-        'https://www.aljazeera.com/news/2026/10/20/nato-to-send-additional-patrol-planes-to-black-sea-after-drone-attacks',
+        'https://news.ru/vlast/zaharova-raskryla-kak-rossiya-namerena-otvechat-na-ugrozy-u-granic',
+        'https://vz.ru/news/2026/10/21/1465854.html',
         'https://www.cnn.com/2026/10/01/europe/putin-kaliningrad-warning-ukraine-latam-intl',
       ],
     },
     infrastructure: {
       status: 'amber',
-      note: 'Amber, no change. Retail refrigeration attack still unclaimed; spread beyond France not officially confirmed. No new cyber incidents, cable cuts, GPS jamming or national outages 20–21 Oct.',
+      note: 'Amber, no change. No new incidents, cable cuts or GPS jamming since 21 Oct. Germany\'s BSI warns of follow-on attacks after the French refrigeration attack; Ahold Delhaize reported its cyber incident to Dutch police (19 Oct), deliveries due to resume 23 Oct.',
       sources: [
-        'https://www.cnn.com/2026/10/14/europe/france-cyberattack-supermarket-fridges-intl',
-        'https://en.wikipedia.org/wiki/2026_French_supermarket_refrigerator_hack',
+        'https://nltimes.nl/2026/10/19/albert-heijn-files-police-report-confirms-suspicious-activity-cyberattack-attempt',
+        'https://www.pbs.org/newshour/world/cyberattacks-disrupt-refrigeration-systems-at-european-supermarkets',
+        'https://www.bleepingcomputer.com/news/security/retail-giant-ahold-delhaize-takes-systems-offline-after-cyberattack/',
       ],
     },
     markets: {
       status: 'amber',
-      note: 'Amber. Tue 20 Oct: Brent spiked to $111–112 intraday (five-month high) on Houthi strikes on Saudi energy sites, settling ~$108.8 as Pakistan began mediating with Iran; ~$109.6 early Wed. VIX ~17.3, gold ~$4,135, EUR/CHF ~0.924 (franc creeping firmer). IRGC mine claims unsupported per JMIC; Hormuz transits down ~70%.',
+      note: 'Amber. US ordered non-emergency staff and families out of Saudi Arabia (21 Oct) over Houthi strikes; Brent settled $108.82 on 21 Oct, ~$110 in Asia on 22 Oct. Iran refuses to move enriched uranium abroad and repeats its Hormuz conditions; Pakistan mediating. VIX ~16.7, gold ~$4,110–4,150, EUR/CHF ~0.926.',
       sources: [
-        'https://energynow.com/2026/10/oil-prices-surge-as-middle-east-attacks-push-brent-above-111-and-wti-back-above-100/',
-        'https://www.asiaone.com/money/brent-falls-irans-president-discusses-mediation-pakistani-army-chief',
-        'https://gcaptain.com/iran-claims-more-tankers-hit-mines-in-hormuz-but-evidence-remains-elusive/',
+        'https://www.cbsnews.com/news/us-saudi-arabia-ordered-departure-houthis/',
+        'https://globalnews.ca/news/12112168/saudi-arabia-us-diplomat-evacuations-houthi-attacks/',
+        'https://www.aljazeera.com/news/2026/10/21/irans-enriched-uranium-re-emerges-as-point-of-contention-in-us-talks',
       ],
     },
     strategic: {
       status: 'amber',
-      note: 'Deteriorating, small change. Trump says he is open to a Putin–Xi summit focused on denuclearisation (19–20 Oct), possibly at APEC in Shenzhen (18–19 Nov); Peskov says discussed, nothing agreed. China has called three-way disarmament talks unfair and unrealistic. No new tests.',
+      note: 'Deteriorating, slightly firmer. Ushakov (21 Oct) says China is arranging a possible Putin–Trump–Xi meeting at APEC Shenzhen (18–19 Nov); Peskov says nothing agreed and China\'s foreign ministry has "no information". No arms-control or testing news.',
       sources: [
-        'https://www.bloomberg.com/news/articles/2026-10-19/trump-open-to-putin-xi-summit-but-would-focus-on-nuclear-arms',
-        'https://time.com/article/2026/10/20/trump-summit-putin-xi-russia-china-ukraine-nuclear-weapons/',
-        'https://www.aa.com.tr/en/world/china-says-asking-it-to-join-disarmament-talks-neither-fair-nor-reasonable-after-trump-s-denuclearization-remarks/4091154',
+        'https://en.cibercuba.com/noticias/2026-10-21-u1-e199894-s27061-nid343471-china-prepara-reunion-trilateral-putin-trump-xi',
+        'https://tass.com/politics/2205699',
+        'https://www.euronews.com/2026/10/20/trump-says-hes-ready-to-meet-putin-and-xi-in-china',
       ],
     },
   },
   logistics: {
     status: 'amber',
-    note: 'Amber, French fuel worsening. Selectra: 28.7% of stations missing at least one fuel (Sun 18 Oct evening), up from ~16%; Grand Est worst at 23.6%; a jerrycan-filling ban there is reported by one source. Five unions call a general strike for 5 Nov, which could hit depots. Fill up in Switzerland and avoid relying on French fuel. Barfleur covers Rosslare–Cherbourg in October only (November unknown); Irish Ferries and Swiss–Irish flights normal.',
+    note: 'Amber. French fuel: Selectra 27.5% of stations missing a fuel (19 Oct), slightly better than 28.7%; Grand Est still worst; the reported jerrycan ban is unconfirmed. 5 Nov general strike stands. Storm Austen: Met Éireann yellow rain warning 22 Oct 19:00–23 Oct 08:00 and orange marine warning; Irish Ferries Dublin–Cherbourg reportedly cancelled 22 Oct (single source). Barfleur on Rosslare–Cherbourg for October; November unknown. Swiss–Irish flights normal.',
     sources: [
       'https://selectra.info/energie/actualites/marche/carburant-rupture-dimanche-soir-carte-toussaint',
-      'https://www.planet.fr/penurie-de-carburant-faut-il-faire-le-plein-pres-de-600-stations-sont-deja-a-sec.2999923.817032.html',
-      'https://www.journaldeleconomie.fr/carburant-pourquoi-595-stations-vides/',
-      'https://afloat.ie/port-news/ferry-news/brittany-ferries/item/73373-former-english-channel-ferry-barfleur-debuts-on-france-ireland-route-albeit-temporarily',
+      'https://www.rustourismnews.com/2026/10/21/storm-austen-sparks-amber-weather-warning-as-uk-and-ireland-brace-for-travel-disruption/',
+      'https://www.irishferries.com/uk-en/sailing-updates/ireland-france/',
+      'https://www.24matins.fr/greve-du-5-novembre-ce-que-prepare-deja-lintersyndicale-1421874',
     ],
   },
 };
