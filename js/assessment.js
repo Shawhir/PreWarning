@@ -2,92 +2,88 @@
 // applyAssessment). Applied once per issuedAt, and only to readings not
 // checked by hand since. Set to null when there is nothing to publish.
 //
-// 2026-10-23: daily check, compiled from dated news search results. Source
+// 2026-10-24: daily check, compiled from dated news search results. Source
 // pages could not be opened directly, so key facts should be confirmed by hand.
 window.Assessment = {
-  date: '2026-10-23',
-  issuedAt: '2026-10-23T05:15:00Z',
+  date: '2026-10-24',
+  issuedAt: '2026-10-24T04:58:20Z',
   ladder: 2,
   categories: {
     conventional: {
       status: 'amber',
-      note: 'Amber, slightly below top of band. Romania\'s Supreme Defence Council (22 Oct) called the drone incursions and ship strikes consequences of Russia\'s aggression and set priorities (maritime surveillance, mine countermeasures, counter-drone, EU Black Sea hub), no concrete deployments. Russia hit Kyiv with ballistic missiles overnight 21–22 Oct, hours after the Witkoff–Putin meeting. No new drone incursions or ship strikes; India–Pakistan rhetoric only.',
+      note: "Amber, no change. No new drone incursions into NATO states, Black Sea ship strikes, NATO deployments or Baltic incidents found for 23–24 Oct; latest Romanian incident is still the 17 Oct F-16 shootdown of two Geran drones. Single-source reports (Militarnyi) of Moscow airport closures and a strike on a Russian data centre on 23 Oct are unconfirmed and would not change the status.",
       sources: [
-        'https://ziare.com/csat/sedinta-cotroceni-incheiat-decizii-luate-2043167',
-        'https://observatornews.ro/politic/csat-a-analizat-escaladarea-incidentelor-maritime-din-apele-teritoriale-ale-romaniei-670032.html',
-        'https://meduza.io/en/news/2026/10/22/russia-strikes-kyiv-hours-after-putin-meets-with-trump-envoy-witkoff-killing-one-and-injuring-more-than-20',
-        'https://kyivindependent.com/russian-ballistic-missiles-rock-kyiv-in-late-night-attack-injuring-6/',
+        'https://www.romania-insider.com/romanian-f-16s-shoot-down-two-geran-drones-black',
+        'https://www.capital.ro/mapn-face-bilantul-incidentelor-de-la-granita-18-drone-au-intrat-in-spatiul-aerian-al-romaniei-in-2026-trei-au-fost-doborate-de-avioane-f-16.html',
       ],
     },
     posture: {
       status: 'green',
-      note: 'Close to amber, no change. No Russian strategic exercise, Kremlin readout, NOTAMs, or bomber/SSBN activity found for 22–23 Oct 2026 (all Grom results were the 2025 drill). Steadfast Noon ends today (23 Oct) without a confirmed Russian counter-exercise.',
+      note: "Close to amber, no change. Steadfast Noon ended 23 Oct with no Russian counter-exercise found; the only 2026 Russian strategic forces drill found was 19–21 May. No NOTAMs or dated bomber/SSBN activity for 23–24 Oct; a NATO official said there was no alarming change in Russian nuclear posture.",
       sources: [
-        'https://www.usnews.com/news/world/articles/2026-10-08/nato-presses-ahead-with-steadfast-noon-nuclear-drill-after-russias-nuclear-warning',
-        'https://www.pravda.com.ua/eng/news/2025/10/22/8003937',
+        'https://russianforces.org/blog/2026/05/exercise_of_strategic_forces_h.shtml',
+        'https://political.org/2026/10/08/nato-launches-annual-steadfast-noon-nuclear-exercise-in-italy-despite-fresh-russian-nuclear-threats/',
       ],
     },
     continuity: {
       status: 'green',
-      note: 'No change. No civil defence activation, leader relocation or emergency powers in NATO states or Switzerland; Romania\'s council ordered no civil-protection measures.',
+      note: "No change. No civil defence activation, leader relocation or emergency powers in NATO states or Switzerland found for 23–24 Oct; only general preparedness coverage.",
       sources: [
-        'https://tvrinfo.ro/s-a-incheiat-prima-sedinta-csat-cu-participarea-premierului-luca-niculescu-incidentele-de-la-marea-neagra-pe-agenda/',
-        'https://ziare.com/csat/sedinta-cotroceni-incheiat-decizii-luate-2043167',
+        'https://en.ara.cat/international/evacuation-plans-sirens-and-new-shelters-eastern-europe-prepares-for-the-russian-threat_1_5868887.amp.html',
       ],
     },
     diplomacy: {
       status: 'green',
-      note: 'Green, stalled. No date or venue set for the talks Putin agreed to "in principle" after 10 Nov; Ushakov said Witkoff\'s proposals had "little of real value", and Russia struck Kyiv hours after the meeting. No expulsions, drawdowns or new "leave" advisories.',
+      note: "Green, stalled. Talks Putin agreed \"in principle\" for after 10 Nov (Abu Dhabi or Geneva mentioned) still have no date. No expulsions, embassy drawdowns or new \"leave\" advisories found.",
       sources: [
-        'https://www.cnn.com/2026/10/21/europe/us-envoy-witkoff-putin-talks-russia-ukraine-intl',
-        'https://www.manilatimes.net/2026/10/23/world/americas-emea/russian-attacks-show-no-change-in-kremlin-position/2451873',
         'https://www.usnews.com/news/world/articles/2026-10-21/putin-hosts-trump-envoy-for-new-ukraine-peace-talks-frees-us-citizen-held-in-russia',
+        'https://www.kktv.com/2026/10/21/trump-envoy-witkoff-meets-putin-st-petersburg-ukraine-war-talks/?outputType=amp',
       ],
     },
     rhetoric: {
       status: 'amber',
-      note: 'Amber, no change. Zakharova (22 Oct) said NATO is massing forces near Russia and Belarus and Russia is "ready to use the full spectrum of available forces and means" (no explicit nuclear mention). Ryabkov (20 Oct): "no grounds" to resume strategic stability talks. No new head-of-state nuclear statements, deadlines or readiness announcements.',
+      note: "Amber, no change. No new nuclear statements found for 23–24 Oct and no Russian reaction found to the end of Steadfast Noon. Latest: Zakharova (22 Oct) \"full spectrum of available forces and means\"; Ryabkov (22 Oct) settlement \"not easy\"; Peskov (20–21 Oct) on the \"extremely dangerous\" post-New START gap. No ultimatum or readiness announcement.",
       sources: [
+        'https://tass.com/politics/2206043',
         'https://www.ritmeurasia.ru/news--2026-10-22--zaharova-nato-namerenno-sozdaet-ugrozy-bezopasnosti-rossii-i-belarusi-91140',
-        'https://news.rambler.ru/politics/57276381-zaharova-zayavila-o-gotovnosti-rf-ispolzovat-vse-sredstva-dlya-ustraneniya-ugroz/',
-        'https://tass.com/politics/2204727',
+        'https://www.yahoo.com/news/politics/articles/kremlin-backs-possible-putin-trump-114852753.html',
       ],
     },
     infrastructure: {
       status: 'amber',
-      note: 'Amber, no change. Both retail cyberattacks still unclaimed; the Dutch NCSC and Ahold say the French and Dutch incidents are unrelated; Ahold deliveries resuming from 23 Oct. Background: reports of 17 Russian trawlers mapping transatlantic cables (single source). No cable cuts or GPS jamming.',
+      note: "Amber, no change. New: German distributor TAKKT reported a cyberattack (21 Oct) significantly restricting orders and deliveries, unclaimed; it joins the unclaimed French and Dutch retail incidents (Ahold deliveries resumed 23 Oct). No cable cuts or GPS jamming surge found.",
       sources: [
+        'https://www.boerse-online.de/dpa-afx/eqs-adhoc-takkt-ag-cyberangriff-bei-takkt-ag-deutsch-559914.html',
+        'https://safeguard.sh/resources/blog/takkt-cyberattack-october-2026-orders-deliveries-restricted',
         'https://therecord.media/ahold-delhaize-cyberattack-grocery',
-        'https://www.ibtimes.co.uk/albert-heijn-deliveries-resume-after-cyber-incident-1826826',
-        'https://mezha.net/eng/news/mezha-924d0d5145b5b6dedbbfcce5_17_russian_trawlers',
       ],
     },
     markets: {
       status: 'amber',
-      note: 'Amber, worsening. Brent settled $113.17 on 22 Oct (+4%, highest since May) after deadly Houthi strikes on Saudi oil sites (Shaybah, Yanbu) and Aramco\'s Dhahran HQ evacuation; NYT reports US–Israeli plans for renewed Iran strikes after 3 Nov (White House denies). Not crisis-level elsewhere: stocks up, VIX ~17–19, gold down to ~$4,020–4,090, EUR/CHF ~0.921 (franc firmer).',
+      note: "Amber, worsening. Brent settled $116.72 on 23 Oct (+3.1% on the day, ~+6.5% over 5 days, highest since April) after more Houthi strikes on Saudi targets and an unexplained oil spill off the UAE; the feed's 10% amber line has not been crossed. Dow fell 600+ points; VIX ~19.5–20.2 (highest since June). Gold ~$4,010 (down), EUR/CHF ~0.923 — no safe-haven rush. Israeli vote 27 Oct and reported post-3 Nov Iran strike plans are the near-term risks.",
       sources: [
-        'https://www.rigzone.com/news/wire/oil_surges_4_after_deadly_saudi_attacks-22-oct-2026-184912-article/',
-        'https://www.timeslive.co.za/news/world/2026-10-22-saudi-aramco-evacuates-dhahran-hq-after-houthi-attack-sources-say/',
-        'https://www.timesofisrael.com/us-israel-said-to-draft-plans-for-resumed-strikes-on-iran-after-midterm-elections/',
+        'https://asia.nikkei.com/business/markets/commodities/brent-crude-jumps-to-highest-since-april-on-houthi-attacks-uae-oil-spill',
+        'https://www.thenationalnews.com/business/energy/2026/10/23/oil-prices-rise-as-houthis-launch-another-wave-of-attacks-on-saudi-arabia/',
+        'https://foreignpolicy.com/2026/10/22/netanyahu-israel-election-overthrow-iran-regime-us-strikes-war/',
       ],
     },
     strategic: {
       status: 'amber',
-      note: 'Deteriorating, no change. Ryabkov says no grounds to resume US–Russia strategic stability talks (20 Oct); Putin–Trump–Xi APEC meeting (18–19 Nov) still unconfirmed. No testing news.',
+      note: "Deteriorating, no change. Putin–Trump–Xi meeting at APEC Shenzhen (18–19 Nov) still unconfirmed; Moscow wants arms control as the main topic. North Korea's latest launches 3 and 12 Oct; no testing news.",
       sources: [
-        'https://tass.com/politics/2204727',
-        'https://www.euronews.com/2026/10/19/putin-seeks-ukraine-summit-with-trump-and-xi-but-refuses-talks-with-zelenskyy',
+        'https://www.bloomberg.com/news/articles/2026-10-21/kremlin-says-china-preparing-for-possible-putin-trump-xi-meeting',
+        'https://www.koreatimes.co.kr/world/20261021/will-xi-trump-putin-meet-at-apec-first-they-must-agree-on-agenda',
       ],
     },
   },
   logistics: {
     status: 'amber',
-    note: 'Amber. Storm Austen: Met Éireann orange rain warnings incl. Dublin; Irish Sea ferries cancelled 23 Oct (Pembroke–Rosslare, Fishguard–Rosslare); Irish Ferries Cherbourg–Dublin 23 Oct and Dublin–Cherbourg 24 Oct listed cancelled (single source). Weather cancellations, not suspensions; a second storm may follow 24–25 Oct. French fuel: no data newer than 19 Oct (27.5% of stations short); 5 Nov strike. Swiss–Irish flights normal.',
+    note: "Amber. Storm Boelo: Met Éireann orange wind warning for Donegal (and Sligo, Leitrim, Mayo) from 14:00 Sat 24 Oct to 09:00 Sun 25 Oct — expect local disruption at the fallback. Irish Ferries Dublin–Cherbourg 24 Oct listed cancelled (single source); Brittany Ferries Rosslare–Cherbourg still running. French fuel: no data newer than 18–19 Oct (16% of stations short); general strike 5 Nov with SNCF unions. Weather cancellations, not suspensions.",
     sources: [
-      'https://www.thejournal.ie/storm-austen-rain-wind-direction-warnings-7200377-Oct2026/',
-      'https://uk.news.yahoo.com/ferry-services-cancelled-ahead-storm-122817025.html',
-      'https://www.irishferries.com/uk-en/sailing-updates/ireland-france/',
-      'https://selectra.info/energie/actualites/marche/carburant-rupture-dimanche-soir-carte-toussaint',
+      'https://highlandradio.com/2026/10/23/donegal-hit-with-several-weather-warnings-ahead-of-storm-boelo/',
+      'https://www.rte.ie/news/ireland/2026/1023/1596525-orange-rain-warning/',
+      'https://cyprusshippingnews.com/2026/10/09/brittany-ferries-move-barfleur-to-rosslare-cherbourg-route/',
+      'https://www.cestlagreve.fr/greve/greve-generale-5-novembre-2026/',
     ],
   },
 };
