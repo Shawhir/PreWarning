@@ -2,26 +2,25 @@
 // applyAssessment). Applied once per issuedAt, and only to readings not
 // checked by hand since. Set to null when there is nothing to publish.
 //
-// 2026-10-27: daily check, compiled from dated news search results. Source
+// 2026-10-28: daily check, compiled from dated news search results. Source
 // pages could not be opened directly, so key facts should be confirmed by hand.
 window.Assessment = {
-  date: '2026-10-27',
-  issuedAt: '2026-10-27T05:58:13Z',
+  date: '2026-10-28',
+  issuedAt: '2026-10-28T05:58:49Z',
   ladder: 2,
   categories: {
     conventional: {
       status: 'amber',
-      note: "Amber, at the top of the band (raised within amber). Correction: earlier readings missed that on 23 Oct a drone sank the cargo ship Khoryv about 13 nm off Constanța, just outside Romanian waters (1 killed, 3 missing); President Dan blamed Russia (AP, Reuters, Meduza). At least seven cargo ships have been hit off Romania and Bulgaria this month, with about 30 sailors dead or missing; NATO, France and the US are adding patrol aircraft. Serious, but not direct NATO–Russia combat and no Article 4. Nothing new confirmed for 26–27 Oct.",
+      note: "Amber, top of band, no change. No new ship hit in the Black Sea since the Khoryv sinking off Constanța on 23 Oct (searched specifically); no Article 4 request; no drone incursions into NATO states or Moldova for 27–28 Oct. Large Russian strike on Kyiv overnight 26–27 Oct (~280 drones plus ballistic missiles; at least 1 killed, ~15 injured; Southern Bridge and a university campus hit) — heavy, but within the Russia–Ukraine war. NATO is adding patrol aircraft, radars and drones in the Black Sea.",
       sources: [
-        'https://www.news4jax.com/news/2026/10/23/a-drone-hit-and-sank-a-cargo-vessel-in-new-black-sea-attack-near-romania-killing-1/',
-        'https://www.timeslive.co.za/news/world/2026-10-23-romania-blames-russia-for-drone-that-sunk-cargo-ship-1-killed-3-missing/',
-        'https://meduza.io/en/news/2026/10/23/romania-blames-russia-for-drone-strike-that-sinks-cargo-ship-in-black-sea-killing-one-sailor-and-leaving-three-missing',
-        'https://united24media.com/world/france-and-us-deploy-maritime-patrol-aircraft-to-black-sea-amid-russian-drone-attacks-23793',
+        'https://www.pravda.com.ua/eng/news/2026/10/27/8059874/',
+        'https://euromaidanpress.com/2026/10/27/russian-ballistic-missiles-hit-a-kyiv-university-campus-then-return-before-dawn-for-the-southern-bridge-again/',
+        'https://kyivindependent.com/nato-to-bolster-black-sea-presence-with-patrol-aircraft-drones-after-attacks-on-commercial-ships/',
       ],
     },
     posture: {
       status: 'green',
-      note: "Close to amber, no change. No Russian strategic exercise, reaction to US Global Thunder 27 (runs to ~1–2 Nov), nuclear-capable deployments, NOTAMs or bomber/SSBN activity found. Last Russian strategic drill 19–21 May 2026; an autumn drill remains possible.",
+      note: "Close to amber, no change. No Russian strategic exercise, reaction to US Global Thunder 27 (to ~1–2 Nov), missile launches, NOTAMs or bomber/SSBN reports found. Russia held its main drill in May this year; a short-notice autumn drill cannot be ruled out.",
       sources: [
         'https://russianforces.org/blog/2026/05/exercise_of_strategic_forces_h.shtml',
         'https://www.afgsc.af.mil/News/Article-Display/Article/4631480/us-strategic-command-begins-exercise-global-thunder-27/',
@@ -29,22 +28,22 @@ window.Assessment = {
     },
     continuity: {
       status: 'green',
-      note: "No change. No civil defence activation, leader relocation or emergency powers found for 26–27 Oct.",
+      note: "No change. No civil defence activation, leader relocation or emergency powers found for 27–28 Oct; only routine siren tests and preparedness speeches.",
       sources: [
-        'https://www.krisinformation.se/en/hazards-and-risks/hojd-beredskap-och-krig/',
+        'https://greydynamics.com/russian-aggression-spawns-civil-preparedness-efforts-across-europe/',
       ],
     },
     diplomacy: {
       status: 'green',
-      note: "Green, stalled. Abu Dhabi talks still undated (\"first half of November\", possibly ~10 Nov). No expulsions, drawdowns or new \"leave\" advisories for 26–27 Oct. The signals feed flagged a change to both Swiss FDFA pages (Russia, Belarus) at 20:30 UTC on 26 Oct; no news of new advice was found and the simultaneous change suggests a site-wide edit — check the pages by hand.",
+      note: "Green, stalled. Abu Dhabi talks still only \"first half of November\" (Moscow proposes ~10 Nov). No NATO-state expulsions, drawdowns or new \"leave\" advisories. The 26 Oct change to the Swiss FDFA Russia and Belarus pages is still unexplained — check by hand.",
       sources: [
-        'https://ukranews.com/en/news/1183033-talks-between-ukraine-the-u-s-and-russia-are-planned-for-the-first-half-of-november-in-abu-dhabi',
+        'https://aa.com.tr/en/eurasia/kremlin-says-trilateral-ukraine-peace-talks-scheduled-for-1st-half-of-november-in-abu-dhabi/4098424',
         'https://www.eda.admin.ch/countries/russia/en/home/travel-advice/current-situation.html',
       ],
     },
     rhetoric: {
       status: 'amber',
-      note: "Amber, holding. No new nuclear statements or ultimatums found for 26–27 Oct; the single-source Zakharova remark from 26 Oct could not be found again and is dropped. No Russian reaction to Global Thunder.",
+      note: "Amber, holding. No nuclear statements or ultimatums found for 27–28 Oct; no Russian statement on the Black Sea ship attacks or Romania.",
       sources: [
         'https://rt-english.com/russia/647458-kremlin-dangerous-nuclear-arms-control/',
         'https://tass.com/politics/2206043',
@@ -52,39 +51,39 @@ window.Assessment = {
     },
     infrastructure: {
       status: 'amber',
-      note: "Amber, holding. No new infrastructure cyberattack, cable damage or GPS jamming surge found for 26–27 Oct; only minor single-source data-leak claims in France. Earlier French, Dutch and German (TAKKT) attacks remain unclaimed.",
+      note: "Amber, holding. No new infrastructure cyberattack, cable damage or GPS jamming surge found for 27–28 Oct. Recent background: Sopra Steria intrusion (20 Oct), Qilin ransomware wave exploiting a Palo Alto flaw; earlier French, Dutch and German retail/logistics attacks remain unclaimed.",
       sources: [
-        'https://research.checkpoint.com/2026/26th-october-threat-intelligence-report/',
+        'https://www.solutions-numeriques.com/securite/sopra-steria-a-confirme-une-cyberattaque-decouverte-le-20-octobre-au-soir',
         'https://safeguard.sh/resources/blog/takkt-cyberattack-october-2026-orders-deliveries-restricted',
       ],
     },
     markets: {
       status: 'amber',
-      note: "Amber, easing slightly. Brent settled $115.81 on Monday (−0.8%) after Trump ruled out a strike before the midterms and Qatari, Saudi, Turkish and Pakistani officials held talks with Iran; Houthi attacks on Saudi Arabia limited the fall. VIX ~18.4, gold ~$4,000 flat, EUR/CHF ~0.925 (franc firm vs mid-October). Fed decision 28 Oct. The signals feed's Brent (~$110) is on a later futures contract and understates the price.",
+      note: "Amber, oil easing. Brent settled ~$113.88 on 27 Oct (−1.7%) on Iran–Saudi–Turkey–Pakistan diplomacy, then rose ~1.4% early Wednesday on Israel's deadlocked election and a claimed Houthi attack near Yanbu (single source). Goldman puts ~$27/bbl of Brent down to war risk. VIX ~17.5, gold ~$4,050, EUR/CHF ~0.924. Fed decision today (hold expected). The signals feed's Brent (~$111) is on a later futures contract.",
       sources: [
-        'https://www.agbi.com/oil-and-gas/2026/10/oil-declines-after-trump-rules-out-imminent-attack-on-iran/',
-        'https://www.investing.com/news/commodities-news/oil-prices-down-almost-1-in-early-trading-4971306',
-        'https://www.bloomberg.com/news/articles/2026-10-26/gold-steadies-above-4-000-with-fed-rate-decision-in-focus',
+        'https://finance.yahoo.com/news/oil-eases-middle-east-diplomacy-003711784.html',
+        'https://www.nationthailand.com/news/world/40072812',
+        'https://www.fxstreet.com/news/wti-rises-above-10000-amid-israeli-election-deadlock-saudi-infrastructure-attack-202610280136',
       ],
     },
     strategic: {
       status: 'amber',
-      note: "Deteriorating; US–Iran decision deferred to after the 3 Nov midterms (risk window ~4–10 Nov), with regional mediation under way. Israel votes today (27 Oct); Pezeshkian is in Moscow today for the gas exporters' summit and is expected to meet Putin. US ordered non-essential staff out of Saudi Arabia (21 Oct). APEC three-way still unconfirmed; no North Korean launch since 12 Oct.",
+      note: "Deteriorating, no change. Israel's 27 Oct election is deadlocked (exit polls: neither bloc near 61 seats; official results 4 Nov), so Netanyahu likely stays caretaker through the 4–10 Nov Iran risk window. Putin met Pezeshkian in Moscow on 27 Oct (energy, trade, Middle East; no military or nuclear announcement). Trump: no Iran strike before the 3 Nov midterms; talks via Qatar and Pakistan continue. APEC three-way still unconfirmed; no new North Korean launch.",
       sources: [
-        'https://www.agbi.com/oil-and-gas/2026/10/oil-declines-after-trump-rules-out-imminent-attack-on-iran/',
-        'https://www.tasnimnews.ir/en/news/2026/10/24/3730538/pezeshkian-to-visit-russia-for-gas-exporters-summit',
-        'https://www.cnn.com/2026/10/21/politics/us-orders-departure-embassy-staff-saudi-arabia',
+        'https://tass.com/politics/2208997',
+        'https://www.axios.com/2026/10/27/netanyahu-eisenkot-israel-election-exit-polls',
+        'https://www.cnn.com/2026/10/27/world/live-news/israel-elections-live-results-latest-votes-intl',
       ],
     },
   },
   logistics: {
     status: 'amber',
-    note: "Amber. French fuel worsening on the route: in the Doubs, 23 of 102 stations (22.5%) are out of diesel (27 Oct) and all four Besançon TotalEnergies stations were dry on 25 Oct — the A36 is the weak point; nationally ~9–11% of stations lack diesel (up from ~5% mid-October). 5 Nov national strike confirmed with SNCF unions. Donegal: ~1,100 customers still without power Monday morning after Storm Boelo. Irish Ferries Dublin–Cherbourg 26 Oct and Cherbourg–Dublin 27 Oct listed cancelled for weather (operator page only). Flights normal.",
+    note: "Amber. French fuel: nationally 11% of stations short of at least one fuel (27 Oct, official data), down from 15% on 25 Oct; the government released strategic diesel stocks (decree of 24 Oct) with prices expected to fall from 1 Nov. Single source: Haut-Rhin, Bas-Rhin and Territoire de Belfort (on the A36) at 25%+ short; Doubs was 22.5% short of diesel on 27 Oct. Toussaint return traffic (31 Oct–1 Nov) risks weekend shortages. 5 Nov national strike with SNCF unions confirmed; no road, depot or port blockades announced. No new Donegal power or ferry problems found; flights normal.",
     sources: [
+      'https://www.prix-carburants.gouv.fr/disponibilites-carburants',
+      'https://www.connexionfrance.com/driving/fuel-shortages-worsen-across-france-hundreds-of-stations-entirely-out-of-supply/824153',
+      'https://ulysse.com/news/tgv-ter-intercites-greve-nationale-sncf',
       'https://www.lappelfrance.fr/2026/10/25/carburants-a-besancon-le-prix-plafonne-saffiche-les-pompes-restent-vides/',
-      'https://www.sortiraparis.com/en/news/in-paris/articles/354559-general-strike-on-november-5-2026-transport-and-schools-brace-for-a-major-mobilization',
-      'https://highlandradio.com/2026/10/26/over-1100-donegal-customers-without-power-as-further-strong-winds-forecast/',
-      'https://www.irishferries.com/uk-en/sailing-updates/ireland-france/',
     ],
   },
 };
