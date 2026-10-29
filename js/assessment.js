@@ -2,88 +2,89 @@
 // applyAssessment). Applied once per issuedAt, and only to readings not
 // checked by hand since. Set to null when there is nothing to publish.
 //
-// 2026-10-28: daily check, compiled from dated news search results. Source
+// 2026-10-29: daily check, compiled from dated news search results. Source
 // pages could not be opened directly, so key facts should be confirmed by hand.
 window.Assessment = {
-  date: '2026-10-28',
-  issuedAt: '2026-10-28T05:58:49Z',
+  date: '2026-10-29',
+  issuedAt: '2026-10-29T05:57:40Z',
   ladder: 2,
   categories: {
     conventional: {
       status: 'amber',
-      note: "Amber, top of band, no change. No new ship hit in the Black Sea since the Khoryv sinking off Constanța on 23 Oct (searched specifically); no Article 4 request; no drone incursions into NATO states or Moldova for 27–28 Oct. Large Russian strike on Kyiv overnight 26–27 Oct (~280 drones plus ballistic missiles; at least 1 killed, ~15 injured; Southern Bridge and a university campus hit) — heavy, but within the Russia–Ukraine war. NATO is adding patrol aircraft, radars and drones in the Black Sea.",
+      note: "Amber, top of band. New: on 28 Oct three sea drones hit the Liberian-flagged container ship Contship Jet ~21 nm south-east of Shabla, Bulgaria (all 18 crew rescued; ship listing). Bulgaria's PM said \"the logic points\" to Russia but it cannot be proven; Moscow denies; Bulgaria says Article 4 would be \"unproductive\" for now. Attacks off NATO coasts continue (~7–8 ships this month). Romania tied a Russian-run sabotage network to the 14 Sep fire beside the Carfil arms plant in Brașov (finding announced 26 Oct). Lighter Russian strike on Ukraine 27–28 Oct. No drone incursions into NATO airspace found.",
       sources: [
-        'https://www.pravda.com.ua/eng/news/2026/10/27/8059874/',
-        'https://euromaidanpress.com/2026/10/27/russian-ballistic-missiles-hit-a-kyiv-university-campus-then-return-before-dawn-for-the-southern-bridge-again/',
-        'https://kyivindependent.com/nato-to-bolster-black-sea-presence-with-patrol-aircraft-drones-after-attacks-on-commercial-ships/',
+        'https://www.washingtonpost.com/business/2026/10/28/bulgaria-drone-attack-container-ship-black-sea/7d0a5260-d2cd-11f1-9931-2a41b76fc976_story.html',
+        'https://www.bta.bg/en/news/world/1234706-all-18-crew-members-of-drone-hit-container-ship-near-kaliakra-have-been-rescued',
+        'https://sofiaglobe.com/2026/10/28/drone-attack-on-container-ship-off-bulgarias-cape-kaliakra/',
       ],
     },
     posture: {
       status: 'green',
-      note: "Close to amber, no change. No Russian strategic exercise, reaction to US Global Thunder 27 (to ~1–2 Nov), missile launches, NOTAMs or bomber/SSBN reports found. Russia held its main drill in May this year; a short-notice autumn drill cannot be ruled out.",
+      note: "Close to amber; watch. On 28 Oct the Borei-A submarine Generalissimus Suvorov fired a Bulava SLBM from the Sea of Okhotsk to the Chizha range — described as scheduled combat training, with NOTAMs posted 25 Oct and US RC-135S observing. A single pre-notified training launch is not a posture change, but it falls during US Global Thunder (to ~1–2 Nov). Amber if a Russian strategic exercise is announced, another strategic launch follows, or SSBN/bomber activity rises.",
       sources: [
-        'https://russianforces.org/blog/2026/05/exercise_of_strategic_forces_h.shtml',
-        'https://www.afgsc.af.mil/News/Article-Display/Article/4631480/us-strategic-command-begins-exercise-global-thunder-27/',
+        'https://english.news.cn/20261028/9000a1715416467b952d0547330e78c5/c.html',
+        'https://www.zona-militar.com/en/2026/10/28/russia-launches-bulava-intercontinental-ballistic-missile-from-borei-a-nuclear-submarine/',
+        'https://russianforces.substack.com/p/bulava-slbm-launched-westward-from',
       ],
     },
     continuity: {
       status: 'green',
-      note: "No change. No civil defence activation, leader relocation or emergency powers found for 27–28 Oct; only routine siren tests and preparedness speeches.",
+      note: "No change. No civil defence activation, leader relocation or emergency powers found for 28–29 Oct.",
       sources: [
-        'https://greydynamics.com/russian-aggression-spawns-civil-preparedness-efforts-across-europe/',
+        'https://www.bluewin.ch/en/news/sirens-wail-on-disaster-preparedness-day-alarm-sound-even-halts-parliamentary-sessions-li.3595169',
       ],
     },
     diplomacy: {
       status: 'green',
-      note: "Green, stalled. Abu Dhabi talks still only \"first half of November\" (Moscow proposes ~10 Nov). No NATO-state expulsions, drawdowns or new \"leave\" advisories. The 26 Oct change to the Swiss FDFA Russia and Belarus pages is still unexplained — check by hand.",
+      note: "Green, slightly improving. Finland's and Norway's leaders held a 90-minute call with Putin on 27 Oct about the planned talks (official readouts) and agreed to keep contact. Lavrov to attend the G20 foreign ministers' meeting in Atlanta 30–31 Oct (Russian announcement; US not confirmed). Abu Dhabi talks still undated (Ryabkov: \"premature\"). No new NATO-state expulsions or \"leave\" advisories. Swiss FDFA page change of 26 Oct still unexplained.",
       sources: [
-        'https://aa.com.tr/en/eurasia/kremlin-says-trilateral-ukraine-peace-talks-scheduled-for-1st-half-of-november-in-abu-dhabi/4098424',
-        'https://www.eda.admin.ch/countries/russia/en/home/travel-advice/current-situation.html',
+        'https://www.presidentti.fi/en/president-stubb-and-prime-minister-store-held-a-phone-call-with-president-putin/',
+        'https://www.bloomberg.com/news/articles/2026-10-28/russia-s-lavrov-to-go-to-us-for-g20-foreign-ministers-meeting',
+        'https://www.turkiyetoday.com/world/russia-says-ukraine-talks-still-in-preparatory-phase-abu-dhabi-meeting-premature-3231212',
       ],
     },
     rhetoric: {
       status: 'amber',
-      note: "Amber, holding. No nuclear statements or ultimatums found for 27–28 Oct; no Russian statement on the Black Sea ship attacks or Romania.",
+      note: "Amber, holding. No nuclear statements or ultimatums found for 28–29 Oct; Zakharova (28 Oct) said Europe is \"not ready for honest discussion\". No Russian statement on the Black Sea ship attacks.",
       sources: [
+        'https://anews.com.tr/world/2026/10/29/russia-says-europe-still-not-ready-to-engage-in-honest-discussion-regarding-its-interests',
         'https://rt-english.com/russia/647458-kremlin-dangerous-nuclear-arms-control/',
-        'https://tass.com/politics/2206043',
       ],
     },
     infrastructure: {
       status: 'amber',
-      note: "Amber, holding. No new infrastructure cyberattack, cable damage or GPS jamming surge found for 27–28 Oct. Recent background: Sopra Steria intrusion (20 Oct), Qilin ransomware wave exploiting a Palo Alto flaw; earlier French, Dutch and German retail/logistics attacks remain unclaimed.",
+      note: "Amber, holding. No new infrastructure cyberattack, cable damage or GPS jamming surge found for 28–29 Oct; only single-source hacker claims in France. Earlier retail/logistics attacks remain unclaimed.",
       sources: [
-        'https://www.solutions-numeriques.com/securite/sopra-steria-a-confirme-une-cyberattaque-decouverte-le-20-octobre-au-soir',
-        'https://safeguard.sh/resources/blog/takkt-cyberattack-october-2026-orders-deliveries-restricted',
+        'https://www.lemagit.fr/actualites/366652455/Cyberhebdo-du-16-octobre-2026-une-semaine-violente-en-France-et-au-dela',
+        'https://gcaptain.com/timeline-of-suspected-underwater-sabotage-in-baltic-sea/',
       ],
     },
     markets: {
       status: 'amber',
-      note: "Amber, oil easing. Brent settled ~$113.88 on 27 Oct (−1.7%) on Iran–Saudi–Turkey–Pakistan diplomacy, then rose ~1.4% early Wednesday on Israel's deadlocked election and a claimed Houthi attack near Yanbu (single source). Goldman puts ~$27/bbl of Brent down to war risk. VIX ~17.5, gold ~$4,050, EUR/CHF ~0.924. Fed decision today (hold expected). The signals feed's Brent (~$111) is on a later futures contract.",
+      note: "Amber, oil firming again. Brent settled $115.32 on 28 Oct (+1.3%) on a claimed Houthi strike on Saudi Arabia's Ras Tanura refinery (unconfirmed by Riyadh) and talk of renewed US strikes on Iran; ~$114.5 Thursday morning. Fed held (10–2, two votes for a hike) and flagged energy as an inflation risk; 10-year Treasury ~5%. VIX ~16.9, gold ~$4,040–4,050, EUR/CHF ~0.925. Signals feed's Brent (~$111) is on a later contract.",
       sources: [
-        'https://finance.yahoo.com/news/oil-eases-middle-east-diplomacy-003711784.html',
-        'https://www.nationthailand.com/news/world/40072812',
-        'https://www.fxstreet.com/news/wti-rises-above-10000-amid-israeli-election-deadlock-saudi-infrastructure-attack-202610280136',
+        'https://www.cnbc.com/2026/10/28/oil-price-today-wti-brent-hormuz.html',
+        'https://www.thenationalnews.com/business/energy/2026/10/28/oil-prices-up-due-to-houthi-strikes-and-us-threat-to-renew-iran-war/',
+        'https://qz.com/oil-prices-houthis-ras-tanura-refinery-strike-102826',
       ],
     },
     strategic: {
       status: 'amber',
-      note: "Deteriorating, no change. Israel's 27 Oct election is deadlocked (exit polls: neither bloc near 61 seats; official results 4 Nov), so Netanyahu likely stays caretaker through the 4–10 Nov Iran risk window. Putin met Pezeshkian in Moscow on 27 Oct (energy, trade, Middle East; no military or nuclear announcement). Trump: no Iran strike before the 3 Nov midterms; talks via Qatar and Pakistan continue. APEC three-way still unconfirmed; no new North Korean launch.",
+      note: "Deteriorating, with a diplomatic counter-signal. Qatar gave Iran a draft deal on 25 Oct (7 days of confidence-building steps, outside guarantors); Iran is expected to reply by the end of this week, with mixed signals (\"welcomes\" talks; ideas \"unacceptable\"). US strike option still open after the 3 Nov midterms. Israel deadlocked (partial results 53–48; new election likely). Lavrov says Putin will attend APEC in Shenzhen; trilateral with Trump and Xi unconfirmed. No North Korean launch since 12 Oct.",
       sources: [
-        'https://tass.com/politics/2208997',
-        'https://www.axios.com/2026/10/27/netanyahu-eisenkot-israel-election-exit-polls',
-        'https://www.cnn.com/2026/10/27/world/live-news/israel-elections-live-results-latest-votes-intl',
+        'https://www.thenationalnews.com/news/mena/2026/10/28/iran-welcomes-negotiations-after-reported-qatari-mediated-draft-deal/',
+        'https://geo.tv/latest/688776-qatar-presents-iran-with-new-draft-deal-to-end-war-tehran-calls-ideas-unacceptable',
+        'https://www.jta.org/2026/10/28/israel/israels-election-deadlock-3-scenarios-for-what-comes-next',
       ],
     },
   },
   logistics: {
     status: 'amber',
-    note: "Amber. French fuel: nationally 11% of stations short of at least one fuel (27 Oct, official data), down from 15% on 25 Oct; the government released strategic diesel stocks (decree of 24 Oct) with prices expected to fall from 1 Nov. Single source: Haut-Rhin, Bas-Rhin and Territoire de Belfort (on the A36) at 25%+ short; Doubs was 22.5% short of diesel on 27 Oct. Toussaint return traffic (31 Oct–1 Nov) risks weekend shortages. 5 Nov national strike with SNCF unions confirmed; no road, depot or port blockades announced. No new Donegal power or ferry problems found; flights normal.",
+    note: "Amber. French fuel: ~9% of stations out of diesel nationally (official feed); fuel tracker shows Territoire de Belfort ~33% and Doubs ~22.5% short on the A36 route; low Rhine levels blocking barge deliveries to Strasbourg. Diesel prices cut from 1 Nov. Bison Futé: Fri 30 Oct orange nationally; Toussaint weekend mostly green outside Paris. 5 Nov: SNCF unions plus CGT national strike (a 3 Nov pay meeting could change it); no depot or port blockades announced. Brittany Ferries Rosslare–Cherbourg daily. Donegal and flights: nothing new.",
     sources: [
+      'https://lautomobiliste.fr/28/10/2026/automobilistes-reduction-carburant',
+      'https://www.sortiraparis.com/en/news/in-paris/articles/355255-sncf-strike-on-november-5-2026-the-latest-updates',
       'https://www.prix-carburants.gouv.fr/disponibilites-carburants',
-      'https://www.connexionfrance.com/driving/fuel-shortages-worsen-across-france-hundreds-of-stations-entirely-out-of-supply/824153',
-      'https://ulysse.com/news/tgv-ter-intercites-greve-nationale-sncf',
-      'https://www.lappelfrance.fr/2026/10/25/carburants-a-besancon-le-prix-plafonne-saffiche-les-pompes-restent-vides/',
     ],
   },
 };
