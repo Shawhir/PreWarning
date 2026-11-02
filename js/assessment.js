@@ -2,85 +2,87 @@
 // applyAssessment). Applied once per issuedAt, and only to readings not
 // checked by hand since. Set to null when there is nothing to publish.
 //
-// 2026-11-01: daily check, compiled from dated news search results. Source
+// 2026-11-02: daily check, compiled from dated news search results. Source
 // pages could not be opened directly, so key facts should be confirmed by hand.
 window.Assessment = {
-  date: '2026-11-01',
-  issuedAt: '2026-11-01T05:56:40Z',
+  date: '2026-11-02',
+  issuedAt: '2026-11-02T05:57:27Z',
   ladder: 2,
   categories: {
     conventional: {
       status: 'amber',
-      note: "Amber, top of band, no change. No new Black Sea ship attack found for 30 Oct–1 Nov (latest: Contship Jet, sunk 28–29 Oct; 7–9 ships hit this month by most counts). NATO's Rutte called the attacks \"unacceptable\"; no Article 4. No NATO-airspace incursion, sabotage or Kaliningrad/Baltic incident found. No US or Israeli strike on Iran so far; US cargo aircraft arrived in Israel 29–31 Oct; Israeli official: \"no decision has yet been made\".",
+      note: "Amber, top of band, no change. No new Black Sea attack, NATO-airspace incursion, Kaliningrad/Baltic incident or major Russian strike found for 1–2 Nov (search coverage of the weekend is thin). Latest: Khoryv (23 Oct) and Contship Jet (28 Oct) sunk off Romania and Bulgaria; no Article 4 filed. No US or Israeli strike on Iran yet.",
       sources: [
-        'https://www.pbs.org/newshour/world/drone-strikes-in-the-black-sea-raise-fears-of-russian-escalation-to-test-natos-response',
-        'https://www.i24news.tv/en/news/international/europe/artc-naval-drones-sink-israeli-operated-cargo-ship-off-bulgaria-s-black-sea-coast',
-        'https://www.nation.com.pk/30-Oct-2026/us-deploys-10-military-cargo-planes-israel-amid-preparations-possible-strike-iran-report',
+        'https://abcnews.com/Business/wireStory/drones-strike-container-ship-off-bulgarias-black-sea-137637109',
+        'https://www.timeslive.co.za/news/world/2026-10-29-german-police-detain-two-suspects-in-russia-linked-sabotage-probe/',
       ],
     },
     posture: {
       status: 'green',
-      note: "Close to amber, no change. No Russian strategic exercise or ICBM/SLBM launch after the 28 Oct Bulava training launch. US Global Thunder ends ~1–2 Nov; Russia has often flown long-range bomber missions right after it, so watch 1–5 Nov. Routine bomber flights alone would not change the status.",
+      note: "Close to amber, no change. No Russian strategic exercise, ICBM/SLBM launch or unusual bomber/SSBN activity found for 1–2 Nov. Russia's 2026 strategic drill was held in May; a second this autumn cannot be ruled out. Watch for Russian long-range bomber flights as US Global Thunder ends.",
       sources: [
         'https://russianforces.org/blog/2026/',
-        'https://nipp.org/?p=4997',
+        'https://www.ibtimes.co.uk/global-thunder-27-fortress-america-base-resilience-1828631',
       ],
     },
     continuity: {
       status: 'green',
-      note: "No change. No civil defence activation, leader relocation or emergency powers found for 31 Oct–1 Nov.",
+      note: "No change. No civil defence activation, leader relocation or emergency powers found for 1–2 Nov.",
       sources: [
-        'https://www.pbs.org/newshour/world/drone-strikes-in-the-black-sea-raise-fears-of-russian-escalation-to-test-natos-response',
+        'https://www.iiss.org/globalassets/media-library---content--migration/files/research-papers/2026/civil-defence-in-europe-an-initial-assessment/iiss_civil-defence-in-europe_an-initial-assessment_-21042026.pdf',
       ],
     },
     diplomacy: {
       status: 'green',
-      note: "Green, steady. Rubio confirmed he and Lavrov \"spoke\" in Atlanta (no formal meeting), including about a possible Trump–Putin meeting at APEC this month; Kallas accused Lavrov of \"lies\". Abu Dhabi talks still \"first half of November\", undated. No new expulsions or \"leave\" advisories; a reported plan for US ordered departures from Gulf embassies has not been confirmed as issued. Swiss FDFA page change of 26 Oct still unexplained.",
+      note: "Green, steady. Abu Dhabi talks still \"first half of November\", undated; Kremlin says preparations for a Trump–Putin–Xi meeting at APEC have started (Beijing: \"no information\"). Peskov (1 Nov, single source): talks with Europe \"impossible\". Correction: US ordered departures applied to Saudi Arabia only (21 Oct); no Gulf-wide evacuation. No new \"leave\" advisories. The Irish DFA page changes flagged 1–2 Nov were the pages' daily \"still current\" date line rolling into November (levels unchanged); the monitor now ignores month names.",
       sources: [
-        'https://kuwaittimes.com/article/52702/world/russia-unyielding-on-ukraine-as-rubio-hosts-g20-talks/',
-        'https://en.cibercuba.com/noticias/2026-10-31-u1-e208574-s27061-nid344440-marco-rubio-serguei-lavrov-conversan-durante',
+        'https://www.kyivpost.com/post/88117',
+        'https://en.iz.ru/en/2194454/2026-11-01/peskov-called-negotiations-europe-impossible-because-its-approach-russian-federation',
+        'https://www.cnn.com/2026/10/21/politics/us-orders-departure-embassy-staff-saudi-arabia',
       ],
     },
     rhetoric: {
       status: 'amber',
-      note: "Amber, holding. No Russian nuclear statements or ultimatums found for 31 Oct–1 Nov. (Iran's Supreme Leader's warning of a \"geographically unrestricted response\" is counted under strategic context.)",
+      note: "Amber, holding. No Russian nuclear statements or ultimatums found for 1–2 Nov. North Korea (2 Nov) called the US–South Korean Iron Mace drill a \"nuclear war rehearsal\" and vowed to speed up its nuclear deterrent. Trump (1 Nov) said remaining Iranian sites could be hit \"in 10 minutes\" (not nuclear).",
       sources: [
-        'https://rt-english.com/russia/647458-kremlin-dangerous-nuclear-arms-control/',
+        'https://www.koreajoongangdaily.com/korea/north-korea-vows-faster-nuclear-buildup/12949364',
+        'https://www.spokesman.com/stories/2026/nov/01/north-korea-says-us-south-korea-nuclear-drill-show/',
+        'https://www.rte.ie/news/2026/1101/1597505-middle-east-iran/',
       ],
     },
     infrastructure: {
       status: 'amber',
-      note: "Amber, holding. No new infrastructure cyberattack, cable damage or GPS jamming surge found for 31 Oct–1 Nov.",
+      note: "Amber, holding. No new infrastructure cyberattack, cable damage or GPS jamming surge found for 1–2 Nov. Background: the UK and EU attribute the May 2026 Polish grid attack to Russia's GRU.",
       sources: [
-        'https://subtelforum.com/baltic-states-on-alert-after-undersea-cable-damage/',
+        'https://www.webpronews.com/uk-and-eu-attribute-2026-polish-power-grid-cyberattack-to-russian-gru/',
       ],
     },
     markets: {
       status: 'amber',
-      note: "Amber, top of band. Markets closed for the weekend; Friday: Brent December contract expired at $117.64 (6-month high), January contract $113.43, VIX ~19.4, gold ~$3,900, EUR/CHF ~0.919. Monday drivers: the first successful limpet-mine attack on a tanker (Louise 1, Hormuz, 29 Oct), Iran–Qatar talks without a deal, and the 3 Nov US midterms. Brent quotes will show the January contract (~$4 lower) — a contract change, not a fall.",
+      note: "Amber, easing within the band. Brent (now the January contract) fell ~1.5–2.6% to ~$110.4–111.6 at Monday's Asian open after Iran's foreign minister described a Qatar-brokered \"two-day plan\" (US measures on day 1, Hormuz reopens on day 2) — a proposal, not a deal. Gold ~$3,890 (one-year low ~$3,870 Friday) on rate-hike expectations; Asian stocks mixed, US/European futures slightly up. VIX ~19.4, EUR/CHF ~0.919 (Friday).",
       sources: [
-        'https://www.twz.com/news-features/iran-used-limpet-mine-placed-on-ships-hull-in-latest-strait-of-hormuz-attack-report',
-        'https://www.iranintl.com/en/202610317760',
-        'https://brecorder.com/news/40446766/oil-jumps-2pc',
+        'https://gulfnews.com/world/mena/iran-proposes-2-day-plan-to-reopen-strait-of-hormuz-amid-us-talks-1.500732117',
+        'https://investinglive.com/commodities/oil-slips-as-iran-says-qatar-brokered-plan-could-reopen-hormuz-in-two-days/',
+        'https://hdfcsky.com/news/global-markets-today-november-2-2026-us-european-futures-rise-asia-mixed-oil-prices-ease-ahead-of-indian-market-opening',
       ],
     },
     strategic: {
       status: 'amber',
-      note: "Deteriorating, no change. Rubio (31 Oct): Trump has not decided whether to resume strikes on Iran; diplomacy preferred but the US \"would have the ability\". Iran's Supreme Leader (31 Oct, single dated source) warned of an \"immediate… geographically unrestricted response\" and ordered target lists updated. Doha talks continue without a deal. Strike risk window opens after the 3 Nov midterms. Israel still deadlocked; North Korea quiet since 29 Oct.",
+      note: "Deteriorating, with a diplomatic track. Iran proposes a Qatar-brokered two-day plan to reopen Hormuz and awaits a US reply; indirect talks continue. Iran's army (1 Nov): a renewed war could outlast the last and spread beyond West Asia. Trump and Rubio signal strikes unlikely before the 3 Nov midterms but possible after; Axios (single source) says Netanyahu is pressing for strikes right after the vote. Israel deadlocked; nomination due ~11 Nov. North Korea tested a new cluster-munition warhead (1 Nov).",
       sources: [
-        'https://www.foxnews.com/live-news/us-iran-war-trump-israel-strait-hormuz-10-31-26',
-        'https://qncnews.com/2026/11/01/rubio-says-trump-has-not-decided-on-new-iran-strikes/',
-        'https://france24.com/en/middle-east/20261031-iran-s-khamenei-warns-us-and-israel-against-new-attacks',
+        'https://www.france24.com/en/middle-east/20261102-iran-warns-renewed-war-with-us-could-outlast-previous-conflict',
+        'https://www.presstv.co.uk/Detail/2026/11/01/779702/araghchi-says-iran-holding-indirect-talks-through-qatar-rules-out-direct-meeting-with-us',
+        'https://www.axios.com/2026/11/01/trump-netanyahu-iran-negotiations-war',
       ],
     },
   },
   logistics: {
     status: 'amber',
-    note: "Amber. Diesel price cut (12–18 c/l) legally applies from today until 31 Jan, but retailers may phase it in; not yet confirmed at the pump. No national shortage figure newer than 29 Oct; Grand Est (A36) was worst hit in October. 5 Nov strike on (four SNCF unions plus cross-sector); correction: the 3 Nov event is a union rally, not a negotiation; SNCF service plan out 4 Nov 17:00; expect heavy roads on 5 Nov. Ferries: no cancellations on Rosslare–Cherbourg or Dublin–Cherbourg. No Met Éireann warning for Donegal; flights normal.",
+    note: "Amber. Diesel price cut only partly at the pump: national average ~€2.337/l (from €2.373); Leclerc down ~21 c, Carrefour almost unchanged, rural/independent stations ~€2.40. No new shortage count (last ~7.4% of diesel stations dry; Doubs 22.5% on 29 Oct). 5 Nov strike: four SNCF unions plus cross-sector; no refinery, depot, road or port blockades announced; SNCF plan out 4 Nov 17:00. Ferries Rosslare/Dublin–Cherbourg running; no Donegal warning; flights normal.",
     sources: [
-      'https://www.letribunaldunet.fr/argent/gazole-baisse-18-centimes-1er-novembre-decret-stocks.html',
-      'https://www.sortiraparis.com/en/news/in-paris/articles/355255-sncf-strike-on-november-5-2026-the-latest-updates',
-      'https://www.prix-carburants.gouv.fr/disponibilites-carburants',
+      'https://prix-carburant.eu/article/gazole-baisse-1er-novembre-2026-prix-par-marque',
+      'https://carburants.chiffrex.fr/actualite/gazole-quelles-stations-ont-baisse-leurs-prix-1er-novembre-2026',
+      'https://lautomobiliste.fr/02/11/2026/prix-gazole-stations-service-baisse-reelle-2026/',
     ],
   },
 };

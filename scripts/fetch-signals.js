@@ -15,7 +15,7 @@ const L = require('./signals-lib.js');
 const OUT = path.join(__dirname, '..', 'data', 'signals.json');
 const UA = 'Mozilla/5.0 (compatible; PreWarning dashboard; +https://github.com/Shawhir/PreWarning)';
 const TIMEOUT_MS = 20000;
-const SIGNALS_VERSION = 2;
+const SIGNALS_VERSION = 3;
 
 const ADVICE = [
   { id: 'ie-russia', source: 'Ireland DFA', country: 'Russia', url: 'https://www.ireland.ie/en/dfa/overseas-travel/advice/russian-federation/' },
@@ -116,7 +116,7 @@ async function fetchMarkets(now) {
 async function fetchAdvice(prev, nowIso) {
   const prevById = {};
   for (const p of (prev && prev.advice) || []) {
-    // Before v2, every load could look like a change: reset that history.
+    // Change detection was tightened in v2 and v3 (month names): reset that history.
     prevById[p.id] = (prev.version || 1) < SIGNALS_VERSION ? { ...p, hash: null, changedAt: null, previousLevel: null } : p;
   }
   const out = [];

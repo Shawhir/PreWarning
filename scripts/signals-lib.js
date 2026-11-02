@@ -154,11 +154,15 @@ function hashText(text) {
   return h.toString(16).padStart(8, '0');
 }
 
-// Text used for change detection: digits and long tokens (dates, times,
-// counters, session ids) are dropped so routine page churn does not count.
+// Text used for change detection: digits, month names and long tokens
+// (dates, times, counters, session ids) are dropped so routine page churn,
+// such as a daily "still current at" line, does not count.
+const MONTHS = /\b(jan(uary)?|feb(ruary)?|mar(ch)?|apr(il)?|may|june?|july?|aug(ust)?|sep(t|tember)?|oct(ober)?|nov(ember)?|dec(ember)?|gennaio|febbraio|marzo|aprile|maggio|giugno|luglio|agosto|settembre|ottobre|novembre|dicembre)\b/gi;
+
 function stableText(text) {
   return String(text)
     .replace(/\b[\w-]{24,}\b/g, ' ')
+    .replace(MONTHS, 'M')
     .replace(/\d+/g, '#')
     .replace(/\s+/g, ' ')
     .trim();

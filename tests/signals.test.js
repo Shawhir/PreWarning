@@ -79,6 +79,9 @@ test('stable text ignores dates and tokens', () => {
   const a = L.stableText('Last updated 9 October 2026 10:42 session a1b2c3d4e5f6a7b8c9d0e1f2a3b4 Do not travel');
   const b = L.stableText('Last updated 10 October 2026 08:01 session ffffffffffffffffffffffffffffff Do not travel');
   assert.equal(a, b);
+  // A month rollover in a "still current" line is not a change.
+  assert.equal(L.stableText('Still current at: 31 October 2026'), L.stableText('Still current at: 01 November 2026'));
+  assert.equal(L.stableText('Aggiornato il 31 ottobre'), L.stableText('Aggiornato il 1 novembre'));
 });
 
 test('metaculus probability and jumps', () => {
