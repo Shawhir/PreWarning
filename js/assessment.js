@@ -2,87 +2,89 @@
 // applyAssessment). Applied once per issuedAt, and only to readings not
 // checked by hand since. Set to null when there is nothing to publish.
 //
-// 2026-11-02: daily check, compiled from dated news search results. Source
+// 2026-11-03: daily check, compiled from dated news search results. Source
 // pages could not be opened directly, so key facts should be confirmed by hand.
 window.Assessment = {
-  date: '2026-11-02',
-  issuedAt: '2026-11-02T05:57:27Z',
+  date: '2026-11-03',
+  issuedAt: '2026-11-03T05:57:20Z',
   ladder: 2,
   categories: {
     conventional: {
       status: 'amber',
-      note: "Amber, top of band, no change. No new Black Sea attack, NATO-airspace incursion, Kaliningrad/Baltic incident or major Russian strike found for 1–2 Nov (search coverage of the weekend is thin). Latest: Khoryv (23 Oct) and Contship Jet (28 Oct) sunk off Romania and Bulgaria; no Article 4 filed. No US or Israeli strike on Iran yet.",
+      note: "Amber, top of band. New on 2 Nov: Poland sent counter-terrorism police to the Kaliningrad border after intelligence warned of sabotage and possible armed crossings, and is forming a border-defence brigade there. Russia–Ukraine: the limited ceasefire ended with a large Russian missile and drone attack overnight 1–2 Nov (26 killed in Zaporizhzhia region). Black Sea: only a single-source Russian claim of hitting a cargo ship south of Odesa (2 Nov); CNN counts at least a dozen merchant ships hit in recent weeks. No Article 4, no NATO-airspace incursions. (US strikes on Iran are counted under strategic context.)",
       sources: [
-        'https://abcnews.com/Business/wireStory/drones-strike-container-ship-off-bulgarias-black-sea-137637109',
-        'https://www.timeslive.co.za/news/world/2026-10-29-german-police-detain-two-suspects-in-russia-linked-sabotage-probe/',
+        'https://kyivindependent.com/poland-deploys-counterterrorism-police-near-russian-border-amid-sabotage-warnings/',
+        'https://www.pravda.com.ua/eng/news/2026/11/02/8060934/',
+        'https://france24.com/en/europe/20261102-live-russia-and-ukraine-trade-blame-cyber-attacks-fragile-ceasefire-ends',
       ],
     },
     posture: {
       status: 'green',
-      note: "Close to amber, no change. No Russian strategic exercise, ICBM/SLBM launch or unusual bomber/SSBN activity found for 1–2 Nov. Russia's 2026 strategic drill was held in May; a second this autumn cannot be ruled out. Watch for Russian long-range bomber flights as US Global Thunder ends.",
+      note: "Close to amber, no change. No Russian strategic launch, exercise, bomber flight or SSBN report for 2–3 Nov; the last launch is still the 28 Oct Bulava. Stories of Putin threatening the \"entire arsenal\" over Kaliningrad date from late September (old). Watch Kaliningrad tension and any US–Iran escalation after today's midterms.",
       sources: [
         'https://russianforces.org/blog/2026/',
-        'https://www.ibtimes.co.uk/global-thunder-27-fortress-america-base-resilience-1828631',
+        'https://www.kyivpost.com/post/85688',
       ],
     },
     continuity: {
       status: 'green',
-      note: "No change. No civil defence activation, leader relocation or emergency powers found for 1–2 Nov.",
+      note: "No change. No civil defence activation, leader relocation or emergency powers in NATO states, Switzerland or Ireland. Note: overnight 1–2 Nov hackers took over Ukraine's Air Alert app and Russia's EMERCOM app and sent FAKE nuclear-attack warnings (sirens unaffected). Confirm any alert through official channels (Alertswiss, sirens) before acting.",
       sources: [
-        'https://www.iiss.org/globalassets/media-library---content--migration/files/research-papers/2026/civil-defence-in-europe-an-initial-assessment/iiss_civil-defence-in-europe_an-initial-assessment_-21042026.pdf',
+        'https://www.washingtonpost.com/world/2026/11/02/ukrainian-russian-emergency-alert-apps-send-false-warnings-after-hacks/',
+        'https://www.cbsnews.com/news/ukraine-russia-war-app-hack-cyberattack-fake-nuclear-chemical-alerts/',
       ],
     },
     diplomacy: {
       status: 'green',
-      note: "Green, steady. Abu Dhabi talks still \"first half of November\", undated; Kremlin says preparations for a Trump–Putin–Xi meeting at APEC have started (Beijing: \"no information\"). Peskov (1 Nov, single source): talks with Europe \"impossible\". Correction: US ordered departures applied to Saudi Arabia only (21 Oct); no Gulf-wide evacuation. No new \"leave\" advisories. The Irish DFA page changes flagged 1–2 Nov were the pages' daily \"still current\" date line rolling into November (levels unchanged); the monitor now ignores month names.",
+      note: "Green, steady. Abu Dhabi talks still \"first half of November\", undated (Moscow prefers mid-November). APEC Trump–Putin–Xi meeting unconfirmed; Putin's attendance most firmly backed. No new departures, expulsions or \"leave\" advisories, including for Israel, the Gulf or Iran.",
       sources: [
-        'https://www.kyivpost.com/post/88117',
-        'https://en.iz.ru/en/2194454/2026-11-01/peskov-called-negotiations-europe-impossible-because-its-approach-russian-federation',
-        'https://www.cnn.com/2026/10/21/politics/us-orders-departure-embassy-staff-saudi-arabia',
+        'https://unn.ua/en/news/trilateral-talks-between-russia-the-us-and-ukraine-are-planned-in-abu-dhabi-in-the-first-half-of-november-kremlin',
+        'https://kyivindependent.com/kremlin-signals-possible-three-way-meeting-at-apec-summit-between-putin-trump-xi/',
       ],
     },
     rhetoric: {
       status: 'amber',
-      note: "Amber, holding. No Russian nuclear statements or ultimatums found for 1–2 Nov. North Korea (2 Nov) called the US–South Korean Iron Mace drill a \"nuclear war rehearsal\" and vowed to speed up its nuclear deterrent. Trump (1 Nov) said remaining Iranian sites could be hit \"in 10 minutes\" (not nuclear).",
+      note: "Amber, holding. No Russian nuclear statements or ultimatums found for 2–3 Nov. North Korea's 2 Nov \"nuclear war rehearsal\" statement stands. Iran warns of a \"powerful response\" to any renewed attack (non-nuclear).",
       sources: [
         'https://www.koreajoongangdaily.com/korea/north-korea-vows-faster-nuclear-buildup/12949364',
-        'https://www.spokesman.com/stories/2026/nov/01/north-korea-says-us-south-korea-nuclear-drill-show/',
-        'https://www.rte.ie/news/2026/1101/1597505-middle-east-iran/',
+        'https://abcnews.com/International/live-updates/iran-live-updates-trump-good-call-netanyahu/?id=137762456',
       ],
     },
     infrastructure: {
       status: 'amber',
-      note: "Amber, holding. No new infrastructure cyberattack, cable damage or GPS jamming surge found for 1–2 Nov. Background: the UK and EU attribute the May 2026 Polish grid attack to Russia's GRU.",
+      note: "Amber. No new attack on European infrastructure, cable damage or GPS jamming surge found for 2–3 Nov. In the Russia–Ukraine war, hackers on both sides hijacked national emergency-alert apps on 1–2 Nov to send fake nuclear and chemical alerts — a reminder that alert channels themselves are targets.",
       sources: [
-        'https://www.webpronews.com/uk-and-eu-attribute-2026-polish-power-grid-cyberattack-to-russian-gru/',
+        'https://therecord.media/ukraine-hackers-russia-alert-system',
+        'https://www.pbs.org/newshour/world/ukraine-and-russia-both-report-fake-emergency-alerts-after-cyberattacks-target-apps-as-limited-ceasefire-ends',
       ],
     },
     markets: {
       status: 'amber',
-      note: "Amber, easing within the band. Brent (now the January contract) fell ~1.5–2.6% to ~$110.4–111.6 at Monday's Asian open after Iran's foreign minister described a Qatar-brokered \"two-day plan\" (US measures on day 1, Hormuz reopens on day 2) — a proposal, not a deal. Gold ~$3,890 (one-year low ~$3,870 Friday) on rate-hike expectations; Asian stocks mixed, US/European futures slightly up. VIX ~19.4, EUR/CHF ~0.919 (Friday).",
+      note: "Amber, mixed. Brent fell ~8% on 2 Nov to ~$104 (WTI $96.26) on Iran's two-day Hormuz plan and Trump saying a deal \"could happen\", then rose ~0.5% to ~$105 on Tuesday after the Qeshm strike. VIX closed 21.15 (back above 20); S&P −0.5% to its lowest since 31 Jul on a continuing tech sell-off. Gold ~$3,940–3,965; EUR/CHF ~0.919. US midterms today.",
       sources: [
-        'https://gulfnews.com/world/mena/iran-proposes-2-day-plan-to-reopen-strait-of-hormuz-amid-us-talks-1.500732117',
-        'https://investinglive.com/commodities/oil-slips-as-iran-says-qatar-brokered-plan-could-reopen-hormuz-in-two-days/',
-        'https://hdfcsky.com/news/global-markets-today-november-2-2026-us-european-futures-rise-asia-mixed-oil-prices-ease-ahead-of-indian-market-opening',
+        'https://www.investing.com/news/commodities-news/oil-rises-after-reported-us-strike-on-irans-qeshm-island-4993349',
+        'https://www.24newshd.tv/03-Nov-2026/oil-prices-rise-plunging-7-percent',
+        'https://yournews.com/2026/11/02/7249699/s/',
       ],
     },
     strategic: {
       status: 'amber',
-      note: "Deteriorating, with a diplomatic track. Iran proposes a Qatar-brokered two-day plan to reopen Hormuz and awaits a US reply; indirect talks continue. Iran's army (1 Nov): a renewed war could outlast the last and spread beyond West Asia. Trump and Rubio signal strikes unlikely before the 3 Nov midterms but possible after; Axios (single source) says Netanyahu is pressing for strikes right after the vote. Israel deadlocked; nomination due ~11 Nov. North Korea tested a new cluster-munition warhead (1 Nov).",
+      note: "Deteriorating. On 2 Nov US forces made limited strikes on launchers on Iran's Qeshm Island after the IRGC fired at a US aircraft over Hormuz; US officials call it \"defensive\", not a return to major combat, and the WSJ says quiet limited strikes have been happening for weeks. Iran warns of a \"powerful response\"; IRGC claims two US drones downed (single source). Trump and Vance still point to progress in talks; Netanyahu reportedly pressing for strikes after today's midterms. Israel: no nomination yet (~11 Nov). North Korea quiet since 31 Oct.",
       sources: [
-        'https://www.france24.com/en/middle-east/20261102-iran-warns-renewed-war-with-us-could-outlast-previous-conflict',
-        'https://www.presstv.co.uk/Detail/2026/11/01/779702/araghchi-says-iran-holding-indirect-talks-through-qatar-rules-out-direct-meeting-with-us',
-        'https://www.axios.com/2026/11/01/trump-netanyahu-iran-negotiations-war',
+        'https://www.cnn.com/2026/11/02/politics/us-strikes-iran-qeshm-island',
+        'https://www.nbcnews.com/world/iran/us-conducted-defensive-strikes-iranian-targets-strait-hormuz-us-offici-rcna607161',
+        'https://www.france24.com/en/middle-east/20261103-us-strikes-iran-qeshm-island-as-trump-signals-progress-in-talks',
+        'https://www.thenationalnews.com/news/us/2026/11/03/us-strike-qeshm-iran-hormuz/',
       ],
     },
   },
   logistics: {
     status: 'amber',
-    note: "Amber. Diesel price cut only partly at the pump: national average ~€2.337/l (from €2.373); Leclerc down ~21 c, Carrefour almost unchanged, rural/independent stations ~€2.40. No new shortage count (last ~7.4% of diesel stations dry; Doubs 22.5% on 29 Oct). 5 Nov strike: four SNCF unions plus cross-sector; no refinery, depot, road or port blockades announced; SNCF plan out 4 Nov 17:00. Ferries Rosslare/Dublin–Cherbourg running; no Donegal warning; flights normal.",
+    note: "Amber, worsening on the French leg. Official data: 16% of French stations had supply difficulties on 2 Nov (12% on 31 Oct); Grand Est (Alsace, near the A36) worst at 25%; diesel ~11% dry (unofficial). No route suspensions (red needs those). 5 Nov strike: SNCF–union talks today; no refinery, depot or road blockades announced (Gilets jaunes blockades rumoured, unconfirmed). Ferries Rosslare/Dublin–Cherbourg running; Aer Lingus Zurich/Geneva–Dublin normal; no Donegal warning. If leaving, fill up in Switzerland.",
     sources: [
-      'https://prix-carburant.eu/article/gazole-baisse-1er-novembre-2026-prix-par-marque',
-      'https://carburants.chiffrex.fr/actualite/gazole-quelles-stations-ont-baisse-leurs-prix-1er-novembre-2026',
-      'https://lautomobiliste.fr/02/11/2026/prix-gazole-stations-service-baisse-reelle-2026/',
+      'https://www.prix-carburants.gouv.fr/disponibilites-carburants',
+      'https://www.penurie-carburant.fr/',
+      'https://www.sortiraparis.com/en/news/in-paris/articles/355255-sncf-strike-on-november-5-2026-the-latest-updates',
     ],
   },
 };
