@@ -2,86 +2,86 @@
 // applyAssessment). Applied once per issuedAt, and only to readings not
 // checked by hand since. Set to null when there is nothing to publish.
 //
-// 2026-11-06: daily check, compiled from dated news search results. Source
+// 2026-11-07: daily check, compiled from dated news search results. Source
 // pages could not be opened directly, so key facts should be confirmed by hand.
 window.Assessment = {
-  date: '2026-11-06',
-  issuedAt: '2026-11-06T05:56:51Z',
+  date: '2026-11-07',
+  issuedAt: '2026-11-07T05:57:08Z',
   ladder: 2,
   categories: {
     conventional: {
       status: 'amber',
-      note: "Amber, top of band, no change. No new Kaliningrad border incident, Baltic drone incursion or Black Sea ship attack confirmed for 5–6 Nov (Latvia says one of the 1–2 Nov drones was a Russian Geran). Poland's border operation runs to 8 Nov. Moderate Russian strike on Ukraine overnight 4–5 Nov (128 drones, 2 missiles). No Article 4. Background: Russia's 1 Oct note threatening nuclear use if Kaliningrad were cut off.",
+      note: "Amber, top of band, no change. Nothing new confirmed for 6–7 Nov (thin search coverage): no follow-up to the 3 Nov Kaliningrad border incident (Tusk warned of possible armed incursions in the first half of November; Polish police operation to 8 Nov), no Baltic drone incursions, no confirmed Black Sea ship hit since the unconfirmed Russian claim of 2 Nov, no Article 4.",
       sources: [
-        'https://www.cnn.com/2026/11/03/europe/ukraine-black-sea-drone-attacks-intl',
-        'https://www.themoscowtimes.com/2026/10/01/putin-says-world-is-living-through-a-dangerous-moment-warns-west-not-to-escalate-a93846',
+        'https://www.theweek.in/wire-updates/international/2026/11/03/tusk-says-poland-thwarted-possible-provocation-on-kaliningrad-border-overnight.html',
+        'https://www.anews.com.tr/world/2026/11/02/russia-hits-military-facility-in-ukraines-odesa-region-cargo-vessel-at-sea',
       ],
     },
     posture: {
       status: 'green',
-      note: "Close to amber, no change. No Russian strategic exercise, ICBM/SLBM launch or unusual bomber/SSBN activity found for 5–6 Nov; last strategic launch remains the 28 Oct Bulava.",
+      note: "Close to amber, no change. No Russian strategic exercise, ICBM/SLBM launch or unusual bomber/SSBN activity found since 28 Oct. Russia's usual autumn drill has not been reported; a short-notice one would make this amber.",
       sources: [
-        'https://russianforces.org/blog/',
+        'https://russianforces.org/blog/2026/',
+        'https://www.themoscowtimes.com/2026/08/28/russian-military-conducts-mobile-icbm-test-a93601/pdf',
       ],
     },
     continuity: {
       status: 'green',
-      note: "No change. No civil defence activation, leader relocation or emergency powers found for 5–6 Nov.",
+      note: "No change. No civil defence activation, leader relocation or emergency powers in Switzerland, Ireland or NATO states.",
       sources: [
-        'https://euronews.com/my-europe/2026/09/03/with-an-eye-on-russia-finland-runs-europes-largest-civil-defence-exercise-since-wwii',
+        'https://san.com/cc/germany-rushes-civil-defense-overhaul-as-russian-threat-grows/',
       ],
     },
     diplomacy: {
       status: 'green',
-      note: "Green, borderline amber on Iran. No US–Iran deal: Iran sent a new nuclear proposal via Qatar on 5 Nov but says it will only discuss it after seven US preconditions (sanctions, frozen assets, reparations); Rezaei says Hormuz stays closed until then. Abu Dhabi Ukraine–Russia talks still on for 10–11 Nov. Trump reported attending APEC (18–19 Nov); three-way meeting unconfirmed. No new expulsions or \"leave\" advisories.",
+      note: "Green, borderline amber on Iran. Trump spoke with Qatar's Emir on 6 Nov (Emir urged no escalation and an open Hormuz); Trump says the US is \"talking to Tehran's representatives\". Bloomberg (single source) says the sides \"edge closer to deal\". Abu Dhabi Ukraine–Russia talks still set for 10–11 Nov (Medinsky, Umerov). No new expulsions, drawdowns or \"leave\" advisories.",
       sources: [
-        'https://www.haaretz.com/middle-east-news/iran/2026-11-06/ty-article/iran-sent-nuclear-proposal-to-u-s-via-qatar-senior-iranian-official-says/000001a1-ae09-dd7a-a3ed-ef4969d10000',
-        'https://www.arabnews.com/middle-east/iran-sent-nuclear-proposal-to-the-us-via-qatar-senior-iranian-official-says-3010067',
+        'https://www.bloomberg.com/news/articles/2026-11-06/trump-holds-call-with-mediator-qatar-about-iran-de-escalation',
+        'https://timesofisrael.com/liveblog_entry/trump-qatars-emir-discuss-efforts-to-reach-deal-ending-regional-crisis',
       ],
     },
     rhetoric: {
       status: 'amber',
-      note: "Amber, holding. No Russian nuclear statements or ultimatums found for 5–6 Nov. Trump's latest (2–3 Nov): could strike Pickaxe Mountain \"relatively soon\" but prefers a deal. A claim of a planned US nuclear strike on Iran (Tucker Carlson) was found baseless by Snopes on 5 Nov.",
+      note: "Amber, holding. No Russian nuclear statements or ultimatums. Trump (5 Nov, reported 6 Nov): the world will soon learn whether he chooses a deal or strikes to \"destroy what is left\" of Iran; NBC reports Hegseth pushing for renewed strikes.",
       sources: [
-        'https://www.snopes.com/news/2026/11/05/trump-iran-nuclear-strike/',
-        'https://www.iranintl.com/en/202611031851',
+        'https://www.cbsnews.com/live-updates/iran-war-trump-us-strait-hormuz-persian-gulf/',
+        'https://www.yahoo.com/news/politics/articles/trump-touts-imminent-decision-potential-123052899.html',
       ],
     },
     infrastructure: {
       status: 'amber',
-      note: "Amber. New on 5 Nov: bomb threats against 27 passenger flights across Europe; flights to Poland disrupted, a Milan–Warsaw flight diverted to Vienna, Bulgarian MiG-29s escorted three Ryanair flights. Not yet attributed; fits the hybrid-pressure pattern. A Finnish court jailed the captain of the Fitburg over the Dec 2025 Gulf of Finland cable damage (verdict on an old event). No new cable cuts or GPS surge.",
+      note: "Amber, slightly worse. A second wave of hoax bomb threats on 6 Nov: 11 more flights (Hungary scrambled jets to escort three), plus broadcasters — RTÉ's Dublin headquarters was evacuated and Bulgaria's NOVA TV threatened. Nothing found; no state attribution (one claim by a fringe group for Rome flights); EU security experts meet next week. Earlier: freezer cyberattacks at 13 SuperValu stores in Ireland (2–3 Nov). No cable cuts or GPS surge.",
       sources: [
-        'https://www.geo.tv/latest/689943-fighter-jets-scrambled-as-bomb-threats-target-27-passenger-flights-across-europe',
-        'https://www.aerotime.aero/articles/bomb-threats-europe-flights-fighter-escorts-diversions',
-        'https://euronews.com/2026/11/05/finnish-court-jails-russian-captain-over-baltic-sea-cable-sabotage',
+        'https://www.npr.org/2026/11/06/nx-s1-6032612/europe-flights-hoaxes',
+        'https://www.aljazeera.com/news/2026/11/6/new-bomb-threats-target-european-broadcasters-air-traffic',
+        'https://www.washingtontimes.com/news/2026/nov/6/european-flights-broadcasters-targeted-another-round-bomb-threats/',
       ],
     },
     markets: {
       status: 'amber',
-      note: "Amber, top of band; stress back up. Thu 5 Nov: S&P 500 −4.4%, Nasdaq −5.5% (correction), Dow −3.4% on an AI/chip selloff after the midterms (not the war); VIX ~28 (signals feed amber). Brent rebounded +3.9% to $98.29 on renewed Hormuz tanker strikes, ~$99 Friday. Nikkei −5.9% Friday (bear market). Gold ~$4,050–4,100; EUR/CHF ~0.918 (franc steady). Not crisis-level across markets yet (VIX red is 35).",
+      note: "Amber, easing slightly. Friday 6 Nov: S&P +0.3% (week ~−2.7%, worst in months), Nasdaq +1.1%; VIX ~24–25.6 (amber on the feed, down from ~28). Brent ~$98 (week −12%, on Iran-deal hopes); gold ~$4,050–4,080 (week +4%); EUR/CHF ~0.914 (franc firmer). Credit stress in AI names (CoreWeave CDS above 1,000bp, high-yield spreads wider) but no bank failures or contagion: a sharp tech correction, not a wider crisis yet.",
       sources: [
-        'https://www.cnbc.com/2026/11/05/stock-market-selloff-ai-fears.html',
-        'https://www.nationthailand.com/news/world/40073162',
-        'https://abc.net.au/news/2026-11-06/asx-markets-business-live-news/107353758',
+        'https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-06-2026',
+        'https://yournews.com/2026/11/06/7255916/ai-selloff-triggers-market-warning-signals-as-investors-watch-for/',
+        'https://energynow.com/2026/11/oil-prices-plunge-13-in-one-week-as-u-s-election-results-raise-hopes-of-iran-peace-deal-wti-closes-below-91-brent-below-99/',
       ],
     },
     strategic: {
       status: 'amber',
-      note: "Deteriorating again. Hormuz attacks continued on 5 Nov: UKMTO confirmed a tanker hit by two projectiles off Qatar; the IRGC says two tankers and a tug caught fire (blames mines; US rejects). The \"deal within 36 hours\" did not happen; Iran's proposal is conditional and Hormuz stays closed. No new US or Israeli strikes since Qeshm (2–3 Nov). North Korea's 4 Nov launches were its fourth show of force in a week.",
+      note: "Deteriorating, no change. The IRGC claims it shot down a US MQ-1 drone over Qeshm on 6 Nov (second in two days) and that two more tankers hit mines near Hormuz (Iranian claims; no US confirmation). Hormuz stays closed; Trump says a deal-or-strike decision is coming. No new US or Israeli strikes since 3 Nov. Israel: Knesset sworn in 10 Nov, no majority. North Korea quiet since 4 Nov.",
       sources: [
-        'https://www.aljazeera.com/news/2026/11/5/iran-says-tankers-struck-in-hormuz-amid-fears-of-new-us-attack',
-        'https://english.alarabiya.net/amp/News/middle-east/2026/11/05/iran-says-two-tankers-and-tugboat-caught-fire-in-strait-of-hormuz',
-        'https://www.iranintl.com/en/202611053453',
+        'https://www.aljazeera.com/amp/news/liveblog/2026/11/6/iran-war-live-trump-warns-us-may-have-to-destroy-rest-of-iran',
+        'https://sundayguardianlive.com/world/us-israel-iran-war-latest-live-news-iran-claims-irgc-shot-down-us-mq-1-drone-over-qeshm-island-as-strait-of-hormuz-tensions-escalate-amid-rising-gulf-tensions-318423/',
       ],
     },
   },
   logistics: {
     status: 'amber',
-    note: "Amber. The 5 Nov strike passed with flights running (no DGAC cuts) and trains disrupted; 448 arrests in clashes in Paris, Lyon, Rennes and Toulouse. Now: Gilets jaunes \"six-seven\" actions — strikes and blockades Fri 6 Nov, protests Sat 7 Nov (51 actions listed, locations unknown) — watch roundabouts and the A36 corridor this weekend. Fuel: 13.7% of French stations short of at least one fuel on 6 Nov (single tracker), up slightly. Bomb threats on European flights 5 Nov (see infrastructure). Ferries running; no Donegal warning; Swiss–Irish flights normal.",
+    note: "Amber, holding. Gilets jaunes: no confirmed road blockades in France on 6 Nov (single tracker); today's \"Acte IV\" has ~90–120 events in ~60 cities with 70,000 police deployed — nothing reported for the A36, Belfort, Besançon or Mulhouse. Fuel: ~13% of stations short of at least one fuel (6 Nov), Paris ~25%. Ferries Rosslare/Dublin–Cherbourg running; no Donegal warning; Swiss–Irish flights normal, but hoax bomb threats are a general air-travel risk.",
     sources: [
-      'https://mistertravel.news/2026/11/05/greve-du-5-novembre-trains-perturbes-vols-maintenus/',
-      'https://www.cnews.fr/france/2026-11-04/six-seven-des-gilets-jaunes-en-quoi-consiste-ce-mouvement-prevu-en-fin-de-semaine',
-      'https://gasbu.app/fr/direct/six-seven-6-7-novembre-2026',
+      'https://www.sudradio.fr/sud-radio/acte-4-des-gilets-jaunes-90-mobilisations-sous-haute-surveillance-ce-samedi-7-novembre',
+      'https://prix-du-carburant.com/actualites/prix-carburants-6-novembre-2026-releve-6h01/',
+      'https://gasbu.app/en/live/six-seven-6-7-novembre-2026',
     ],
   },
 };
