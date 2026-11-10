@@ -2,87 +2,85 @@
 // applyAssessment). Applied once per issuedAt, and only to readings not
 // checked by hand since. Set to null when there is nothing to publish.
 //
-// 2026-11-09: daily check, compiled from dated news search results. Source
+// 2026-11-10: daily check, compiled from dated news search results. Source
 // pages could not be opened directly, so key facts should be confirmed by hand.
 window.Assessment = {
-  date: '2026-11-09',
-  issuedAt: '2026-11-09T05:57:35Z',
+  date: '2026-11-10',
+  issuedAt: '2026-11-10T05:57:02Z',
   ladder: 2,
   categories: {
     conventional: {
       status: 'amber',
-      note: "Amber, top of band, no change. Taiwan: AEI/ISW, the Taipei Times (8 Nov) and the SCMP report a possible large unannounced Chinese exercise rehearsing the isolation of Taiwan (100+ navy and coast guard vessels); Beijing has not confirmed it — an exercise, not a blockade. Russia hit Ukraine's grid again overnight 7–8 Nov (164 drones, 3 missiles; 600k+ without power in Dnipropetrovsk); Zaporizhzhia nuclear plant lost outside power on 8 Nov (16th time this year). Russian claims of ship hits off Odesa (unverified). No new Kaliningrad/Baltic incidents; no Article 4.",
+      note: "Amber, top of band, no change. Taiwan: Taiwan's defence minister said on 10 Nov that China is running \"area denial\" drills in the Western Pacific with the Liaoning carrier group (Japan Times, China-Global South); Beijing calls it routine; Taiwan's daily count to 9 Nov was low (1 aircraft, 7 ships); no blockade. Zaporizhzhia: a drone killed a worker at the nuclear plant on 9 Nov (IAEA), which remains on diesel generators. No new Kaliningrad/Baltic incident, NATO-airspace incursion or confirmed Black Sea hit; no Article 4.",
       sources: [
-        'https://www.taipeitimes.com/News/front/archives/2026/11/08/2003867351',
-        'https://euromaidanpress.com/2026/11/08/russia-cuts-power-to-more-than-600000-in-dnipropetrovsk-oblast-as-zelenskyy-says-the-strikes-aim-to-squeeze-ukraine-before-talks/',
-        'https://news.liga.net/en/war/news/zaporizhzhia-npp-left-without-external-power-16th-blackout-of-the-year',
+        'https://www.japantimes.co.jp/news/2026/11/10/asia-pacific/taiwan-china-area-denial-pacific/',
+        'https://chinaglobalsouth.com/2026/11/10/china-taiwan-aircraft-carrier-area-denial-military-drills',
+        'https://www.themoscowtimes.com/2026/11/09/zaporizhzhia-nuclear-plant-worker-killed-in-drone-attack-iaea-says-a94213',
       ],
     },
     posture: {
       status: 'green',
-      note: "Close to amber, no change. No Russian strategic exercise, ICBM/SLBM launch or unusual bomber/SSBN activity found for 8–9 Nov; last strategic launch the 28 Oct Bulava. Zaporizhzhia is a reactor-safety issue, not a weapons signal.",
+      note: "Close to amber, no change. No Russian strategic exercise or ICBM/SLBM launch since 28 Oct. Watch item: Ukrainian outlets report nearly all Russian Tu-160 and Tu-95MS bombers (~47) concentrated in the open at Ukrainka in the Far East — apparently a relocation away from Ukrainian drones (concentration, not dispersal), undated and unconfirmed by Russia.",
       sources: [
-        'https://russianforces.org/blog/2026/',
+        'https://united24media.com/war-in-ukraine/russia-masses-47-nuclear-capable-bombers-at-far-eastern-airbase-in-rare-fleet-concentration-24179',
+        'https://en.defence-ua.com/analysis/moving_all_10_tu_160s_37_tu_95ms_bombers_to_russias_ukrainka_air_base_proved_easier_than_building_shelters_at_engels_that_says_lot-20362.html',
       ],
     },
     continuity: {
       status: 'green',
-      note: "No change. No civil defence activation, leader relocation or emergency powers found for 8–9 Nov.",
+      note: "No change. No civil defence activation, leader relocation or emergency powers in NATO states, Switzerland or Ireland.",
       sources: [
-        'https://san.com/cc/germany-rushes-civil-defense-overhaul-as-russian-threat-grows/',
+        'https://www.cnn.com/2026/11/09/middleeast/iran-us-talks-explainer-intl',
       ],
     },
     diplomacy: {
       status: 'green',
-      note: "Green, improving. Abu Dhabi Ukraine–Russia talks on for 10–11 Nov with larger delegations (Russia: Medinsky, Ryabkov, Galuzin, GRU chief Kostyukov; Ukraine: Umerov, Budanov). Trump meets Qatar's Prime Minister on 9 Nov on Iran mediation; Rubio says the sides are not close. No new expulsions or \"leave\" advisories.",
+      note: "Green, improving. US-mediated Ukraine–Russia talks open in Abu Dhabi today (first three-way round since February); agenda: energy and Black Sea ceasefire, prisoner swaps, security guarantees — no general ceasefire or territory; Kyiv expects no breakthrough. EU sending its own team; Kremlin rejects a European seat. Trump cites \"positive momentum\" after meeting Qatar's PM; Iran still demands US \"surrender\" and compensation. No new expulsions or advisories.",
       sources: [
-        'https://www.axios.com/2026/11/09/trump-qatar-prime-minister-iran-war-mediation',
-        'https://www.kyivpost.com/post/89466',
-        'https://www.etvbharat.com/en/international/trump-to-meet-qatar-pm-on-monday-as-key-mediator-pushes-new-proposals-in-talks-with-iran-enn26110900754',
+        'https://www.france24.com/en/live-news/20261110-us-mediated-talks-with-russia-and-ukraine-to-start-in-abu-dhabi',
+        'https://www.euronews.com/2026/11/09/eu-to-send-joint-team-to-ukraine-russia-peace-talks-in-abu-dhabi',
+        'https://www.themoscowtimes.com/2026/11/09/kremlin-rejects-european-role-in-upcoming-abu-dhabi-talks-a94207',
       ],
     },
     rhetoric: {
       status: 'amber',
-      note: "Amber, holding. No nuclear statements or ultimatums from Russian leaders, Trump or Kim for 8–9 Nov. Trump (8 Nov): renewed war with Iran \"highly unlikely\" if talks progress — calming.",
+      note: "Amber, holding. No nuclear statements from Russian, Chinese or North Korean leaders for 9–10 Nov. Trump (9 Nov): Iran war at \"status quo\" but US forces \"locked and loaded\"; Iran threatens to \"rain down hell\" if strikes resume.",
       sources: [
-        'https://www.foxnews.com/live-news/iran-war-news-trump-saudi-houthi-november-8',
-        'https://abc7news.com/post/us-iran-war-news-donald-trump-says-renewed-attacks-nuclear-program-strait-hormuz-talks-show-progress/20024909/',
+        'https://www.cbsnews.com/live-updates/iran-war-us-trump-deal-negotiations/',
+        'https://www.foxnews.com/live-news/trump-says-he-s-unlikely-to-escalate-iran-conflict-amid-talks-responds-to-vance-assessment',
       ],
     },
     infrastructure: {
       status: 'amber',
-      note: "Amber, holding. No new hoax threats since 6 Nov; European intelligence reportedly examining a Russian link (FT, via aggregator), no attribution. No new cable damage, GPS surge or infrastructure cyberattack.",
+      note: "Amber, holding. No new hoax threats since 6 Nov; European intelligence examining a Russian link, unproven. No new cable damage, GPS surge or infrastructure cyberattack.",
       sources: [
-        'https://www.cnbc.com/2026/11/09/europe-fridge-hacks-bomb-threats-cyberattack.html',
-        'https://www.npr.org/2026/11/06/nx-s1-6032612/europe-flights-hoaxes',
+        'https://english.nv.ua/nation/european-intelligence-probes-possible-russian-links-to-flight-bomb-threats-ft-50657174.html',
       ],
     },
     markets: {
       status: 'amber',
-      note: "Amber, easing. Monday Asia rebounded after Trump said new Iran strikes are \"highly unlikely\": Nikkei +3.4%, Taiwan +6%, US futures +0.6–0.7%. Brent ~$97.4–98, gold ~$4,125 (+1.3%). Friday VIX 25.6 (amber on the feed). Watch: Nvidia board inquiry into reported foreign-intelligence targeting of its CEO; ~80% odds of a December Fed hike. EUR/CHF ~0.914.",
+      note: "Amber, easing toward green. Monday 9 Nov relief rally: all three US indexes +2%+, semiconductors +6.9% (Nvidia −4.2% on its internal probe); VIX −22% to 19.92; Brent settled $92.57 (−5.9%). Tuesday: Nikkei back above 60,000, Kospi +5%; gold ~$4,115–4,125; EUR/CHF ~0.916. Signals feed back to green on all four. Held at amber one more day after last week's crash and with Hormuz still closed; US CPI due today.",
       sources: [
-        'https://hdfcsky.com/news/global-markets-today-november-9-2026-asia-rises-us-futures-higher-oil-slips-to-98-as-easing-iran-tensions-lift-sentiment',
-        'https://www.investing.com/news/stock-market-news/asia-stocks-roar-back-as-taiwan-jumps-6-nvidia-probe-rattles-ai-trade-5010437',
+        'https://www.thestar.com.my/business/business-news/2026/11/10/stocks-jump-as-oil-tumbles-nvidia-falls-amid-internal-probe',
+        'https://journalarta.com/en/2026/11/10/oil-price-today-brent-slides-6-73-to-91-70-as-trump-eases-iran-rhetoric/',
+        'https://mlq.ai/news/nikkei-reclaims-60000-and-softbank-jumps-11-as-asian-chip-stocks-track-wall-streets-rebound/',
       ],
     },
     strategic: {
       status: 'amber',
-      note: "Escalation pausing, not reversing. No US strikes on 8–9 Nov; the 8 Nov explosions at Bandar Abbas, Qeshm, Jask and Sirik are unexplained (Fars suggests warning shots at ships). IRGC says three tankers burned in Hormuz and calls Task Force Iron Gate \"wordplay\"; no Russian reaction to the Caspian blockade. Israel: Herzog asked Eisenkot (not Netanyahu) to form a government (7 Nov, 28 days); Knesset sworn in 10 Nov. North Korea quiet since 4 Nov.",
+      note: "Paused. No new US strikes on 9–10 Nov; US and Iran negotiating quietly (CNN); blockade and Hormuz closure continue. Israel: Knesset sworn in 10 Nov; Eisenkot's mandate to ~6 Dec; Speaker vote by 17 Nov. APEC Shenzhen 18–19 Nov: Trump–Xi expected, three-way with Putin floated. US–China trade truce reportedly extended to 10 Jan (single source). North Korea quiet since 4 Nov.",
       sources: [
-        'https://www.iranintl.com/en/202611088071',
-        'https://www.middleeasteye.net/news/iron-gate-plan-merely-wordplay-iran-mocks-us-plan-disrupt-supply-routes',
-        'https://www.aljazeera.com/news/2026/11/7/israels-president-picks-eisenkot-over-netanyahu-to-form-next-government',
+        'https://www.cnn.com/2026/11/09/middleeast/iran-us-talks-explainer-intl',
+        'https://www.haaretz.com/israel-news/elections/2026-11-09/ty-article/.premium/haredi-party-declines-to-back-anti-netanyahu-blocs-bid-to-oust-knesset-speaker/000001a1-c088-d3c0-a1af-e1aca9cf0000',
       ],
     },
   },
   logistics: {
     status: 'amber',
-    note: "Amber. Correction: the 18% fuel figure came from crowd-sourced trackers; the official site shows ~12% of French stations short of at least one fuel on 8 Nov (10% on 6 Nov) — a slow rise; Grand Est highest at ~20–23% (undated table). Gilets jaunes \"Acte V\" called for Sat 14 Nov, Europe-wide \"Acte VI\" 20–22 Nov; no motorway blockades listed. Irish Ferries cancelled Cherbourg–Dublin on 7 Nov for technical reasons (operator page). Donegal fog warning overnight 8–9 Nov (minor). Flights normal.",
+    note: "Amber, French fuel worsening. Official data: ~15% of French stations short of at least one fuel on 9 Nov (11% on 7 Nov, 14% on 8 Nov); Grand Est 24% (A36 corridor) — fill up in Switzerland. Gilets jaunes Acte V 14 Nov, Acte VI 20–22 Nov (no blockade plans found). Ferries: no new disruption (Irish Ferries' 7 Nov technical cancellation not followed up); flights normal; no Donegal warning.",
     sources: [
       'https://www.prix-carburants.gouv.fr/disponibilites-carburants',
-      'https://lesvoitures.fr/carte-des-manifestations/',
-      'https://www.irishferries.com/uk-en/sailing-updates/ireland-france/',
-      'https://donegalnews.com/yellow-weather-warning-for-fog-in-donegal/',
+      'https://prix-du-carburant.com/actualites/ruptures-carburant-15-pourcent-stations-9-novembre/',
     ],
   },
 };
