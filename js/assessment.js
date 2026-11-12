@@ -2,85 +2,87 @@
 // applyAssessment). Applied once per issuedAt, and only to readings not
 // checked by hand since. Set to null when there is nothing to publish.
 //
-// 2026-11-11: daily check, compiled from dated news search results. Source
+// 2026-11-12: daily check, compiled from dated news search results. Source
 // pages could not be opened directly, so key facts should be confirmed by hand.
 window.Assessment = {
-  date: '2026-11-11',
-  issuedAt: '2026-11-11T05:57:45Z',
+  date: '2026-11-12',
+  issuedAt: '2026-11-12T05:57:15Z',
   ladder: 2,
   categories: {
     conventional: {
       status: 'amber',
-      note: "Amber, top of band. New, night of 10–11 Nov: drones probably from Russia or Belarus triggered air alerts across eastern and central Latvia; Lithuania issued a shelter alert for Vilnius and Utena counties (~45 min), restricted Vilnius and Kaunas airports, and NATO jets were activated; one object briefly crossed into Poland. No shoot-downs, no Article 4. Russian strikes on Ukraine continued during the Abu Dhabi talks (162 drones, Iskander-M; power cut in Dnipro and Kamianske). Taiwan: China's Liaoning \"area denial\" drills continue; G7 opposes forced change; no blockade.",
+      note: "Amber, top of band, no change. More detail on the 10–11 Nov Baltic drone: officials held fire over Kaunas (built-up area); NATO jets then made two failed intercepts near Biržai — one missile missed and self-destructed, debris fell in Biržai district; the drone flew on into Latvia. Lithuania investigating with Poland, Latvia and Estonia; no origin stated, no Article 4. Nothing new confirmed for 11–12 Nov on Kaliningrad, the Black Sea or major Russian strikes (last: 10–11 Nov). Taiwan: Chinese \"silent\" exercise continues, no blockade.",
       sources: [
-        'https://eng.lsm.lv/article/society/defence/10.11.2026-air-alerts-across-large-parts-of-latvia-overnight.a671412/',
-        'https://www.lrt.lt/en/news-in-english/19/3110468/lithuania-calls-off-air-alert-warning-in-vilnius-and-utena-regions',
-        'https://unn.ua/en/news/russia-attacked-ukraine-with-ballistic-missiles-135-of-162-drones-were-neutralized',
+        'https://www.lrt.lt/en/news-in-english/19/3111025/drone-incursions-trigger-air-alerts-across-lithuania-nato-jets-scrambled',
+        'https://militarnyi.com/en/news/nato-fighter-jets-twice-fail-to-shoot-down-unknown-drone-over-lithuania/',
+        'https://www.taipeitimes.com/News/front/archives/2026/11/11/2003867520',
       ],
     },
     posture: {
       status: 'green',
-      note: "Close to amber, no change. No Russian strategic exercise or launch since the 28 Oct Bulava; no unusual SSBN activity. The reported concentration of ~47 bombers at Ukrainka (single OSINT group, early November) is linked to conventional strikes on Ukraine, not nuclear signalling.",
+      note: "Close to amber, no change. No Russian strategic exercise, launch or unusual bomber/SSBN activity found for November; last major strategic exercise 19–21 May. No Chinese strategic-forces news.",
       sources: [
-        'https://united24media.com/war-in-ukraine/russia-masses-47-nuclear-capable-bombers-at-far-eastern-airbase-in-rare-fleet-concentration-24179',
+        'https://russianforces.org/blog/2026/05/exercise_of_strategic_forces_h.shtml',
       ],
     },
     continuity: {
       status: 'green',
-      note: "No change. Lithuania's 10 Nov shelter alert for Vilnius and Utena was a short (~45 min) local drone alert, not a national civil defence activation. No leader relocations or emergency powers in Switzerland, Ireland or major NATO states.",
+      note: "No change. No civil defence activation, leader relocation or emergency powers in Switzerland, Ireland or major NATO states.",
       sources: [
         'https://www.lrt.lt/en/news-in-english/19/3110468/lithuania-calls-off-air-alert-warning-in-vilnius-and-utena-regions',
       ],
     },
     diplomacy: {
       status: 'green',
-      note: "Green, improving. Abu Dhabi day 1 (10 Nov) ran nearly 4 hours: no ceasefire, but Zelensky called it \"constructive and quite substantive\", Rubio \"very productive\", and the sides reportedly agreed a large prisoner swap. Day 2 outcome not yet reported. Russia expelled a Moldovan diplomat (single source). No \"leave now\" advisories.",
+      note: "Green, steady. Abu Dhabi ended 11 Nov without a breakthrough: prisoner swap agreed \"in principle\" (size and timing open), no energy or Black Sea ceasefire, territory the main obstacle; Ryabkov sees \"a foundation for further work\"; no date for the next round. Witkoff and Kushner meet Putin in Moscow today, then Zelensky in Dublin. No new expulsions or \"leave\" advisories (a single-source report of a US \"leave Iraq\" alert on 8 Nov is unconfirmed).",
       sources: [
-        'https://www.pravda.com.ua/eng/news/2026/11/10/8062157/',
-        'https://united24media.com/world/ukraine-and-russia-reportedly-agree-to-large-scale-prisoner-exchange-in-abu-dhabi-24249',
-        'https://www.npr.org/2026/11/10/g-s1-152773/russia-ukraine-war-talks',
+        'https://www.nbcnews.com/world/middle-east/us-russia-ukraine-start-second-day-abu-dhabi-peace-talks-rcna608714',
+        'https://www.spokesman.com/stories/2026/nov/11/us-envoys-to-meet-putin-and-zelenskyy-after-abu-dh/',
+        'https://tass.com/politics/2216315',
       ],
     },
     rhetoric: {
       status: 'amber',
-      note: "Amber, holding. No nuclear statements from Russian, Chinese, North Korean or US leaders found for 10–11 Nov (year-old Nov 2025 nuclear-testing stories keep resurfacing).",
+      note: "Amber, holding. No nuclear statements or ultimatums from Russian, US, Chinese or North Korean leaders found for 11–12 Nov; no Russian statement on the Baltic drones.",
       sources: [
-        'https://www.aljazeera.com/news/2026/11/7/qeshm-island-and-hormuz-hit-as-mediators-try-to-prevent-us-iran-escalation',
+        'https://tass.com/politics/2216315',
       ],
     },
     infrastructure: {
       status: 'amber',
-      note: "Amber, holding. No new hoax threats since 6 Nov (a group calling itself \"Mikhail Andropov\" claimed them; Moscow denies; no state blamed). No new cable damage, cyberattack or GPS surge.",
+      note: "Amber, holding. No new hoax threats, cyberattacks, cable damage or GPS surge for 11–12 Nov. France attributed the early-November supermarket refrigeration hacks to Iran's Revolutionary Guard (9 Nov).",
       sources: [
-        'https://www.insurancejournal.com/news/international/2026/11/09/892102.htm',
-        'https://time.com/article/2026/11/07/europe-bomb-threats-raise-fear-new-warfare/',
+        'https://www.euronews.com/2026/11/07/hackers-probed-europes-fridge-systems-weeks-before-cyberattacks-who-did-it-and-what-could-',
+        'https://www.aljazeera.com/news/2026/11/4/eu-urges-action-as-germany-romania-and-uk-report-supermarket-cyberattacks',
       ],
     },
     markets: {
       status: 'green',
-      note: "Green (down from amber): a second calm day. Tue 10 Nov: S&P −0.4%, Nasdaq −0.7% on a hot October CPI (December Fed hike now ~84–97% priced); VIX 19.5; Brent ~$90–92; gold ~$4,030 (−2.5%); EUR/CHF ~0.920 (franc slightly weaker); STOXX 600 near a record. Signals feed green on all four. Hormuz is still closed, so watch oil.",
+      note: "Green. Wed 11 Nov: S&P +1.3%, Nasdaq +1.6% on strong CoreWeave earnings; VIX 17.5; Brent ~$92; gold slipped below $4,000 (~$3,990); franc weaker (EUR/CHF 0.923); STOXX 600 near a record. Nvidia fell ~8% after hours on a WSJ report its board may remove the CEO — company-specific, not geopolitical.",
       sources: [
-        'https://www.washingtonpost.com/business/2026/11/10/wall-street-stocks-dow-nasdaq/a8f8d958-dd4c-11f1-912c-4fbb80d73f7f_story.html',
-        'https://gvwire.com/2026/11/10/wall-st-ends-lower-as-hot-inflation-data-fed-comments-heighten-rate-worries/',
-        'https://finance.yahoo.com/markets/world-indices/articles/european-shares-near-record-high-101156381.html',
+        'https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-11-2026',
+        'https://www.washingtonpost.com/business/2026/11/11/wall-street-stocks-dow-nasdaq/86c5e492-de15-11f1-912c-4fbb80d73f7f_story.html',
+        'https://finance.yahoo.com/markets/stocks/articles/wall-st-futures-fall-nvidia-011540333.html',
       ],
     },
     strategic: {
       status: 'amber',
-      note: "Paused. No new US–Iran event confirmed for 10–11 Nov; blockade stays, Iran holds to its seven demands. Taiwan: China's unannounced Liaoning drills ahead of APEC (18–19 Nov) and Taiwan's local elections. Israel: Knesset Speaker vote 17 Nov; Eisenkot holds the mandate. North Korea quiet since 4 Nov.",
+      note: "Hardened but not escalating. Trump says the Iran war is \"effectively over\"; Iran denies planned talks and says Hormuz stays shut until its seven demands are met; Rubio calls them \"totally unrealistic\" and backs the blockade. APEC (18–19 Nov): Trump–Xi bilateral confirmed by both sides; three-way with Putin still \"under discussion\". Israel: Eisenkot holds the mandate (67 MKs); Speaker vote 17 Nov. No new Taiwan statements; North Korea quiet since 4 Nov.",
       sources: [
-        'https://www.taipeitimes.com/News/front/archives/2026/11/10/2003867493',
-        'https://www.haaretz.com/israel-news/israel-politics/2026-11-10/ty-article/.premium/eisenkots-bloc-requests-vote-to-replace-netanyahu-ally-as-knesset-speaker/000001a1-c5bc-dba2-a9f9-d5fc26880000',
+        'https://www.aljazeera.com/news/2026/11/11/iran-denies-talks-with-us-says-hormuz-will-stay-shut-until-demands-are-met',
+        'https://euronews.com/2026/11/10/trump-says-iran-war-effectively-over-as-tehran-denies-planned-talks',
+        'https://www.koreatimes.co.kr/world/20261107/china-confirms-discussions-underway-on-historic-xi-trump-putin-meeting',
       ],
     },
   },
   logistics: {
     status: 'amber',
-    note: "Amber. French fuel: official figure ~12% of stations in difficulty on 10 Nov (15% on 9 Nov; single relaying source; other trackers higher), Grand Est 23%, Bas-Rhin ~50% by one count — fill up in Switzerland. New national union strike announced for 17 Nov; Gilets jaunes Acte V 14 Nov (no blockades announced), Acte VI ~20–22 Nov. Ferries running. Dublin: US Embassy security alert 10–13 Nov for EU summits (road closures; airport normal). Donegal: marine small-craft warning only.",
+    note: "Amber, French fuel easing. Official: ~10% of stations in difficulty on 11 Nov (two sources); Grand Est 19%; Bas-Rhin worst at 35% — low Rhine levels are blocking depot resupply; the ministry says no further strategic-stock release. 17 Nov: mainly a public-sector pay strike (six unions); no joint SNCF/RATP call; transport plans due 16 Nov; nothing on depots or motorways. No confirmed Gilets jaunes Acte V on 14 Nov. Dublin: EPC summit today, EU leaders 13 Nov, transport disruption expected, no incidents. Ferries and flights normal.",
     sources: [
-      'https://prix-du-carburant.com/actualites/ruptures-carburant-baisse-12-pourcent-10-novembre/',
-      'https://fr.news.yahoo.com/manifestations-contre-vie-ch%C3%A8re-gilets-104506032.html',
-      'https://www.irishtimes.com/ireland/dublin/2026/11/05/dublin-road-closures-what-to-expect-during-states-biggest-policing-operation/',
+      'https://www.connaissancedesenergies.org/afp/carburant-approvisionnement-en-tension-dans-le-nord-est-de-la-france-261111',
+      'https://www.europe1.fr/societe/carburants-des-tensions-dapprovisionnement-dans-le-quart-nord-est-de-la-france-1225715',
+      'https://www.cestlagreve.fr/greve/fonction-publique-novembre-2026/',
+      'https://www.transportforireland.ie/news/significant-disruption-to-public-transport-anticipated-in-central-dublin-on-10th-to-13th-november-around-eu-presidency-meetings/',
     ],
   },
 };
