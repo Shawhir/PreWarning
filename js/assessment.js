@@ -2,84 +2,82 @@
 // applyAssessment). Applied once per issuedAt, and only to readings not
 // checked by hand since. Set to null when there is nothing to publish.
 //
-// 2026-11-13: daily check, compiled from dated news search results. Source
+// 2026-11-14: daily check, compiled from dated news search results. Source
 // pages could not be opened directly, so key facts should be confirmed by hand.
 window.Assessment = {
-  date: '2026-11-13',
-  issuedAt: '2026-11-13T05:57:17Z',
+  date: '2026-11-14',
+  issuedAt: '2026-11-14T05:56:55Z',
   ladder: 2,
   categories: {
     conventional: {
       status: 'amber',
-      note: "Amber, top of band, no change. Russia struck Kyiv overnight into 12 Nov (Iskander-M, KN-23, S-400, Zircon, 123 drones; 1 killed; power cuts in nine regions) hours before the Putin meeting. The 10–11 Nov Baltic drone reportedly entered from Belarus near Druskininkai; still unattributed, Lithuania examining possible electronic-warfare diversion; no new incursions, no Article 4. Nothing new on Kaliningrad or confirmed Black Sea hits. Taiwan: 29 PLA aircraft on 12 Nov (22 across the median line), routine patrol; no blockade.",
+      note: "Amber, top of band, no change. New: overnight 12–13 Nov Ukraine launched nearly 1,200 drones at Russia (Russia says 1,198 downed), one of the largest attacks of the war; 4 killed at Volgograd's refinery district — watch for a large Russian retaliatory strike in the next days. No new NATO-airspace incursions since 10–11 Nov, no Kaliningrad incident, no Black Sea attack, no Article 4.",
       sources: [
-        'https://kyivindependent.com/russia-attacks-kyiv-with-ballistic-missiles-hours-after-peace-talks-end/',
-        'https://cyprus-mail.com/2026/11/12/russian-strikes-kill-woman-in-kyiv-cause-power-outages-across-ukraine',
+        'https://www.cp24.com/news/world/2026/11/13/ukraine-launches-nearly-1200-drones-at-russia-us-led-talks-consider-wider-european-security/',
+        'https://themoscowtimes.com/2026/11/13/ukrainian-drone-attack-kills-4-workers-sparks-fire-at-volgograd-oil-refinery-a94250',
       ],
     },
     posture: {
       status: 'green',
-      note: "Close to amber, no change. No Russian strategic launch or exercise since the 28 Oct Bulava; no unusual SSBN or bomber activity. No Chinese strategic-forces news.",
+      note: "Close to amber, no change. No Russian strategic exercise, launch or unusual SSBN/bomber activity found; latest strategic events were May (exercise) and August (mobile ICBM test) plus the 28 Oct Bulava. Watch: a Grom-type autumn exercise, or nuclear-capable systems used in a large retaliation, would make this amber.",
       sources: [
-        'https://russianforces.org/blog/2026/10/bulava_slbm_launched_westward_.shtml',
+        'https://www.themoscowtimes.com/2026/08/28/russian-military-conducts-mobile-icbm-test-a93601/pdf',
       ],
     },
     continuity: {
       status: 'green',
-      note: "No change. No civil defence activation, leader relocation or emergency powers in Switzerland, Ireland or elsewhere in Europe; only routine preparedness guidance (EU 72-hour kits).",
+      note: "No change. No civil defence activation, leader relocation or emergency powers in NATO states, Switzerland or Ireland.",
       sources: [
-        'https://brusselssignal.eu/2026/11/brussels-takes-crisis-preparedness-into-primary-schools-and-revives-72-hour-kits/',
+        'https://www.euronews.com/2026/11/11/a-restless-and-difficult-night-in-the-baltics-as-nato-fighter-jets-fail-to-shoot-down-dron',
       ],
     },
     diplomacy: {
       status: 'green',
-      note: "Green, slightly better. Witkoff and Kushner met Putin for ~2 hours on 12 Nov: agreement to continue direct talks; Putin accepts Europeans in the next round in principle (after US–ally coordination) but rejects foreign peacekeepers; a new meeting is set (no date). In Dublin, Zelensky announced preparations for possibly the largest prisoner exchange of the war. Ryabkov: Russia's security demands \"cannot be dropped\". No new expulsions or \"leave\" advisories.",
+      note: "Green, steady. No new events since the 12 Nov Putin meeting. The large prisoner exchange agreed in Abu Dhabi has not happened yet (numbers unsettled; possibly within two to three weeks). No date for the next round. No expulsions, drawdowns or \"leave\" advisories.",
       sources: [
-        'https://time.com/article/2026/11/12/ukraine-russia-peace-deal-talks-putin-zelensky-witkoff-kushner/',
-        'https://www.aljazeera.com/news/2026/11/12/us-envoys-arrive-in-moscow-for-russia-ukraine-talks-with-putin',
-        'https://tass.com/politics/2216931',
+        'https://www.wusf.org/2026-11-11/russia-and-ukraine-agree-to-a-large-exchange-of-prisoners-of-war-officials-say',
+        'https://en.interfax.com.ua/news/general/1234775.html',
       ],
     },
     rhetoric: {
       status: 'amber',
-      note: "Amber, holding. No nuclear statements or ultimatums from Russian, US, Chinese or North Korean leaders for 12–13 Nov; no Russian statement on the Baltic drones.",
+      note: "Amber, holding. No nuclear statements or ultimatums found for 13–14 Nov; latest US–Iran rhetoric is Hegseth (10 Nov) ready to strike again.",
       sources: [
-        'https://tass.com/politics/2216931',
+        'https://www.iranintl.com/en/202611102727',
       ],
     },
     infrastructure: {
       status: 'amber',
-      note: "Amber, holding. No new hoax threats, cyberattacks, cable damage or GPS surge confirmed for 12–13 Nov (latest: a Ryanair bomb threat from Dublin on 10 Nov). Dublin EU summits under a \"substantial\" threat rating; no incidents reported. Zelensky says US Starshield military satellite communications were disrupted again.",
+      note: "Amber, holding. No new hoax threats, cyberattacks, cable damage or GPS surge found for 13–14 Nov.",
       sources: [
-        'https://www.irishtimes.com/ireland/2026/11/10/gardai-say-significant-risk-to-security-this-week-as-ryanair-flight-from-dublin-faces-bomb-threat/',
-        'https://time.com/article/2026/11/12/ukraine-russia-peace-deal-talks-putin-zelensky-witkoff-kushner/',
+        'https://militarnyi.com/en/news/from-the-baltic-to-the-black-sea-large-scale-gps-jamming-detected-along-nato-borders/',
       ],
     },
     markets: {
       status: 'green',
-      note: "Green, watch oil. Thu 12 Nov: US indexes slightly lower (Dow −0.4%) as Nvidia's CEO Jensen Huang stepped down (stock −4%); STOXX 600 at a record. Brent +3.3% to $95.82 after the Houthis claimed attacks on Saudi Arabia's East-West pipeline and a Yanbu facility. VIX 18.7; gold down ~2.8% to ~$3,880–3,915; EUR/CHF 0.923. Signals feed green on all four.",
+      note: "Green. Friday 13 Nov: S&P −0.4% but +2.5% on the week (first winning week since early October); Nasdaq −0.9% (chips, Nvidia CEO exit). Brent ~$96, second weekly loss (~−2.4%) as Trump signals keeping the blockade without a deal and the IEA sees a larger surplus. VIX 19.3; gold ~$3,890; EUR/CHF 0.927 (franc weaker). US wholesale inflation 6.5% y/y (single source).",
       sources: [
-        'https://thehill.com/policy/energy-environment/6088763-oil-prices-jump-houthi-attacks/',
-        'https://www.cnbc.com/2026/11/12/nvidia-jensen-huang-ceo-live-updates.html',
+        'https://www.cnbc.com/2026/11/13/oil-prices-set-for-second-weekly-decline-as-trump-to-stay-with-iran-blockade.html',
+        'https://www.thenationalnews.com/business/energy/2026/11/13/oil-on-track-to-post-second-weekly-decline-as-trump-eases-fears-of-renewed-war-with-iran/',
+        'https://www.bostonglobe.com/2026/11/13/business/stocks-fall-wall-street-notches-winning-week-after-several-turbulent-days/',
       ],
     },
     strategic: {
       status: 'amber',
-      note: "Mixed. New watch item: on 12 Nov Iran's Assembly of Experts called for a review of leaving the NPT (nine withdrawal bills on parliament's agenda; no formal notice). Houthis attacked Saudi oil infrastructure (12 Nov). Iran denies talks; Qatar reports \"positive responses\"; Hormuz shut. APEC: Rubio and Wang Yi reportedly discussed a denuclearization track for a possible Trump–Xi–Putin meeting (not in China's readout; three-way unconfirmed). Israel Speaker vote 17 Nov; North Korea quiet since 4 Nov.",
+      note: "No change. Nothing new on Iran's NPT review since 12 Nov; Qatar-mediated contacts continue without breakthrough; Iran claims four tankers hit in Hormuz on 12 Nov (Iranian report). APEC (18–19 Nov): Trump–Xi expected, three-way with Putin unconfirmed; Putin plans to attend. Israel Speaker vote 17 Nov. North Korea quiet since 4 Nov.",
       sources: [
-        'https://kashmirobserver.net/2026/11/12/iran-mulls-npt-exit-nuclear-doctrine-overhaul/',
-        'https://tribune.net.ph/2026/11/12/china-us-discuss-raising-denuclearization-at-potential-russia-trilateral',
-        'https://aljazeera.com/news/2026/11/11/iran-denies-talks-with-us-says-hormuz-will-stay-shut-until-demands-are-met',
+        'https://www.newstribune.com/news/2026/nov/09/trump-thinks-he-will-meet-xi-and-putin-at-china-apec-summit/',
+        'https://www.jns.org/news/israel-news/knesset-speaker-vote-scheduled-for-nov-17',
       ],
     },
   },
   logistics: {
     status: 'amber',
-    note: "Amber, no longer easing. Official: ~12% of French stations in difficulty on 12 Nov (10% on 11 Nov); Bas-Rhin ~39% (independent tracker); no new stocks for Grand Est while the Rhine is low; summer-diesel waiver ends 15 Nov. No current Doubs/Belfort data. 17 Nov: public-sector strike (six unions) plus CGT-Transports action week 16–20 Nov (buses, logistics, airports); air traffic controllers could join; plans due 16 Nov. Ferries, Donegal weather and Swiss–Irish flights normal.",
+    note: "Amber, easing slightly. Official: ~10% of French stations in difficulty on 13 Nov (12% on 12 Nov); Grand Est 18–19%; north-east depots still short with the Rhine low; summer-diesel waiver ends 15 Nov. 17 Nov strike (six public-sector unions) plus CGT-Transports week 16–20 Nov; no aviation-wide notice; controllers must declare by noon 15 Nov, any DGAC flight cuts ~15–16 Nov. Possible yellow wind warning for Donegal Sat 14 Nov 16:00–21:00 (single source — check met.ie). Ferries and flights normal.",
     sources: [
       'https://www.prix-carburants.gouv.fr/disponibilites-carburants',
-      'https://lenergeek.com/2026/11/12/carburants-stocks-grand-est-rhin-stations-ruptures-novembre-2026/',
       'https://mistertravel.news/2026/11/12/greve-du-17-novembre-ce-que-lon-sait-pour-les-trains-les-avions-et-les-transports/',
+      'https://www.offalyexpress.ie/news/national-news/1950091/live-seven-counties-hit-with-status-yellow-weather-warnings-as-heavy-rain-and-wind-expected.html',
     ],
   },
 };
