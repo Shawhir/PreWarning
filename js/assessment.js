@@ -2,82 +2,82 @@
 // applyAssessment). Applied once per issuedAt, and only to readings not
 // checked by hand since. Set to null when there is nothing to publish.
 //
-// 2026-11-14: daily check, compiled from dated news search results. Source
+// 2026-11-15: daily check, compiled from dated news search results. Source
 // pages could not be opened directly, so key facts should be confirmed by hand.
 window.Assessment = {
-  date: '2026-11-14',
-  issuedAt: '2026-11-14T05:56:55Z',
+  date: '2026-11-15',
+  issuedAt: '2026-11-15T05:57:44Z',
   ladder: 2,
   categories: {
     conventional: {
       status: 'amber',
-      note: "Amber, top of band, no change. New: overnight 12–13 Nov Ukraine launched nearly 1,200 drones at Russia (Russia says 1,198 downed), one of the largest attacks of the war; 4 killed at Volgograd's refinery district — watch for a large Russian retaliatory strike in the next days. No new NATO-airspace incursions since 10–11 Nov, no Kaliningrad incident, no Black Sea attack, no Article 4.",
+      note: "Amber, top of band, no change. The expected large Russian retaliation for Ukraine's ~1,200-drone attack has not been seen yet (latest Ukrainian report, night of 13–14 Nov: 96 drones, no missiles). Caution: reports of a big \"14 November\" strike on Kyiv are from 2025. No new NATO-airspace, Kaliningrad, Black Sea or sabotage events; no Article 4.",
       sources: [
-        'https://www.cp24.com/news/world/2026/11/13/ukraine-launches-nearly-1200-drones-at-russia-us-led-talks-consider-wider-european-security/',
-        'https://themoscowtimes.com/2026/11/13/ukrainian-drone-attack-kills-4-workers-sparks-fire-at-volgograd-oil-refinery-a94250',
+        'https://en.interfax.com.ua/news/general/1236499.html',
+        'https://www.kyivpost.com/post/89990',
       ],
     },
     posture: {
       status: 'green',
-      note: "Close to amber, no change. No Russian strategic exercise, launch or unusual SSBN/bomber activity found; latest strategic events were May (exercise) and August (mobile ICBM test) plus the 28 Oct Bulava. Watch: a Grom-type autumn exercise, or nuclear-capable systems used in a large retaliation, would make this amber.",
+      note: "Close to amber, no change. No Russian strategic exercise, launch or unusual SSBN/bomber activity in November. Oreshnik last used 8 Jan 2026; watch whether the coming retaliation uses it or other nuclear-capable systems.",
       sources: [
-        'https://www.themoscowtimes.com/2026/08/28/russian-military-conducts-mobile-icbm-test-a93601/pdf',
+        'https://wtop.com/news/2026/01/russias-defense-ministry-says-it-has-used-the-new-oreshnik-ballistic-missile-in-the-latest-strike-on-ukraine',
       ],
     },
     continuity: {
       status: 'green',
-      note: "No change. No civil defence activation, leader relocation or emergency powers in NATO states, Switzerland or Ireland.",
+      note: "No change. No civil defence activation, leader relocation or emergency powers; only routine preparedness (EU 72-hour guidance, Ireland's \"Be Emergency Ready\" booklet).",
       sources: [
-        'https://www.euronews.com/2026/11/11/a-restless-and-difficult-night-in-the-baltics-as-nato-fighter-jets-fail-to-shoot-down-dron',
+        'https://brusselssignal.eu/2026/11/brussels-takes-crisis-preparedness-into-primary-schools-and-revives-72-hour-kits/',
       ],
     },
     diplomacy: {
       status: 'green',
-      note: "Green, steady. No new events since the 12 Nov Putin meeting. The large prisoner exchange agreed in Abu Dhabi has not happened yet (numbers unsettled; possibly within two to three weeks). No date for the next round. No expulsions, drawdowns or \"leave\" advisories.",
+      note: "Green, improving. New (14 Nov): the White House and the Kremlin confirmed the first Trump–Xi–Putin meeting, 19 Nov in Shenzhen at APEC (agenda: the Iran war and nuclear arms; no agreement expected; China has not confirmed). The agreed prisoner swap has not yet happened; no date for the next Ukraine round. No expulsions, drawdowns or \"leave\" advisories.",
       sources: [
-        'https://www.wusf.org/2026-11-11/russia-and-ukraine-agree-to-a-large-exchange-of-prisoners-of-war-officials-say',
-        'https://en.interfax.com.ua/news/general/1234775.html',
+        'https://www.aljazeera.com/news/2026/11/14/trump-xi-and-putin-to-hold-first-three-way-summit-in-china',
+        'https://tass.com/politics/2218203',
+        'https://kyivindependent.com/large-scale-prisoner-exchange-agreed-as-2nd-day-of-abu-dhabi-talks-concludes-umerov-says/',
       ],
     },
     rhetoric: {
       status: 'amber',
-      note: "Amber, holding. No nuclear statements or ultimatums found for 13–14 Nov; latest US–Iran rhetoric is Hegseth (10 Nov) ready to strike again.",
+      note: "Amber, holding. No nuclear statements or ultimatums found for 14–15 Nov. Watch item (single dated source, unconfirmed): pro-Kremlin outlets claim Russia's Security Council may lift an unofficial ban on targeting Zelensky and Ukraine's top generals after drone strikes on Ust-Luga.",
       sources: [
-        'https://www.iranintl.com/en/202611102727',
+        'https://eadaily.com/en/news/2026/11/14/insider-moscow-could-lift-the-unspoken-ban-on-the-liquidation-of-zelensky-and-his-entourage',
       ],
     },
     infrastructure: {
       status: 'amber',
-      note: "Amber, holding. No new hoax threats, cyberattacks, cable damage or GPS surge found for 13–14 Nov.",
+      note: "Amber, holding. No new hoax threats, cyberattacks, cable damage or GPS surge found for 14–15 Nov.",
       sources: [
-        'https://militarnyi.com/en/news/from-the-baltic-to-the-black-sea-large-scale-gps-jamming-detected-along-nato-borders/',
+        'https://www.chathamhouse.org/2026/11/europe-faces-faster-cyberattacks-ever-many-solutions-are-long-known',
       ],
     },
     markets: {
       status: 'green',
-      note: "Green. Friday 13 Nov: S&P −0.4% but +2.5% on the week (first winning week since early October); Nasdaq −0.9% (chips, Nvidia CEO exit). Brent ~$96, second weekly loss (~−2.4%) as Trump signals keeping the blockade without a deal and the IEA sees a larger surplus. VIX 19.3; gold ~$3,890; EUR/CHF 0.927 (franc weaker). US wholesale inflation 6.5% y/y (single source).",
+      note: "Green; watch Monday's open. Friday close: Brent $95.84 (second weekly loss), VIX 19.3, gold ~$3,890, EUR/CHF 0.927. Weekend: Iran's navy and IRGC say 2–3 tankers hit mines in the eastern Strait of Hormuz on 14 Nov (not independently confirmed) — could lift oil.",
       sources: [
-        'https://www.cnbc.com/2026/11/13/oil-prices-set-for-second-weekly-decline-as-trump-to-stay-with-iran-blockade.html',
-        'https://www.thenationalnews.com/business/energy/2026/11/13/oil-on-track-to-post-second-weekly-decline-as-trump-eases-fears-of-renewed-war-with-iran/',
-        'https://www.bostonglobe.com/2026/11/13/business/stocks-fall-wall-street-notches-winning-week-after-several-turbulent-days/',
+        'https://www.investing.com/news/commodities-news/irans-navy-says-three-tankers-on-fire-after-hitting-mines-in-hormuz-5027556',
+        'https://www.middleeastmonitor.com/20261114-2-tankers-caught-fire-after-hitting-naval-mine-in-hormuz-iranian-navy-says/',
       ],
     },
     strategic: {
       status: 'amber',
-      note: "No change. Nothing new on Iran's NPT review since 12 Nov; Qatar-mediated contacts continue without breakthrough; Iran claims four tankers hit in Hormuz on 12 Nov (Iranian report). APEC (18–19 Nov): Trump–Xi expected, three-way with Putin unconfirmed; Putin plans to attend. Israel Speaker vote 17 Nov. North Korea quiet since 4 Nov.",
+      note: "No change. Hormuz still shut; Iran claims more tankers mined (14 Nov). Nothing new on Iran's NPT review or US–Iran talks. The confirmed Trump–Xi–Putin meeting (19 Nov) will cover the Iran war and nuclear arms; China calls three-way arms talks \"unreasonable\". Israel Speaker vote 17 Nov; North Korea quiet since early November.",
       sources: [
-        'https://www.newstribune.com/news/2026/nov/09/trump-thinks-he-will-meet-xi-and-putin-at-china-apec-summit/',
+        'https://www.spokesman.com/stories/2026/nov/14/historic-meeting-trump-xi-and-putin-set-to-meet-on/',
         'https://www.jns.org/news/israel-news/knesset-speaker-vote-scheduled-for-nov-17',
       ],
     },
   },
   logistics: {
     status: 'amber',
-    note: "Amber, easing slightly. Official: ~10% of French stations in difficulty on 13 Nov (12% on 12 Nov); Grand Est 18–19%; north-east depots still short with the Rhine low; summer-diesel waiver ends 15 Nov. 17 Nov strike (six public-sector unions) plus CGT-Transports week 16–20 Nov; no aviation-wide notice; controllers must declare by noon 15 Nov, any DGAC flight cuts ~15–16 Nov. Possible yellow wind warning for Donegal Sat 14 Nov 16:00–21:00 (single source — check met.ie). Ferries and flights normal.",
+    note: "Amber, easing slowly. French fuel: Grand Est 16% of stations in difficulty on 14 Nov (19% on 12 Nov); no further stock release planned — call ahead and plan alternates on the A36. 17 Nov strike: controllers' declaration deadline was noon today; no DGAC flight cuts reported yet; SNCF/RATP forecasts Mon 16 Nov. Ferries normal; Aer Lingus Zurich–Dublin listed for 17 Nov. Donegal: small-craft warnings, wintry showers and possible snow on high ground Sunday night.",
     sources: [
       'https://www.prix-carburants.gouv.fr/disponibilites-carburants',
-      'https://mistertravel.news/2026/11/12/greve-du-17-novembre-ce-que-lon-sait-pour-les-trains-les-avions-et-les-transports/',
-      'https://www.offalyexpress.ie/news/national-news/1950091/live-seven-counties-hit-with-status-yellow-weather-warnings-as-heavy-rain-and-wind-expected.html',
+      'https://mobilitycenter.fr/greve-17-novembre-2026-transports-sncf-ratp-rer-previsions/',
+      'https://www.met.ie/warnings/today',
     ],
   },
 };
