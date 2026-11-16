@@ -2,82 +2,85 @@
 // applyAssessment). Applied once per issuedAt, and only to readings not
 // checked by hand since. Set to null when there is nothing to publish.
 //
-// 2026-11-15: daily check, compiled from dated news search results. Source
+// 2026-11-16: daily check, compiled from dated news search results. Source
 // pages could not be opened directly, so key facts should be confirmed by hand.
 window.Assessment = {
-  date: '2026-11-15',
-  issuedAt: '2026-11-15T05:57:44Z',
+  date: '2026-11-16',
+  issuedAt: '2026-11-16T05:58:08Z',
   ladder: 2,
   categories: {
     conventional: {
       status: 'amber',
-      note: "Amber, top of band, no change. The expected large Russian retaliation for Ukraine's ~1,200-drone attack has not been seen yet (latest Ukrainian report, night of 13–14 Nov: 96 drones, no missiles). Caution: reports of a big \"14 November\" strike on Kyiv are from 2025. No new NATO-airspace, Kaliningrad, Black Sea or sabotage events; no Article 4.",
+      note: "Amber, top of band, no change. Still no large Russian retaliation for Ukraine's ~1,200-drone attack; a single-source report of a Russian attack on Odesa Oblast (132 drones) on 15 Nov would be a normal night. Latest NATO-airspace event remains the 10–11 Nov Baltic drone. Nothing new on Kaliningrad, the Black Sea or sabotage; no Article 4. (Several \"15–16 November\" strike reports are from 2025.)",
       sources: [
-        'https://en.interfax.com.ua/news/general/1236499.html',
-        'https://www.kyivpost.com/post/89990',
+        'https://kyivindependent.com/ukraine-war-latest-russia-launches-mass-attack-on-odesa-oblast-as-ukraine-strikes-airfield-drone-launch-site-in-russia/',
+        'https://www.euronews.com/2026/11/11/a-restless-and-difficult-night-in-the-baltics-as-nato-fighter-jets-fail-to-shoot-down-dron',
       ],
     },
     posture: {
       status: 'green',
-      note: "Close to amber, no change. No Russian strategic exercise, launch or unusual SSBN/bomber activity in November. Oreshnik last used 8 Jan 2026; watch whether the coming retaliation uses it or other nuclear-capable systems.",
+      note: "Close to amber, no change. No Russian strategic exercise, launch, Oreshnik use or unusual SSBN/bomber activity in November. Analysts expect the autumn Grom drill around now — its announcement would make this amber.",
       sources: [
-        'https://wtop.com/news/2026/01/russias-defense-ministry-says-it-has-used-the-new-oreshnik-ballistic-missile-in-the-latest-strike-on-ukraine',
+        'https://russianforces.org/blog/2026/05/exercise_of_strategic_forces_h.shtml',
       ],
     },
     continuity: {
       status: 'green',
-      note: "No change. No civil defence activation, leader relocation or emergency powers; only routine preparedness (EU 72-hour guidance, Ireland's \"Be Emergency Ready\" booklet).",
+      note: "No change. No civil defence activation, leader relocation or emergency powers; only routine preparedness guidance.",
       sources: [
-        'https://brusselssignal.eu/2026/11/brussels-takes-crisis-preparedness-into-primary-schools-and-revives-72-hour-kits/',
+        'https://www.lovguiden.dk/en/det-offentlige/den-europaeiske-union/2026-11-03-eu-guidelines-households-should-be-self-sufficient-for-at-least-72-hours',
       ],
     },
     diplomacy: {
       status: 'green',
-      note: "Green, improving. New (14 Nov): the White House and the Kremlin confirmed the first Trump–Xi–Putin meeting, 19 Nov in Shenzhen at APEC (agenda: the Iran war and nuclear arms; no agreement expected; China has not confirmed). The agreed prisoner swap has not yet happened; no date for the next Ukraine round. No expulsions, drawdowns or \"leave\" advisories.",
+      note: "Green, improving. China confirmed on 16 Nov the first Xi–Trump–Putin meeting, Thursday 19 Nov in Shenzhen — now confirmed by all three. Agendas differ: the US says nuclear arms reduction and Iran, not Ukraine; a Kremlin aide says Ukraine work continues; Peskov says its agreements \"cannot be imposed\" on others. The prisoner swap is still agreed only in principle. No expulsions or \"leave\" advisories.",
       sources: [
-        'https://www.aljazeera.com/news/2026/11/14/trump-xi-and-putin-to-hold-first-three-way-summit-in-china',
-        'https://tass.com/politics/2218203',
-        'https://kyivindependent.com/large-scale-prisoner-exchange-agreed-as-2nd-day-of-abu-dhabi-talks-concludes-umerov-says/',
+        'https://hongkongfp.com/2026/11/16/china-confirms-first-xi-trump-putin-summit-in-shenzhen-on-thursday/',
+        'https://www.cnbc.com/2026/11/16/trump-xi-putin-ukraine-nuclear-tariffs-russia-iran-.html',
+        'https://www.koreatimes.co.kr/world/20261116/china-confirms-first-xi-trump-putin-summit-on-thursday',
       ],
     },
     rhetoric: {
       status: 'amber',
-      note: "Amber, holding. No nuclear statements or ultimatums found for 14–15 Nov. Watch item (single dated source, unconfirmed): pro-Kremlin outlets claim Russia's Security Council may lift an unofficial ban on targeting Zelensky and Ukraine's top generals after drone strikes on Ust-Luga.",
+      note: "Amber, holding. No nuclear statements or ultimatums found for 15–16 Nov. The single-source claim that Russia may lift a ban on targeting Zelensky found no second source and is dropped.",
       sources: [
-        'https://eadaily.com/en/news/2026/11/14/insider-moscow-could-lift-the-unspoken-ban-on-the-liquidation-of-zelensky-and-his-entourage',
+        'https://aljazeera.com/news/2026/10/1/russias-putin-rules-out-ceasefire-with-ukraine-during-speech-in-moscow',
       ],
     },
     infrastructure: {
       status: 'amber',
-      note: "Amber, holding. No new hoax threats, cyberattacks, cable damage or GPS surge found for 14–15 Nov.",
+      note: "Amber, holding. No new hoax threats, cyberattacks or cable damage for 15–16 Nov. Reports published 15 Nov of GPS jamming affecting at least 7–28 Schiphol-bound flights refer to 9 Nov (possibly from a ship off Texel; unattributed) — a reminder that jamming reaches the North Sea, not only the Baltic. EU grant for Baltic cable repairs signed 13 Nov.",
       sources: [
-        'https://www.chathamhouse.org/2026/11/europe-faces-faster-cyberattacks-ever-many-solutions-are-long-known',
+        'https://nltimes.nl/2026/11/15/video-least-seven-schiphol-bound-flights-disrupted-gps-interference',
+        'https://www.vrt.be/vrtnws/nl/2026/11/15/gps-signaal-van-tientallen-vliegtuigen-bij-schiphol-verstoord/',
       ],
     },
     markets: {
       status: 'green',
-      note: "Green; watch Monday's open. Friday close: Brent $95.84 (second weekly loss), VIX 19.3, gold ~$3,890, EUR/CHF 0.927. Weekend: Iran's navy and IRGC say 2–3 tankers hit mines in the eastern Strait of Hormuz on 14 Nov (not independently confirmed) — could lift oil.",
+      note: "Green. Monday Asia fell on AI/Nvidia worries (Kospi −2.8%, Nikkei −1.7%, Japan Q3 GDP shrank) ahead of Nvidia's results Tuesday — not Hormuz. Brent ~$95 (flat; traders expect a surplus), gold ~$3,880, franc steady (~0.925); no safe-haven rush.",
       sources: [
-        'https://www.investing.com/news/commodities-news/irans-navy-says-three-tankers-on-fire-after-hitting-mines-in-hormuz-5027556',
-        'https://www.middleeastmonitor.com/20261114-2-tankers-caught-fire-after-hitting-naval-mine-in-hormuz-iranian-navy-says/',
+        'https://www.clickorlando.com/business/2026/11/16/stocks-decline-in-asia-as-investor-concerns-over-nvidia-fallout-extend-into-another-week/',
+        'https://investing.com/news/stock-market-news/asian-chip-stocks-slide-ahead-of-nvidia-earnings-5028327',
       ],
     },
     strategic: {
       status: 'amber',
-      note: "No change. Hormuz still shut; Iran claims more tankers mined (14 Nov). Nothing new on Iran's NPT review or US–Iran talks. The confirmed Trump–Xi–Putin meeting (19 Nov) will cover the Iran war and nuclear arms; China calls three-way arms talks \"unreasonable\". Israel Speaker vote 17 Nov; North Korea quiet since early November.",
+      note: "Worsening in the Gulf. The IRGC claims six tankers hit mines on 15–16 Nov, one supertanker sank and the southern Hormuz channel is mined (Iranian claims, unverified; disputed by the US). Bahrain says it intercepted an IRGC strike on radar at a US base on 15 Nov (two live blogs). Iran rejected Germany's demand to stop enrichment (single source). Nothing new on the NPT review. Israel Speaker vote 17 Nov; North Korea quiet since 4 Nov.",
       sources: [
-        'https://www.spokesman.com/stories/2026/nov/14/historic-meeting-trump-xi-and-putin-set-to-meet-on/',
-        'https://www.jns.org/news/israel-news/knesset-speaker-vote-scheduled-for-nov-17',
+        'https://www.anews.com.tr/middle-east/2026/11/15/iran-says-2-oil-tankers-hit-mines-near-strait-of-hormuz-1-sinks',
+        'https://www.trend.az/iran/4246772.html',
+        'https://foxnews.com/live-news/iran-war-strikes-donald-trump-strait-hormuz-irgc-november-15',
+        'https://www.cbsnews.com/live-updates/us-iran-war-trump-nuclear-material-no-deal/',
       ],
     },
   },
   logistics: {
     status: 'amber',
-    note: "Amber, easing slowly. French fuel: Grand Est 16% of stations in difficulty on 14 Nov (19% on 12 Nov); no further stock release planned — call ahead and plan alternates on the A36. 17 Nov strike: controllers' declaration deadline was noon today; no DGAC flight cuts reported yet; SNCF/RATP forecasts Mon 16 Nov. Ferries normal; Aer Lingus Zurich–Dublin listed for 17 Nov. Donegal: small-craft warnings, wintry showers and possible snow on high ground Sunday night.",
+    note: "Amber. French fuel: Grand Est 16% (14 Nov), Bourgogne-Franche-Comté (Doubs, Belfort) 6%; no further stock release. 17 Nov strike: no aviation-wide notice or DGAC flight-cut request found (a late one is possible — check airline notices); SNCF forecasts at 17:00 today (regional trains hit hardest); no road blockades announced; recovery from 18 Nov. Ferries and Swiss–Irish flights normal. Weather: UK Met Office yellow snow warning Tue 00:00–12:00 nearby — check met.ie for Donegal.",
     sources: [
-      'https://www.prix-carburants.gouv.fr/disponibilites-carburants',
       'https://mobilitycenter.fr/greve-17-novembre-2026-transports-sncf-ratp-rer-previsions/',
-      'https://www.met.ie/warnings/today',
+      'https://www.cestlagreve.fr/greve/sncf-france-novembre-2026/',
+      'https://www.prix-carburants.gouv.fr/disponibilites-carburants',
     ],
   },
 };
