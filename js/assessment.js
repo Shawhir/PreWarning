@@ -2,94 +2,95 @@
 // applyAssessment). Applied once per issuedAt, and only to readings not
 // checked by hand since. Set to null when there is nothing to publish.
 //
-// 2026-11-20: daily check, compiled from dated news search results. Source
+// 2026-11-21: daily check, compiled from dated news search results. Source
 // pages could not be opened directly, so key facts should be confirmed by hand.
 window.Assessment = {
-  date: '2026-11-20',
-  issuedAt: '2026-11-20T05:58:16Z',
+  date: '2026-11-21',
+  issuedAt: '2026-11-21T05:58:09Z',
   ladder: 2,
   categories: {
     conventional: {
       status: 'amber',
-      note: "Amber, top of band, not red (no direct combat between nuclear powers, no Article 5). After Ukraine's third strike on the Kerch Bridge in four days (Neptune missiles on the railway section, 18–19 Nov), Putin promised on 19 Nov a response 'far more painful' and ruled out energy and Black Sea ceasefires. Overnight 19–20 Nov Russia launched a mass ballistic, cruise-missile and drone attack: about seven waves on Kyiv, power outages, 3 killed per the city administration; Kharkiv, Lviv and Vinnytsia regions also targeted (missile count and bridge damage not yet confirmed). No Oreshnik use. No new Black Sea ship strikes since GAS HUSKY on 17 Nov; no Article 4 request; no NATO airspace incursion 18–20 Nov.",
+      note: "Amber, top of band; not red (no sustained NATO–Russia combat, no Article 4 or 5). New: during Russia's mass strike overnight 19–20 Nov (84 cruise missiles, 404 drones plus ballistic missiles per Ukraine's Air Force), two Kh-101 cruise missiles and a jet drone came down in south-eastern Poland (Nowy Lipowiec, Rudnik nad Sanem, Mołodycz); no injuries. Tusk called it an 'intentional provocation' timed to allied drills; Rutte called it clearly dangerous; Poland asked NATO for more air defence but did not invoke Article 4; Trump called them 'little missiles, by mistake'. In Ukraine three Kyiv Dnipro bridges were damaged and at least 8 people killed; nuclear plants cut output. This was Russia's stated retaliation for the Kerch Bridge strikes. No Oreshnik use; no new Black Sea ship strikes since 17 Nov. Denmark expelled Russia's defence attaché on 20 Nov over an alleged assassination plot.",
       sources: [
-        'https://www.pravda.com.ua/eng/news/2026/11/19/8063622/',
-        'https://unn.ua/en/news/kyiv-endured-seven-waves-of-ballistic-strikes-russia-launched-about-30-missiles-and-power-outages-began-in-the-capital',
-        'https://ua.news/en/capital/rosiiska-balistichna-ataka-na-kiyiv-zabrala-zhittia-trokh-liudei-ie-poraneni',
-        'https://www.themoscowtimes.com/2026/11/19/putin-vows-painful-retaliation-to-crimean-bridge-attacks-a94315',
+        'https://kyivindependent.com/poland-reports-airspace-violation-during-russian-attack-on-ukraine-investigates-debris-crash/',
+        'https://notesfrompoland.com/2026/11/20/unidentified-object-hits-poland-amid-russian-attacks-on-western-ukraine/',
+        'https://meduza.io/en/news/2026/11/20/poland-issues-air-raid-alerts-as-russia-attacks-ukraine-poland-s-defense-minister-says-two-russian-missiles-and-a-drone-fell-on-polish-soil',
+        'https://www.aljazeera.com/news/2026/11/20/russia-unleashes-retaliatory-barrage-on-kyiv-bridges',
       ],
     },
     posture: {
       status: 'green',
-      note: "Green, close to amber. The two Tu-95MS bombers left Da Nang before sunrise on 19 Nov and were intercepted by Taiwan and Japan heading back toward Ukrainka, not onward. No Grom exercise, strategic launch, Oreshnik use or deployment change. The Shenzhen declaration commits to nuclear-risk reduction (mildly positive).",
+      note: "Green, close to amber. No Grom exercise, strategic launch, Oreshnik use or deployment change. Russian state TV showed Putin's 'Cheget' nuclear briefcase in Shenzhen (signalling only). The two Tu-95MS bombers flew back from Vietnam on 19 Nov (single report; not re-confirmed today).",
       sources: [
+        'https://newsweek.com/putins-nuclear-briefcase-shown-off-by-russian-state-media-on-china-trip-12734494',
         'https://theaviationist.com/2026/11/19/taiwan-japan-intercept-russian-tu-95/',
-        'https://united24media.com/world/two-russian-tu-95ms-bombers-two-days-in-vietnam-what-was-moscow-trying-to-prove-24532',
       ],
     },
     continuity: {
       status: 'green',
-      note: "Green, no change. No civil-defence alerts, shelter orders, leadership relocations or emergency powers in Switzerland, Ireland or NATO states. Estonia's border closure from 1 Dec is a security measure.",
+      note: "Green, no change. No civil-defence alerts, shelter orders, leadership relocations or emergency powers in Switzerland, Ireland or NATO states. Polish air-raid alerts and stay-at-home advice in the south-east on 20 Nov were local and tied to the strike.",
       sources: [
+        'https://www.washingtontimes.com/news/2026/nov/20/tusk-says-russian-missile-landing-poland-appears-intentional/',
         'https://www.babs.admin.ch/en/sirens',
-        'https://euromaidanpress.com/2026/11/15/estonia-to-close-all-border-crossings-with-russia/',
       ],
     },
     diplomacy: {
       status: 'green',
-      note: "Green. The first Xi–Trump–Putin trilateral met for about 90 minutes in Shenzhen on 19 Nov and issued a joint declaration: 'a nuclear war cannot be won and must never be fought', a nuclear-risk-reduction dialogue with no timetable, UN reform, oil supply and ICC immunity. No arms-reduction commitment; Ukraine and Iran not mentioned; Putin said it binds no one. Trump and Putin spoke ~40 minutes on Ukraine with no result, and Putin then ruled out ceasefire talks after the Kerch strikes. Prisoner swap still pending. No new expulsions or 'leave now' advisories. Next chance: G20 on 14–15 Dec.",
+      note: "Green, borderline. The Shenzhen declaration (19 Nov) has no follow-up date or working group; reactions call it vague. Putin ruled out energy and Black Sea truces and Peskov says the Ukraine peace process is 'on hold' (TASS). Denmark expelled Russia's defence attaché (20 Nov). Prisoner swap (1,200–1,300 per side) still pending. No closures, ordered departures or 'leave now' advisories. Would turn amber on a wider expulsion spiral, collapse of the swap or ordered departures.",
       sources: [
-        'https://english.news.cn/20261119/f54674416ffb46a68734353f2b1bc0ea/c.html',
-        'https://www.france24.com/en/asia-pacific/20261119-xi-trump-putin-talks-live-china-us-russia-leaders-hold-landmark-three-way-meeting',
-        'https://www.koreatimes.co.kr/world/20261120/trump-xi-and-putin-release-peace-declaration-from-unprecedented-summit',
-        'https://www.rferl.org/a/trump-and-putin-hold-brief-apec-meeting/33901539.html',
+        'https://www.al-monitor.com/originals/2026/11/china-and-russia-release-peace-declaration-after-trump-xi-putin-meeting',
+        'https://www.scmp.com/news/china/military/article/3375268/concrete-aims-or-just-symbolism-trump-xi-and-putin-talk-nuclear-risk-controls-stall',
+        'https://arabnews.com/world/denmark-expels-russian-diplomat-over-attempt-to-kill-ukrainian-rapper-3013218',
+        'https://tass.com/politics/2222385',
       ],
     },
     rhetoric: {
       status: 'amber',
-      note: "Amber, no change. Putin's 19 Nov threat of a 'far more painful' response to the Kerch strikes was conventional, with no nuclear reference, and was followed by the 19–20 Nov missile strike. No new nuclear statements from Medvedev, Peskov, Lavrov, Ryabkov, Zakharova, Kim or Chinese officials. Trump repeated threats against Iran ('consequences unlike any previously imposed').",
+      note: "Amber, no change. Putin's 'far more painful' threat (19 Nov) was carried out conventionally. Zakharova said on 20 Nov that NATO is 'openly preparing' for war and should account for both sides' nuclear arsenals, while saying Russia has no plans to attack NATO (TASS only). No explicit nuclear threat or ultimatum. Trump deferred any decision on new Iran strikes to after the new year.",
       sources: [
-        'https://www.themoscowtimes.com/2026/11/19/putin-vows-painful-retaliation-to-crimean-bridge-attacks-a94315',
-        'https://www.cbsnews.com/live-updates/iran-war-us-gulf-retaliation-strikes-strait-of-hormuz/',
+        'https://tass.com/politics/2222319',
+        'https://www.foxnews.com/world/russia-putin-vows-response-far-more-painful-ukraine-attacks-prized-bridge-crimea',
+        'https://theprint.in/world/trump-says-no-rush-on-iran-decision-looks-to-next-year/3103750/',
       ],
     },
     infrastructure: {
       status: 'amber',
-      note: "Amber, no change. The Equinor cyberattack was still ongoing on 19 Nov, and a second Norwegian energy firm, Skagerak Energi, reported an attempted attack on 18 Nov (operations unaffected, no attribution). Genoa airport closed for several hours on 19 Nov after drone sightings; Paris CDG briefly held arrivals. Hoax bomb threats continue (Galicia school evacuations 18 Nov). No new GPS-jamming, cable or grid incident.",
+      note: "Amber, easing slightly. Equinor said on 20 Nov its cyberattack was stopped (production never affected); Norway's NSM says the Equinor and Skagerak incidents do not appear to target the energy sector specifically; no attribution. Genoa airport closed ~2 hours on 19 Nov over drones; CDG briefly held arrivals. No new hoax-threat wave, GPS jamming, cable or grid incident 19–21 Nov.",
       sources: [
-        'https://www.aftenposten.no/okonomi/i/QroqVW/cyberangrep-mot-equinor-og-skagerak-energi-paagaar-fremdeles',
-        'https://www.darkreading.com/cyberattacks-data-breaches/second-norwegian-energy-company-breached',
-        'https://www.theflightclub.it/en/2026/11/allarme-droni-aeroporto-genova-droni-itaairways/',
-        'https://www.usnews.com/news/world/articles/2026-11-18/hoax-bomb-threats-force-evacuation-of-several-schools-in-spain',
+        'https://www.rigzone.com/news/equinor_says_cyberattack_stopped-20-nov-2026-185131-article/',
+        'https://industrialcyber.co/utilities-energy-power-water-waste/equinor-thwarts-cyberattack-as-separate-intrusion-at-skagerak-energi-raises-concerns-across-norways-energy-sector/',
+        'https://uk.lapresse.it/news-en/2026/11/20/genoa-drone-alert-colombo-airport-closed-and-then-reopened/',
       ],
     },
     markets: {
       status: 'amber',
-      note: "Amber (feed: VIX 28.4, gold −8.9% over five days), but not geopolitical. US stocks fell ~2% on 19 Nov (S&P 500 sixth straight loss) on an AI-valuation unwind and Fed-hike expectations; Asia heading for its worst week since 2020 (Nikkei −4%, KOSPI −5% on 20 Nov). Gold is falling, not rising (~$3,540–3,600), Brent ~$90–93, EUR/CHF ~0.926 with no flight to the franc. No market reaction to the Shenzhen summit.",
+      note: "Amber (feed: VIX red at 35.9, gold amber; Brent and franc green), but the stress is not geopolitical. Fri 20 Nov: S&P 500 −3.7%, Nasdaq −5.3%; S&P and Dow in correction, Dow's worst week since March 2020, on an AI unwind (reported SEC probe into Nvidia, Nvidia −23% on the week) and ~97% odds of a Fed hike in December. Gold −8.7% on the week to ~$3,540 (margin selling, strong dollar), Brent $92.57, EUR/CHF ~0.922: no safe-haven flows. Markets did not react to the Polish missile incident.",
       sources: [
-        'https://www.washingtonpost.com/business/2026/11/19/wall-street-stocks-dow-nasdaq/6aaf39d0-e463-11f1-a99e-b3e3805c6b8b_story.html',
-        'https://www.investing.com/news/economy-news/asian-shares-head-for-worst-week-since-2020-as-ai-trade-gloom-fails-to-abate-5040496',
-        'https://kitco.com/news/article/2026-11-19/gold-falls-below-3650-silver-tumbles-fed-rate-concerns-pressure-metals',
+        'https://www.hngn.com/articles/273903/20261120/wall-street-plunges-correction-ai-selloff-erases-nasdaqs-2026-gains.htm',
+        'https://www.home.saxo/en-mena/content/articles/options/stocks-fall-together-as-near-term-volatility-jumps---options-brief---20-november-2026-20112026',
+        'https://www.indexbox.io/blog/gold-extends-steep-weekly-loss-as-hawkish-fed-bets-and-equity-rout-weigh/',
+        'https://energynow.com/2026/11/oil-prices-rebound-friday-on-middle-east-tensions-but-fall-for-third-straight-week-wti-closes-at-83-98-brent-at-92-57/',
       ],
     },
     strategic: {
       status: 'amber',
-      note: "Amber (background). Gulf fighting continues without a clear new step up: Iranian drones at Kuwait and Bahrain on 18 Nov (intercepted) after the 17 Nov US strike on Qeshm; correction, the ADNOC ship was hit on 17 Nov (one missing). A Houthi strike damaged a Riyadh tower on 19 Nov. Iran claims more tankers mined (unverified); Hormuz restricted. US Senate war-powers resolution failed 48–51; reports say Trump weighs further strikes. Iran not in the Shenzhen declaration. No NPT vote, no nuclear tests.",
+      note: "Amber (background). Gulf: another tanker set on fire near Khasab on 20 Nov (UKMTO: seven attacks in a week); the US tightened its blockade, threatening action against ship-to-ship transfers of Iranian cargo; a 20 Nov Qeshm explosion is disputed (Tasnim later said munitions disposal). Trump told Reuters he will decide on new strikes after the new year; CBS reports US–Israel planning for near-term action (single source). Iran calls the dirty-bomb report a pretext. No NPT vote, no nuclear tests; North Korea quiet since 4 Nov.",
       sources: [
-        'https://gulfnews.com/world/mena/middle-east-war-iran-attacks-bahrain-kuwait-drone-threats-keep-gulf-on-high-alert-as-us-hits-irans-qeshm-1.500751444',
-        'https://www.cnn.com/2026/11/17/politics/us-iran-self-defense-strikes',
-        'https://france24.com/en/middle-east/20261119-skyscraper-in-riyadh-damaged-as-saudi-arabia-reports-surge-in-new-houthi-attacks',
+        'https://www.bairdmaritime.com/security/incidents/projectile-strikes-outbound-tanker-in-strait-of-hormuz-sparks-fire',
+        'https://aljazeera.com/news/2026/11/20/us-targets-irans-ship-to-ship-transfers-can-tehran-break-the-blockade',
+        'https://www.rte.ie/news/middle-east/2026/1119/1599925-us-iran/',
       ],
     },
   },
   logistics: {
     status: 'amber',
-    note: "Amber. Fuel: no new official figures found after 18 Nov (Grand Est 14% then); the latest departmental readings (14 Nov) were 44% in Territoire de Belfort and 18% in Doubs (both Bourgogne-Franche-Comté, not Grand Est), so still fill up before the A36. Rhine at Kaub rising (~1.2 m on 19 Nov, weak sources). No strikes or blockades. Irish Ferries Cherbourg–Dublin still weather-hit but easing: 20 Nov Dublin–Cherbourg delayed up to 6 h. No Brittany Ferries disruption found. No Donegal warning in force.",
+    note: "Amber, improving. Rhine at Kaub recovering strongly (~1.0 m on 18 Nov, ~1.5 m on 20 Nov, single-source readings), which should ease depot resupply. Latest fuel figures: Grand Est ~14–20% of stations short (17–18 Nov); Territoire de Belfort 44% and Doubs 18% (14 Nov); no newer departmental data, so still fill up before the A36. Strikes fading, no blockades. Irish Ferries Cherbourg–Dublin back to delays rather than cancellations (21 Nov Dublin departure delayed); no Brittany Ferries disruption found. No Donegal warning in force.",
     sources: [
-      'https://www.prix-carburants.gouv.fr/disponibilites-carburants',
+      'https://media.roole.fr/quotidien/au-volant/carburants-pourquoi-1-station-service-sur-5-est-en-rupture-dans-le-grand-est',
       'https://lesvoitures.fr/penurie-carburant/',
+      'https://pegelonline.wsv.de/gast/stammdaten?pegelnr=25700100',
       'https://www.irishferries.com/ie-en/sailing-updates/ireland-france/',
-      'https://www.hgvireland.com/irish-ferries-cancels-all-rosslare-pembroke-sailings-as-bad-weather-also-hits-cherbourg-route/',
     ],
   },
 };
