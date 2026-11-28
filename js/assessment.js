@@ -2,98 +2,97 @@
 // applyAssessment). Applied once per issuedAt, and only to readings not
 // checked by hand since. Set to null when there is nothing to publish.
 //
-// 2026-11-27: daily check, compiled from dated news search results. Source
+// 2026-11-28: daily check, compiled from dated news search results. Source
 // pages could not be opened directly, so key facts should be confirmed by hand.
 window.Assessment = {
-  date: '2026-11-27',
-  issuedAt: '2026-11-27T05:59:48Z',
+  date: '2026-11-28',
+  issuedAt: '2026-11-28T05:59:18Z',
   ladder: 2,
   categories: {
     conventional: {
       status: 'amber',
-      note: "Amber, top of band; not red. No new incursions into Poland, Romania, Moldova, the Baltics or Finland on 25–27 Nov. NATO's forward AWACS for Poland is approved and described as deployed. Poland asked NATO on 25–26 Nov to shoot down Russian missiles over Ukraine heading for NATO territory; allies lack consensus; Poland plans a no-fly zone along its eastern border around the new year. Overnight 25–26 Nov Russia launched ballistic missiles (Iskander, Zircon) and 113 drones, its first large strike since Putin vowed 'inevitable' retaliation (at least 3 killed); two foreign grain ships were attacked near Odesa (not in NATO waters). No Russian response yet to the Merkury sinking or the Savasleyka strike. Russia restricted flights around Kaliningrad's Khrabrovo airport to 28 Nov, citing NATO drills in Lithuania. Trump, after meeting Rutte, told Putin to 'pull back all military aggression' across Europe. IISS: Russian-linked sabotage in Europe roughly doubled in the year to Sept 2026. No Oreshnik use.",
+      note: "Amber, top of band; not red. An unidentified drone briefly entered Latvian airspace near Ludza on 27 Nov; NATO Baltic Air Policing jets were scrambled (Euronews, Militarnyi; origin not stated). Romania scrambled F-18s over possible drones near Tulcea on 26 Nov (single source). No new Polish incursion; NATO has made no decision on Poland's request to down Russian missiles over Ukraine (Romania reluctant); Poland plans an eastern-border restriction zone by late December or early January. Russia struck Ukraine again overnight 26–27 Nov (155 drones; 6 killed over the day; outages in 6 oblasts); Zelensky warns a new mass strike is being prepared. Kyiv proposed a Black Sea ceasefire on 27 Nov. Peskov says Russia is not interested in widening the war. No Oreshnik use; no new ship strikes in Romanian or Bulgarian waters. IISS: Russia-linked sabotage in Europe up 16% in the year to Sept 2026.",
       sources: [
-        'https://www.euronews.com/2026/11/26/russia-launches-ballistic-missile-and-drone-barrage-on-ukraine-killing-at-least-three',
-        'https://www.usnews.com/news/world/articles/2026-11-26/ukraine-says-russia-hits-two-grain-ships-near-odesa-ports',
-        'https://www.bloomberg.com/news/articles/2026-11-25/poland-asks-nato-to-shoot-down-russian-missiles-over-ukraine',
-        'https://kyivindependent.com/trump-tells-putin-to-pull-back-all-military-aggression-across-europe/',
+        'https://www.euronews.com/2026/11/27/nato-jets-scrambled-after-drone-briefly-enters-latvian-airspace',
+        'https://militarnyi.com/en/news/poland-calls-on-nato-to-shoot-down-russian-missiles-over-ukraine-alliance-seeks-to-avoid-crossing-this-line/',
+        'https://kyivindependent.com/russian-attacks-kill-6-injure-25-across-ukraine-over-past-day-power-outages-across-6-oblasts/',
+        'https://aljazeera.com/news/2026/11/27/kyiv-offers-black-sea-ceasefire-as-putin-expands-russias-navy',
       ],
     },
     posture: {
       status: 'green',
-      note: "Green, close to amber. Nuclear-armed satellite: German Space Command assesses it ready for launch as early as December; no US statement, launch preparations or NOTAMs found; the Kremlin says space 'must be free of any weapon'. A routine 10-hour Tu-160 patrol over the Sea of Japan (24 Nov). Last strategic launch: Bulava, 28 Oct. No Grom exercise or deployment change.",
+      note: "Green, close to amber. No US statement, launch preparations or NOTAMs for the reported nuclear-armed satellite. Putin commissioned the Yasen-M submarine Perm on 27 Nov, said to carry Zircon missiles as standard (single source). No Grom exercise, ICBM or SLBM launch, or deployment change. North Korea: Kim's call for wider tactical-nuclear deployment is a policy direction; no new deployment or test reported.",
       sources: [
         'https://militarnyi.com/en/news/russia-has-nuclear-satellite-ready-for-launch-by-end-of-2026-german-space-command-warns/',
-        'https://www.themoscowtimes.com/2026/11/23/kremlin-dismisses-reports-about-alleged-nuclear-armed-satellite-launch-a94349',
-        'https://rferl.org/a/russia-sputnik-s-space-nuclear-weapons-reports-starfish-prime-emp/33905092.html',
+        'https://thebostonreport.com/2026/11/27/putin-perm-yasen-m-submarine-zircon',
+        'https://www.koreatimes.co.kr/foreignaffairs/northkorea/20261126/north-koreas-kim-urges-wider-tactical-nuclear-weapons-deployment-on-facility-tour-kcna-says',
       ],
     },
     continuity: {
       status: 'green',
-      note: "Green, no change. No civil-defence alerts, shelter orders, leadership relocations or emergency powers in Switzerland, Ireland or NATO states.",
+      note: "Green, no change. No civil-defence alerts, shelter orders, leadership relocations or emergency powers in Switzerland, Ireland or NATO states; only local alerts in Latvia (Ludza, Balvi) and Tulcea, Romania.",
       sources: [
-        'https://www.babs.admin.ch/en/shelters-for-the-population',
+        'https://www.babs.admin.ch/en',
       ],
     },
     diplomacy: {
       status: 'green',
-      note: "Green, borderline. The Danish attaché's deadline passes today; Russia has not yet counter-expelled (in 2022 it took about four weeks). Cyprus expelled two Russian diplomats for suspected spying (reported 22–23 Nov). Trump and Rutte jointly warned Russia not to expand the war; Trump says Putin wants a deal. No invitees or dates for Moscow talks. Prisoner swap: first stage expected late November or early December; Russia has agreed part of Ukraine's list. No closures, ordered departures or 'leave now' advice.",
+      note: "Green, borderline. Russia has still not counter-expelled after Denmark's attaché deadline (~27 Nov). Correction: the Cyprus expulsion of two Russian diplomats rests on anonymous Cypriot officials and Moscow denies it. Trump's 'pull back' message referred to his in-person talk with Putin in Shenzhen, not a new call; Putin is 'welcome' at the 14–15 Dec G20 but may not attend. Kushner says Russia accepted a watered-down US security-guarantee proposal in return for freezing the front (single source). Prisoner swap still not carried out. No closures, ordered departures or 'leave now' advice.",
       sources: [
-        'https://cphpost.dk/2026-11-21/news/round-up/denmark-expels-russian-diplomat-over-alleged-assassination-plot-targeting-ukrainian-rapper/',
-        'https://www.themoscowtimes.com/2026/11/23/cyprus-expels-russian-diplomats-suspected-of-espionage-reports-say-a94348',
+        'https://tass.com/politics/2223819',
         'https://time.com/article/2026/11/26/trump-warns-putin-russia-to-pull-back-military-aggression-europe-ukraine-war/',
-        'https://nikvesti.com/en/news/politics/326995-russia-has-already-agreed-to-portion-of-the-ukrainian-prisoners-of-war',
+        'https://wisevoter.com/world/us/2026/11/27/trump-putin-welcome-g20-summit-florida',
+        'https://kyivindependent.com/large-scale-prisoner-exchange-agreed-as-2nd-day-of-abu-dhabi-talks-concludes-umerov-says/',
       ],
     },
     rhetoric: {
       status: 'amber',
-      note: "Amber, holding. Russia's OSCE envoy Polyansky (26 Nov) said NATO involvement in attacks on Russian vessels and drills he called preparation to seize Kaliningrad are 'inching closer' to nuclear war (TASS, Newsweek). Kim Jong Un (KCNA, 26 Nov) ordered fissile-material output 'systematically expanded' and wider tactical-nuclear deployment, and said denying North Korea's nuclear status is 'a declaration of war'. No Kremlin comment on Medvedev's article (a circulating Peskov quote is from August 2025). Nothing new from Putin, Lavrov or Chinese officials.",
+      note: "Amber, holding. Medvedev's 'preventive nuclear attack' article remains the week's strongest nuclear statement (he adds there is no 'immediate necessity'). The Kremlin deflected Trump and Rutte's warning, blaming Kyiv for widening the war to the Mediterranean and Baltic. Putin calls retaliation for refinery strikes 'inevitable' (conventional). Kim's 26 Nov nuclear-expansion statement; South Korea says it takes it seriously; China says its position is unchanged. Nothing new from Lavrov or Ryabkov.",
       sources: [
-        'https://tass.com/politics/2225491',
-        'https://www.newsweek.com/putin-russia-nuclear-war-inching-closer-nato-12772118',
-        'https://www.aljazeera.com/news/2026/11/26/kim-jong-un-says-north-korea-should-widen-deployment-of-tactical-nukes',
-        'https://www.france24.com/en/live-news/20261126-north-korea-s-kim-calls-for-more-ways-to-fire-nuclear-weapons',
+        'https://www.foxnews.com/world/russia-warns-preventive-nuclear-attack-medvedev-claims-ukraine-nato-crossed-line',
+        'https://kyivindependent.com/trump-tells-putin-to-pull-back-all-military-aggression-across-europe/',
+        'https://tass.com/politics/2224231',
+        'https://www.cnbc.com/2026/11/26/north-korea-kim-nuclear-weapons-expansion.html',
       ],
     },
     infrastructure: {
       status: 'amber',
-      note: "Amber, steady. Zelensky confirmed Ukraine struck the Sparta II in the Gulf of Finland (21 Nov). 'Exceptional' GPS jamming over Stockholm, Helsinki and Tallinn around 21–23 Nov (Swedish Transport Agency; same data via Ukrainian outlets). The 23 Nov hoax bomb-threat wave hit 880+ German schools and every Danish police district. Spain's 29 Nov election targeted by Russian 'Matryoshka' disinformation. No new cable, grid or airport drone closures 25–27 Nov.",
+      note: "Amber, steady. New: a drone sighting stopped all flights at Cologne/Bonn airport for about 2.5 hours on the night of 27–28 Nov (no attribution). Spain's 29 Nov election faces Russian 'Matryoshka' impersonation of news outlets; Spain has activated its coordination network; no cyberattack on election systems so far. Ransomware at French hospitals (Guadeloupe, Bordeaux). No new hoax wave, GPS jamming, cable or grid incident on 26–28 Nov.",
       sources: [
-        'https://euromaidanpress.com/2026/11/24/the-burning-sparta-ii-drifted-into-finnish-waters-off-loviisa-before-russia-towed-it-away-and-kyiv-now-says-it-struck-it/',
-        'https://www.eurointegration.com.ua/eng/news/2026/11/26/7250879/',
-        'https://www.jpost.com/international/article-915832',
-        'https://maldita.es/investigaciones/20261113/russian-operation-matryoshka-campaign-interfere-elections-spain/',
+        'https://www.derbund.ch/drohne-legt-flughafen-koeln-bonn-2-5-stunden-lahm-567234057494',
+        'https://www.nau.ch/news/ausland/flugbetrieb-in-kolnbonn-nach-drohnensichtung-gestoppt-67208211',
+        'https://www.euronews.com/2026/11/23/spains-29-november-election-shielding-the-vote-from-hybrid-threats-and-disinformation',
       ],
     },
     markets: {
-      status: 'amber',
-      note: "Amber (feed: VIX 26.8 amber; gold, Brent and franc green), possibly easing. Correction to yesterday: gold is not firming; it is near 14-month lows on Fed-hike bets (~$3,600 after a Thanksgiving bounce from ~$3,480). The franc's strength (EUR/CHF briefly below 0.91, back to 0.915) reflects equity risk-off and French fiscal worries, not geopolitics. Europe rebounded 1.8% on 26 Nov on reports US tariffs on the EU will be capped. Brent ~$92 on Houthi attacks on Saudi Arabia ahead of Sunday's OPEC+ meeting. TTF ~€87/MWh.",
+      status: 'green',
+      note: "Back to green (feed: VIX 23.8, gold, Brent and franc all green). Risk-on rebound in Friday's half-day session: S&P 500 +1.6%, Nasdaq +2.3%, best week since April 2025, though the S&P and Nasdaq are heading for their worst November since 2008; Europe +1.1%. Gold bounced to ~$3,670 on a weaker dollar and short covering, not a flight to safety; EUR/CHF ~0.916. The geopolitical component is in oil: Brent ~$91–96 with its first weekly gain of November on Hormuz tanker attacks and Houthi strikes on Saudi Arabia; OPEC+ meets Sunday. Bitcoin ~$59–61k.",
       sources: [
-        'https://investinglive.com/technical-analysis/chart-of-the-day-swiss-franc-emerges-as-a-quiet-winner-in-the-market-turmoil/',
-        'https://www.riotimesonline.com/gold-silver-precious-metals-thursday-november-26-2026/',
-        'https://ca.investing.com/news/economy-news/european-stocks-rally-as-tech-bank-stocks-rebound-tariff-fears-ease-4982398',
-        'https://tradingeconomics.com/commodity/eu-natural-gas',
+        'https://www.cnbc.com/2026/11/26/stock-market-today-live-updates.html',
+        'https://irishtimes.com/business/2026/11/27/european-shares-log-strong-weekly-gains-as-markets-await-spanish-election',
+        'https://kitco.com/news/article/2026-11-27/gold-climbs-above-3650-silver-surges-wall-street-rebounds-sharply-kitco-pm',
+        'https://political.org/2026/11/27/oil-posts-first-weekly-gain-of-november-as-attacks-on-tankers-and-saudi-facilities-revive-supply-fears',
       ],
     },
     strategic: {
       status: 'amber',
-      note: "Amber (background), leaning toward escalation. Two Italian technicians were killed in Kuwait on 26 Nov by shrapnel from intercepted, reportedly Iranian-made drones; Iran denies involvement; von der Leyen calls for more pressure on Iran. UKMTO: tanker hit by a projectile east of Khasab on 25 Nov (one crew member reportedly badly hurt). No direct US–Iran exchange of fire since 17 Nov; Arab officials fear a return to full-scale war; Qatari and Pakistani mediation continues. Houthi missiles and drones at Riyadh, Jeddah and Jazan intercepted, minor damage at Jazan port; coalition strikes on Hodeidah (Houthis say 10 killed). Kharg convoy not sailed. NPT exit bill: no vote.",
+      note: "Amber (background), leaning toward escalation. CENTCOM disabled the Palau-flagged bulk carrier Pacific Archer as it tried to run the blockade (26 Nov; 6 vessels disabled and 158 redirected so far); Iran vows to break the blockade and keep Hormuz shut while it lasts. Kuwait, 26 Nov: two Italian Rheinmetall technicians killed by debris from intercepted drones that Italy and Kuwait say were Iranian; Iran denies; no US military response. Trump: the war ends 'whenever I want'; Pickaxe Mountain would be hit if strikes resume. JMIC: 17 tankers hit since 1 Nov. Qatari and Pakistani mediation continues. Houthi attacks on Jeddah and Jazan ports after coalition strikes on Hodeidah.",
       sources: [
-        'https://www.arabnews.com/middle-east/two-italian-workers-killed-in-iranian-drone-attack-on-kuwait-3014135',
-        'https://boereport.com/2026/11/26/tanker-struck-by-projectile-while-transiting-strait-of-hormuz-ukmto-says/',
-        'https://thenationalnews.com/news/mena/2026/11/26/arab-nations-fear-renewed-iran-war-as-officials-warn-of-far-reaching-impact',
-        'https://www.thenationalnews.com/news/gulf/2026/11/26/saudi-arabia-intercepts-wave-of-retaliatory-houthi-attacks/',
+        'https://www.centcom.mil/MEDIA/PUBLIC-RELEASES/Article/4644273/us-forces-disable-cargo-vessel-attempting-to-violate-naval-blockade/',
+        'https://www.cnn.com/2026/11/26/middleeast/italians-killed-iranian-attack-kuwait-intl',
+        'https://www.business-standard.com/world-news/us-could-hit-iran-s-pickaxe-mountain-nuclear-site-if-strikes-resume-trump-126112700363_1.html',
+        'https://www.aljazeera.com/news/2026/11/25/houthis-target-saudi-arabias-red-sea-ports-as-strikes-escalate',
       ],
     },
   },
   logistics: {
     status: 'amber',
-    note: "Amber, improving. Correction: French fuel shortages have eased substantially; official figures for 26 Nov 09:00 show 4% of stations in difficulty in Bourgogne-Franche-Comté (Territoire de Belfort, Doubs) and 5% in Grand Est (Haut-Rhin); yesterday's '33–39% in Belfort' figure was out of date or belonged to Bas-Rhin. Rhine at Kaub ~2.4 m, easing toward ~2.0 m. Weather: yellow snow/ice warnings this morning (27 Nov, 03:00–10:00) for Doubs, Territoire de Belfort and Haut-Rhin; first lowland snow in Switzerland; no A16 or A36 closures reported. Irish Ferries: Dublin–Cherbourg on 27 and 28 Nov listed on time, but the 29 Nov 16:30 Dublin departure is cancelled for operational reasons (the return leg may be affected). Brittany Ferries normal. No Donegal warning.",
+    note: "Amber. Fuel (official, 27 Nov 09:00): 3% of stations nationally, Grand East 6% (up from 5%); private trackers still rank Territoire de Belfort worst in France (28–39%, different method), so fill up in Switzerland and again west of Besançon. Rhine at Kaub ~2.0–2.4 m. Weather: yellow severe-cold warning today for Doubs, Haut-Rhin, Territoire de Belfort; black-ice risk on the A36 early morning. No motorway blockades; farmer actions target supermarkets. Ferries: Irish Ferries cancelled the 29 Nov 16:30 Dublin–Cherbourg sailing (rebooking offered on 28 Nov or via UK landbridge), so the next Cherbourg–Dublin sailing (~30 Nov) is likely affected (unconfirmed); Hibernia Line's Cork–Boulogne ferry ceased operations on 27 Nov, removing a fallback. Brittany Ferries Cherbourg–Rosslare normal (~5 sailings a week). Donegal: cold, dry weekend, black-ice warnings, no Met Éireann warning.",
     sources: [
       'https://www.prix-carburants.gouv.fr/disponibilites-carburants',
-      'https://www.cnews.fr/france/2026-11-26/neige-verglas-voici-les-8-departements-places-en-vigilance-jaune-ce-vendredi',
-      'https://www.hochwasser.rlp.de/flussgebiet/mittelrhein/kaub',
-      'https://www.irishferries.com/uk-en/sailing-updates/ireland-france/',
+      'https://www.lejma.fr/2026/11/27/grand-froid-19-departements-en-vigilance-jaune-lalerte-setendra-a-lest-samedi/',
+      'https://www.irishferries.com/ie-en/sailing-updates/ireland-france',
+      'https://afloat.ie/port-news/ferry-news/item/73934-jobs-at-risk-as-hibernia-line-ferry-service-to-france-ceases-operations',
     ],
   },
 };
